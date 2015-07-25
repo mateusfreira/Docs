@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			}
 		},
 		'gh-pages': {
-			options: {
+			def: {
 				base: 'dist',
 				user: {
 					name: 'demo-travis-gh-pages',
