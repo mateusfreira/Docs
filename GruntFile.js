@@ -20,6 +20,13 @@ module.exports = function(grunt) {
 			options: {
 				base: 'dist'
 			},
+			user: {
+				name: 'demo-travis-gh-pages',
+				email: 'doc@appbase.io'
+			},
+			repo: 'https://' + process.env.GH_TOKEN + '@github.com/mateusfreira/Docs.git',
+			message: 'publish gh-pages (auto)' + getDeployMessage(),
+			silent: true			
 			src: ['**']
 		}
 	});
