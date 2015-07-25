@@ -19,10 +19,6 @@ module.exports = function(grunt) {
 		'gh-pages': {
 			def: {
 				base: 'dist',
-				user: {
-					name: 'demo-travis-gh-pages',
-					email: 'doc@appbase.io'
-				},
 				message: 'publish gh-pages (auto)',
 				silent: true,
 				src: ['**']
