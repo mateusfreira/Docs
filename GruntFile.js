@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 				email: 'doc@appbase.io'
 			},
 			repo: 'https://' + process.env.GH_TOKEN + '@github.com/mateusfreira/Docs.git',
-			message: 'publish gh-pages (auto)' + getDeployMessage(),
+			message: 'publish gh-pages (auto)',
 			silent: true,
 			src: ['**']
 		}
