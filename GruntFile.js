@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				user: {
 					name: 'demo-travis-gh-pages',
 					email: 'doc@appbase.io'
-				}
+				},
 				message: 'publish gh-pages (auto)',
 				silent: true,
 				src: ['**']
