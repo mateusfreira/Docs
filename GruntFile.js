@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 			def: {
 				base: 'dist',
 				message: 'publish gh-pages (auto)',
-				silent: true,
+				silent: false,
 				src: ['**']
 			}
 		}
