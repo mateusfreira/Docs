@@ -27,7 +27,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-docbase');
 	grunt.loadNpmTasks('grunt-gh-pages');
-	//grunt.loadTasks('node_modules/grunt-docbase/tasks');
 	// Default task.
 	grunt.registerTask('default', ['connect', 'docbase']);
+	grunt.registerTask('publish', ['connect', 'docbase', 'gh-pages']);
+	
 };

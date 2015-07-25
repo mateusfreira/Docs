@@ -7,7 +7,7 @@
   "description": "Documentation for Appbase",
   "contributors": [],
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt publish"
   },
   "repository": {
     "type": "git",
