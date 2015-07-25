@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			},
 			repo: 'https://' + process.env.GH_TOKEN + '@github.com/mateusfreira/Docs.git',
 			message: 'publish gh-pages (auto)' + getDeployMessage(),
-			silent: true			
+			silent: true,
 			src: ['**']
 		}
 	});
