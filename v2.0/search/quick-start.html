@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,23 +50,23 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docsbower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docsbower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docsbower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docsbower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
@@ -98,36 +98,36 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/quick-start.html>Quick start</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/angular.html>Angular Binding</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/oauth.html>OAuth</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -140,7 +140,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docsv2.0.html ng-bind="version" class="ng-binding" href=/Docsv2.0.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0.html ng-bind="version" class="ng-binding" href=/Docs/v2.0.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -153,7 +153,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-searching-for-a-better-search-threecolumns-false-item" class="level-1"><a id="title-searching-for-a-better-search-threecolumns-false-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false" class="level-1" pref="#title-searching-for-a-better-search-threecolumns-false">Searching for a better Search?</a><ul class="level-2" id="title-searching-for-a-better-search-threecolumns-false-list"><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-item" class="level-2"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search" class="level-2" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search">Our Approach to Search</a><ul class="level-3" id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-list"><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app">1. Create an App</a></li><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data">2. Put some Data</a></li><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data">3. Perform Search on Data</a></li></ul></li><li id="title-searching-for-a-better-search-threecolumns-false-next-steps-item" class="level-2"><a id="title-searching-for-a-better-search-threecolumns-false-next-steps-link" href="/Docsv2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-next-steps" class="level-2" pref="#title-searching-for-a-better-search-threecolumns-false-next-steps">Next Steps</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-searching-for-a-better-search-threecolumns-false-item" class="level-1"><a id="title-searching-for-a-better-search-threecolumns-false-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false" class="level-1" pref="#title-searching-for-a-better-search-threecolumns-false">Searching for a better Search?</a><ul class="level-2" id="title-searching-for-a-better-search-threecolumns-false-list"><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-item" class="level-2"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search" class="level-2" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search">Our Approach to Search</a><ul class="level-3" id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-list"><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app">1. Create an App</a></li><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data">2. Put some Data</a></li><li id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data-item" class="level-3"><a id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data" class="level-3" pref="#title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-3-perform-search-on-data">3. Perform Search on Data</a></li></ul></li><li id="title-searching-for-a-better-search-threecolumns-false-next-steps-item" class="level-2"><a id="title-searching-for-a-better-search-threecolumns-false-next-steps-link" href="/Docs/v2.0/search/quick-start.html#title-searching-for-a-better-search-threecolumns-false-next-steps" class="level-2" pref="#title-searching-for-a-better-search-threecolumns-false-next-steps">Next Steps</a></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="title-searching-for-a-better-search-threecolumns-false">Searching for a better Search?</h1><p>Building a good quality full-text search experience for an app is a hard problem if your data resides in traditional RDBMS systems. Even database systems like MongoDB have very nascent support for search, others like DynamoDB offer no support. The hard, real fact is that these systems are not designed with search as a use-case, and one is left with a very rudimentary support like exact search match, or in the worst case scenario, even scanning the DB tables.</p><p>While there are great tools available for search, like Apache Solr and Elasticsearch, they have two big problems:<br>1. It is not recommended to use ElasticSearch as a primary data store. So you are still stuck with the problem of streaming data from your primary store to a search database like ES.<br>2. The documentation is intimidating. Really, it seems the docs are made for rocket scientists rather than your average app developer!</p><p>We have thought about the <strong>Search</strong> problem really hard, and have come up with an elegant solution.</p><h2 id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search">Our Approach to Search</h2><p>Appbase takes the search problem head-on and indexes all the data that is ever stored in Appbase, allowing searching on all the data and relationships. We provide the ability to do the following kind of queries:<br>1. Full-text search - including <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-simple-match">simple match queries</a> and <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-fuzzy">fuzzy search queries</a>,<br>2. <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-numeric-range">Numeric-range queries</a> - when you want answers to “Give me all the products that cost between $50 and $100” or “fetch all pages from 5 to 10”,<br>3. <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-geo-spatial">Geo spatial queries</a> - ElasticSearch offers a lot of Geo Spatial queries. To name a few, you can compare distances, get a bounding box, determine shape,<br>4. <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-sorting">Sort queries</a> - sort queries are more like filters to arrange data returned by one of above queries. You can sort the data using multiple “property” parameters.</p><p>With <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-aggregation">Aggregation</a> and <a href="http://docs.appbase.io/docs/elasticsearch.html#-searching-combining-queries-filters">Combining queries</a>, the possibilities are endless.</p><p>Here’s a primer to leverage these powerful search queries broken into three steps.</p><h3 id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-1-create-an-app">1. Create an App</h3><p>Log into <span class="fa fa-external-link"></span><a href="https://appbase.io/developer/">Appbase Dashboard</a>, and create a new app. Once you create an app with a desired name, you should see an app dialog box appear as below.</p><p><img src="http://i.imgur.com/LBjXQQT.png" alt="App credentials"><br><strong>Image 1</strong>: App name, credentials, and access controls  </p><p>We will need the <code>app name</code> and the <code>secret</code> in all our API calls. In this case, these would be <em>my_app9</em> and <em>097b2b28b6a13cf2e53b6cecfec42b86</em>. We <strong>trust you</strong> with our app’s secret!</p><h3 id="title-searching-for-a-better-search-threecolumns-false-our-approach-to-search-2-put-some-data">2. Put some Data</h3><p>Appbase works with JSON data. You can store JSON objects with Appbase directly, they would form Appbase vertices (similar to MongoDB documents, or RDBMS records). We can make search requests on all the vertices, or a set of vertices via a JSON based query format (using ElasticSearch’s DSL).</p><p>For brevity, let’s suppose we are storing user profiles and would like to later search them by different properties. Here’s how a JSON user object might look: </p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
     </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Laura Vieria"</span></span><span class="pun">,</span><span class="pln">
@@ -253,6 +253,6 @@ The JSON query object that we send with this request:</p>
 </div></div>
 
   <script type="text/javascript" src="scripts/main.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

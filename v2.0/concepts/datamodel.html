@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,23 +50,23 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docsbower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docsbower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docsbower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docsbower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docsbower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
@@ -98,36 +98,36 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/quick-start.html>Quick start</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/angular.html>Angular Binding</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/javascript/oauth.html>OAuth</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docsv2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docsv2.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -140,7 +140,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docsv2.0.html ng-bind="version" class="ng-binding" href=/Docsv2.0.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0.html ng-bind="version" class="ng-binding" href=/Docs/v2.0.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -153,7 +153,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-datamodel-threecolumns-false-item" class="level-1"><a id="title-datamodel-threecolumns-false-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false" class="level-1" pref="#title-datamodel-threecolumns-false">Datamodel</a><ul class="level-2" id="title-datamodel-threecolumns-false-list"><li id="title-datamodel-threecolumns-false-data-in-appbase-item" class="level-2"><a id="title-datamodel-threecolumns-false-data-in-appbase-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-data-in-appbase" class="level-2" pref="#title-datamodel-threecolumns-false-data-in-appbase">Data in Appbase</a></li><li id="title-datamodel-threecolumns-false-concepts-item" class="level-2"><a id="title-datamodel-threecolumns-false-concepts-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts" class="level-2" pref="#title-datamodel-threecolumns-false-concepts">Concepts</a><ul class="level-3" id="title-datamodel-threecolumns-false-concepts-list"><li id="title-datamodel-threecolumns-false-concepts-vertex-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-vertex-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-vertex" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-vertex">Vertex</a></li><li id="title-datamodel-threecolumns-false-concepts-namespace-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-namespace-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-namespace" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-namespace">Namespace</a></li><li id="title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships">Edge (one-to-one relationships)</a></li><li id="title-datamodel-threecolumns-false-concepts-path-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-path-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-path" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-path">Path</a></li><li id="title-datamodel-threecolumns-false-concepts-url-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-url-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-url" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-url">URL</a></li></ul></li><li id="title-datamodel-threecolumns-false-storing-data-item" class="level-2"><a id="title-datamodel-threecolumns-false-storing-data-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data" class="level-2" pref="#title-datamodel-threecolumns-false-storing-data">Storing Data</a><ul class="level-3" id="title-datamodel-threecolumns-false-storing-data-list"><li id="title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects">Primitive Data and JSON Objects</a></li><li id="title-datamodel-threecolumns-false-storing-data-nested-json-objects-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-nested-json-objects-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-nested-json-objects" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-nested-json-objects">Nested JSON Objects</a></li><li id="title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship">Sets (One-to-Many Relationship)</a></li></ul></li><li id="title-datamodel-threecolumns-false-retrieving-data-item" class="level-2"><a id="title-datamodel-threecolumns-false-retrieving-data-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data" class="level-2" pref="#title-datamodel-threecolumns-false-retrieving-data">Retrieving Data</a><ul class="level-3" id="title-datamodel-threecolumns-false-retrieving-data-list"><li id="title-datamodel-threecolumns-false-retrieving-data-properties-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-properties-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-properties" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-properties">Properties</a></li><li id="title-datamodel-threecolumns-false-retrieving-data-edges-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-edges-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-edges" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-edges">Edges</a></li><li id="title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace-link" href="/Docsv2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace">Vertices in a Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-datamodel-threecolumns-false-item" class="level-1"><a id="title-datamodel-threecolumns-false-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false" class="level-1" pref="#title-datamodel-threecolumns-false">Datamodel</a><ul class="level-2" id="title-datamodel-threecolumns-false-list"><li id="title-datamodel-threecolumns-false-data-in-appbase-item" class="level-2"><a id="title-datamodel-threecolumns-false-data-in-appbase-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-data-in-appbase" class="level-2" pref="#title-datamodel-threecolumns-false-data-in-appbase">Data in Appbase</a></li><li id="title-datamodel-threecolumns-false-concepts-item" class="level-2"><a id="title-datamodel-threecolumns-false-concepts-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts" class="level-2" pref="#title-datamodel-threecolumns-false-concepts">Concepts</a><ul class="level-3" id="title-datamodel-threecolumns-false-concepts-list"><li id="title-datamodel-threecolumns-false-concepts-vertex-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-vertex-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-vertex" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-vertex">Vertex</a></li><li id="title-datamodel-threecolumns-false-concepts-namespace-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-namespace-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-namespace" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-namespace">Namespace</a></li><li id="title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-edge-one-to-one-relationships">Edge (one-to-one relationships)</a></li><li id="title-datamodel-threecolumns-false-concepts-path-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-path-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-path" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-path">Path</a></li><li id="title-datamodel-threecolumns-false-concepts-url-item" class="level-3"><a id="title-datamodel-threecolumns-false-concepts-url-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-concepts-url" class="level-3" pref="#title-datamodel-threecolumns-false-concepts-url">URL</a></li></ul></li><li id="title-datamodel-threecolumns-false-storing-data-item" class="level-2"><a id="title-datamodel-threecolumns-false-storing-data-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data" class="level-2" pref="#title-datamodel-threecolumns-false-storing-data">Storing Data</a><ul class="level-3" id="title-datamodel-threecolumns-false-storing-data-list"><li id="title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-primitive-data-and-json-objects">Primitive Data and JSON Objects</a></li><li id="title-datamodel-threecolumns-false-storing-data-nested-json-objects-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-nested-json-objects-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-nested-json-objects" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-nested-json-objects">Nested JSON Objects</a></li><li id="title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship-item" class="level-3"><a id="title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship" class="level-3" pref="#title-datamodel-threecolumns-false-storing-data-sets-one-to-many-relationship">Sets (One-to-Many Relationship)</a></li></ul></li><li id="title-datamodel-threecolumns-false-retrieving-data-item" class="level-2"><a id="title-datamodel-threecolumns-false-retrieving-data-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data" class="level-2" pref="#title-datamodel-threecolumns-false-retrieving-data">Retrieving Data</a><ul class="level-3" id="title-datamodel-threecolumns-false-retrieving-data-list"><li id="title-datamodel-threecolumns-false-retrieving-data-properties-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-properties-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-properties" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-properties">Properties</a></li><li id="title-datamodel-threecolumns-false-retrieving-data-edges-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-edges-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-edges" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-edges">Edges</a></li><li id="title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace-item" class="level-3"><a id="title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace-link" href="/Docs/v2.0/concepts/datamodel.html#title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace" class="level-3" pref="#title-datamodel-threecolumns-false-retrieving-data-vertices-in-a-namespace">Vertices in a Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="title-datamodel-threecolumns-false">Datamodel</h1><p>Appbase is a realtime Database as a Service (DBaaS), built on top of a graph schema with JSON based vertices (similar to JSON documents), and edges to link them.</p><p>All databases support the storing and fetching of data, what distinguishes one database type from another is the structure of the data they store and the means by which it can be retrieved. </p><p>Several popular databases can be classified as below:</p><ol>
 <li><a href="http://en.wikipedia.org/wiki/SQL">Relational (SQL) Databases</a> SQLite, PostgreSQL  </li>
@@ -367,6 +367,6 @@ movieNSRef</span><span class="pun">.</span><span class="pln">on</span><span clas
 </div></div>
 
   <script type="text/javascript" src="scripts/main.js"></script>
-  <script type="text/javascript" src="/Docsbower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>
