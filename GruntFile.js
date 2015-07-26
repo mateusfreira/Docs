@@ -19,6 +19,11 @@ module.exports = function(grunt) {
 		'gh-pages': {
 			def: {
 				base: 'dist',
+				user: {
+						name: 'Travis',
+						email: 'mateusfreira@gmail.com'
+				},
+				repo: 'https://' + process.env.GH_TOKEN + '@github.com/mateusfreira/Docs.git',
 				message: 'publish gh-pages (auto)',
 				silent: false,
 				src: ['**']
