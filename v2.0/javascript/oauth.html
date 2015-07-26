@@ -1,0 +1,86 @@
+<html><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Appbase Documentation</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script type="text/javascript">
+    if (!Function.prototype.bind) {
+Function.prototype.bind = function bind(that) { // .length is 1
+        var slice = [].slice;
+        var Empty = function(){};
+        var target = this;
+        if (typeof target != "function") {
+            throw new TypeError("Function.prototype.bind called on incompatible " + target);
+        }
+        var args = slice.call(arguments, 1); // for normal call
+        var bound = function () {
+
+            if (this instanceof bound) {
+
+                var result = target.apply(
+                    this,
+                    args.concat(slice.call(arguments))
+                );
+                if (Object(result) === result) {
+                    return result;
+                }
+                return this;
+
+            } else {
+                return target.apply(
+                    that,
+                    args.concat(slice.call(arguments))
+                );
+
+            }
+
+        };
+        if(target.prototype) {
+            Empty.prototype = target.prototype;
+            bound.prototype = new Empty();
+            Empty.prototype = null;
+        }
+        return bound;
+    };  
+}
+  </script>
+  <!-- Flatdoc -->
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
+
+  <!-- Flatdoc theme -->
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+
+  <!-- DocBase -->
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+  
+
+  <!-- Custom -->
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+<body role="flatdoc" class="no-literate">
+  <!--[if lt IE 10]>
+     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- ngView:  -->
+
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body></html>
