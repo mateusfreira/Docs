@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 			def: {
 				options: {
 					generatePath: "dist/",
-					baseUrl: "/Docs"
+					baseUrl: "/Docs/"
 				}
 			}
 		},
