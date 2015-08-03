@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -88,7 +88,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="/images/logo.svg">
+        <img src="/Docs/images/logo.svg">
       </a>
     </div>
 
@@ -98,36 +98,36 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v2.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/quick-start.html>Quick start</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/angular.html>Angular Binding</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/oauth.html>OAuth</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -140,11 +140,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -157,7 +157,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="datamodel-item" class="level-1"><a id="datamodel-link" href="/v2.0/concepts/datamodel.html#datamodel" class="level-1" pref="#datamodel">Datamodel</a><ul class="level-2" id="datamodel-list"><li id="datamodel-data-in-appbase-item" class="level-2"><a id="datamodel-data-in-appbase-link" href="/v2.0/concepts/datamodel.html#datamodel-data-in-appbase" class="level-2" pref="#datamodel-data-in-appbase">Data in Appbase</a></li><li id="datamodel-concepts-item" class="level-2"><a id="datamodel-concepts-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts" class="level-2" pref="#datamodel-concepts">Concepts</a><ul class="level-3" id="datamodel-concepts-list"><li id="datamodel-concepts-vertex-item" class="level-3"><a id="datamodel-concepts-vertex-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts-vertex" class="level-3" pref="#datamodel-concepts-vertex">Vertex</a></li><li id="datamodel-concepts-namespace-item" class="level-3"><a id="datamodel-concepts-namespace-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts-namespace" class="level-3" pref="#datamodel-concepts-namespace">Namespace</a></li><li id="datamodel-concepts-edge-one-to-one-relationships-item" class="level-3"><a id="datamodel-concepts-edge-one-to-one-relationships-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts-edge-one-to-one-relationships" class="level-3" pref="#datamodel-concepts-edge-one-to-one-relationships">Edge (one-to-one relationships)</a></li><li id="datamodel-concepts-path-item" class="level-3"><a id="datamodel-concepts-path-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts-path" class="level-3" pref="#datamodel-concepts-path">Path</a></li><li id="datamodel-concepts-url-item" class="level-3"><a id="datamodel-concepts-url-link" href="/v2.0/concepts/datamodel.html#datamodel-concepts-url" class="level-3" pref="#datamodel-concepts-url">URL</a></li></ul></li><li id="datamodel-storing-data-item" class="level-2"><a id="datamodel-storing-data-link" href="/v2.0/concepts/datamodel.html#datamodel-storing-data" class="level-2" pref="#datamodel-storing-data">Storing Data</a><ul class="level-3" id="datamodel-storing-data-list"><li id="datamodel-storing-data-primitive-data-and-json-objects-item" class="level-3"><a id="datamodel-storing-data-primitive-data-and-json-objects-link" href="/v2.0/concepts/datamodel.html#datamodel-storing-data-primitive-data-and-json-objects" class="level-3" pref="#datamodel-storing-data-primitive-data-and-json-objects">Primitive Data and JSON Objects</a></li><li id="datamodel-storing-data-nested-json-objects-item" class="level-3"><a id="datamodel-storing-data-nested-json-objects-link" href="/v2.0/concepts/datamodel.html#datamodel-storing-data-nested-json-objects" class="level-3" pref="#datamodel-storing-data-nested-json-objects">Nested JSON Objects</a></li><li id="datamodel-storing-data-sets-one-to-many-relationship-item" class="level-3"><a id="datamodel-storing-data-sets-one-to-many-relationship-link" href="/v2.0/concepts/datamodel.html#datamodel-storing-data-sets-one-to-many-relationship" class="level-3" pref="#datamodel-storing-data-sets-one-to-many-relationship">Sets (One-to-Many Relationship)</a></li></ul></li><li id="datamodel-retrieving-data-item" class="level-2"><a id="datamodel-retrieving-data-link" href="/v2.0/concepts/datamodel.html#datamodel-retrieving-data" class="level-2" pref="#datamodel-retrieving-data">Retrieving Data</a><ul class="level-3" id="datamodel-retrieving-data-list"><li id="datamodel-retrieving-data-properties-item" class="level-3"><a id="datamodel-retrieving-data-properties-link" href="/v2.0/concepts/datamodel.html#datamodel-retrieving-data-properties" class="level-3" pref="#datamodel-retrieving-data-properties">Properties</a></li><li id="datamodel-retrieving-data-edges-item" class="level-3"><a id="datamodel-retrieving-data-edges-link" href="/v2.0/concepts/datamodel.html#datamodel-retrieving-data-edges" class="level-3" pref="#datamodel-retrieving-data-edges">Edges</a></li><li id="datamodel-retrieving-data-vertices-in-a-namespace-item" class="level-3"><a id="datamodel-retrieving-data-vertices-in-a-namespace-link" href="/v2.0/concepts/datamodel.html#datamodel-retrieving-data-vertices-in-a-namespace" class="level-3" pref="#datamodel-retrieving-data-vertices-in-a-namespace">Vertices in a Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="datamodel-item" class="level-1"><a id="datamodel-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel" class="level-1" pref="#datamodel">Datamodel</a><ul class="level-2" id="datamodel-list"><li id="datamodel-data-in-appbase-item" class="level-2"><a id="datamodel-data-in-appbase-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-data-in-appbase" class="level-2" pref="#datamodel-data-in-appbase">Data in Appbase</a></li><li id="datamodel-concepts-item" class="level-2"><a id="datamodel-concepts-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts" class="level-2" pref="#datamodel-concepts">Concepts</a><ul class="level-3" id="datamodel-concepts-list"><li id="datamodel-concepts-vertex-item" class="level-3"><a id="datamodel-concepts-vertex-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts-vertex" class="level-3" pref="#datamodel-concepts-vertex">Vertex</a></li><li id="datamodel-concepts-namespace-item" class="level-3"><a id="datamodel-concepts-namespace-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts-namespace" class="level-3" pref="#datamodel-concepts-namespace">Namespace</a></li><li id="datamodel-concepts-edge-one-to-one-relationships-item" class="level-3"><a id="datamodel-concepts-edge-one-to-one-relationships-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts-edge-one-to-one-relationships" class="level-3" pref="#datamodel-concepts-edge-one-to-one-relationships">Edge (one-to-one relationships)</a></li><li id="datamodel-concepts-path-item" class="level-3"><a id="datamodel-concepts-path-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts-path" class="level-3" pref="#datamodel-concepts-path">Path</a></li><li id="datamodel-concepts-url-item" class="level-3"><a id="datamodel-concepts-url-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-concepts-url" class="level-3" pref="#datamodel-concepts-url">URL</a></li></ul></li><li id="datamodel-storing-data-item" class="level-2"><a id="datamodel-storing-data-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-storing-data" class="level-2" pref="#datamodel-storing-data">Storing Data</a><ul class="level-3" id="datamodel-storing-data-list"><li id="datamodel-storing-data-primitive-data-and-json-objects-item" class="level-3"><a id="datamodel-storing-data-primitive-data-and-json-objects-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-storing-data-primitive-data-and-json-objects" class="level-3" pref="#datamodel-storing-data-primitive-data-and-json-objects">Primitive Data and JSON Objects</a></li><li id="datamodel-storing-data-nested-json-objects-item" class="level-3"><a id="datamodel-storing-data-nested-json-objects-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-storing-data-nested-json-objects" class="level-3" pref="#datamodel-storing-data-nested-json-objects">Nested JSON Objects</a></li><li id="datamodel-storing-data-sets-one-to-many-relationship-item" class="level-3"><a id="datamodel-storing-data-sets-one-to-many-relationship-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-storing-data-sets-one-to-many-relationship" class="level-3" pref="#datamodel-storing-data-sets-one-to-many-relationship">Sets (One-to-Many Relationship)</a></li></ul></li><li id="datamodel-retrieving-data-item" class="level-2"><a id="datamodel-retrieving-data-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-retrieving-data" class="level-2" pref="#datamodel-retrieving-data">Retrieving Data</a><ul class="level-3" id="datamodel-retrieving-data-list"><li id="datamodel-retrieving-data-properties-item" class="level-3"><a id="datamodel-retrieving-data-properties-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-retrieving-data-properties" class="level-3" pref="#datamodel-retrieving-data-properties">Properties</a></li><li id="datamodel-retrieving-data-edges-item" class="level-3"><a id="datamodel-retrieving-data-edges-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-retrieving-data-edges" class="level-3" pref="#datamodel-retrieving-data-edges">Edges</a></li><li id="datamodel-retrieving-data-vertices-in-a-namespace-item" class="level-3"><a id="datamodel-retrieving-data-vertices-in-a-namespace-link" href="/Docs/v2.0/concepts/datamodel.html#datamodel-retrieving-data-vertices-in-a-namespace" class="level-3" pref="#datamodel-retrieving-data-vertices-in-a-namespace">Vertices in a Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="datamodel">Datamodel</h1><p>Appbase is a realtime Database as a Service (DBaaS), built on top of a graph schema with JSON based vertices (similar to JSON documents), and edges to link them.</p><p>All databases support the storing and fetching of data, what distinguishes one database type from another is the structure of the data they store and the means by which it can be retrieved. </p><p>Several popular databases can be classified as below:</p><ol>
 <li><a href="http://en.wikipedia.org/wiki/SQL">Relational (SQL) Databases</a> SQLite, PostgreSQL  </li>
@@ -370,7 +370,7 @@ movieNSRef</span><span class="pun">.</span><span class="pln">on</span><span clas
   </a>
 </div></div>
 
-  <script type="text/javascript" src="/scripts/main.js"></script>
-  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

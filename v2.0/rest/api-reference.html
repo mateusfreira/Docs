@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
 
 </head>
 <body role="flatdoc" class="">
@@ -88,7 +88,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="/images/logo.svg">
+        <img src="/Docs/images/logo.svg">
       </a>
     </div>
 
@@ -98,36 +98,36 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v2.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/quick-start.html>Quick start</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/angular.html>Angular Binding</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/oauth.html>OAuth</a>
+      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -140,11 +140,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -157,7 +157,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/v2.0/rest/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a><ul class="level-2" id="introduction-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="introduction-allowed-http-request-types-item" class="level-3"><a id="introduction-allowed-http-request-types-link" href="/v2.0/rest/api-reference.html#introduction-allowed-http-request-types" class="level-3" pref="#introduction-allowed-http-request-types">Allowed HTTP Request Types</a></li><li id="introduction-http-headers-item" class="level-3"><a id="introduction-http-headers-link" href="/v2.0/rest/api-reference.html#introduction-http-headers" class="level-3" pref="#introduction-http-headers">HTTP Header(s)</a></li><li id="introduction-authorization-item" class="level-3"><a id="introduction-authorization-link" href="/v2.0/rest/api-reference.html#introduction-authorization" class="level-3" pref="#introduction-authorization">Authorization</a></li><li id="introduction-base-uri-item" class="level-3"><a id="introduction-base-uri-link" href="/v2.0/rest/api-reference.html#introduction-base-uri" class="level-3" pref="#introduction-base-uri">Base URI</a></li></ul></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/v2.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-introduction-item" class="level-2"><a id="api-reference-introduction-link" href="/v2.0/rest/api-reference.html#api-reference-introduction" class="level-2" pref="#api-reference-introduction">Introduction</a></li><li id="api-reference-namespace-item" class="level-2"><a id="api-reference-namespace-link" href="/v2.0/rest/api-reference.html#api-reference-namespace" class="level-2" pref="#api-reference-namespace">Namespace</a><ul class="level-3" id="api-reference-namespace-list"><li id="api-reference-namespace-list-all-vertices-item" class="level-3"><a id="api-reference-namespace-list-all-vertices-link" href="/v2.0/rest/api-reference.html#api-reference-namespace-list-all-vertices" class="level-3" pref="#api-reference-namespace-list-all-vertices">List all vertices</a></li><li id="api-reference-namespace-search-vertices-by-propertyies-item" class="level-3"><a id="api-reference-namespace-search-vertices-by-propertyies-link" href="/v2.0/rest/api-reference.html#api-reference-namespace-search-vertices-by-propertyies" class="level-3" pref="#api-reference-namespace-search-vertices-by-propertyies">Search Vertices by property(ies)</a></li></ul></li><li id="api-reference-vertex-property-item" class="level-2"><a id="api-reference-vertex-property-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property" class="level-2" pref="#api-reference-vertex-property">Vertex Property</a><ul class="level-3" id="api-reference-vertex-property-list"><li id="api-reference-vertex-property-create-update-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-create-update-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-create-update-vertex-properties" class="level-3" pref="#api-reference-vertex-property-create-update-vertex-properties">Create / Update Vertex Properties</a></li><li id="api-reference-vertex-property-read-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-read-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-read-vertex-properties" class="level-3" pref="#api-reference-vertex-property-read-vertex-properties">Read Vertex Properties</a></li><li id="api-reference-vertex-property-delete-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-delete-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-delete-vertex-properties" class="level-3" pref="#api-reference-vertex-property-delete-vertex-properties">Delete vertex properties</a></li></ul></li><li id="api-reference-vertex-edge-item" class="level-2"><a id="api-reference-vertex-edge-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge" class="level-2" pref="#api-reference-vertex-edge">Vertex Edge</a><ul class="level-3" id="api-reference-vertex-edge-list"><li id="api-reference-vertex-edge-create-update-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-create-update-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-create-update-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-create-update-vertex-edges">Create / Update Vertex Edges</a></li><li id="api-reference-vertex-edge-read-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-read-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-read-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-read-vertex-edges">Read Vertex Edges</a></li><li id="api-reference-vertex-edge-delete-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-delete-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-delete-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-delete-vertex-edges">Delete vertex edges</a></li></ul></li></ul></li><li id="socketio-api-endpoints-item" class="level-1"><a id="socketio-api-endpoints-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints" class="level-1" pref="#socketio-api-endpoints">Socket.io API Endpoints</a><ul class="level-2" id="socketio-api-endpoints-list"><li id="socketio-api-endpoints-creating-the-client-item" class="level-2"><a id="socketio-api-endpoints-creating-the-client-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-creating-the-client" class="level-2" pref="#socketio-api-endpoints-creating-the-client">Creating the Client</a></li><li id="socketio-api-endpoints-requesting-for-data-item" class="level-2"><a id="socketio-api-endpoints-requesting-for-data-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data" class="level-2" pref="#socketio-api-endpoints-requesting-for-data">Requesting for data</a><ul class="level-3" id="socketio-api-endpoints-requesting-for-data-list"><li id="socketio-api-endpoints-requesting-for-data-request-format-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-request-format-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-request-format" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-request-format">Request Format</a></li><li id="socketio-api-endpoints-requesting-for-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-vertex-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-vertex" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-requesting-for-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-namespace-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-namespace" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-namespace">Namespace</a></li></ul></li><li id="socketio-api-endpoints-attachingremoving-data-listeners-item" class="level-2"><a id="socketio-api-endpoints-attachingremoving-data-listeners-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners" class="level-2" pref="#socketio-api-endpoints-attachingremoving-data-listeners">Attaching/Removing Data Listeners</a><ul class="level-3" id="socketio-api-endpoints-attachingremoving-data-listeners-list"><li id="socketio-api-endpoints-attachingremoving-data-listeners-format-item" class="level-3"><a id="socketio-api-endpoints-attachingremoving-data-listeners-format-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners-format" class="level-3" pref="#socketio-api-endpoints-attachingremoving-data-listeners-format">Format</a></li></ul></li><li id="socketio-api-endpoints-parsing-the-data-item" class="level-2"><a id="socketio-api-endpoints-parsing-the-data-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data" class="level-2" pref="#socketio-api-endpoints-parsing-the-data">Parsing the Data</a><ul class="level-3" id="socketio-api-endpoints-parsing-the-data-list"><li id="socketio-api-endpoints-parsing-the-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-vertex-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-vertex" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-parsing-the-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-namespace-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-namespace" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-namespace">Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/Docs/v2.0/rest/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a><ul class="level-2" id="introduction-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="introduction-allowed-http-request-types-item" class="level-3"><a id="introduction-allowed-http-request-types-link" href="/Docs/v2.0/rest/api-reference.html#introduction-allowed-http-request-types" class="level-3" pref="#introduction-allowed-http-request-types">Allowed HTTP Request Types</a></li><li id="introduction-http-headers-item" class="level-3"><a id="introduction-http-headers-link" href="/Docs/v2.0/rest/api-reference.html#introduction-http-headers" class="level-3" pref="#introduction-http-headers">HTTP Header(s)</a></li><li id="introduction-authorization-item" class="level-3"><a id="introduction-authorization-link" href="/Docs/v2.0/rest/api-reference.html#introduction-authorization" class="level-3" pref="#introduction-authorization">Authorization</a></li><li id="introduction-base-uri-item" class="level-3"><a id="introduction-base-uri-link" href="/Docs/v2.0/rest/api-reference.html#introduction-base-uri" class="level-3" pref="#introduction-base-uri">Base URI</a></li></ul></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/Docs/v2.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-introduction-item" class="level-2"><a id="api-reference-introduction-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-introduction" class="level-2" pref="#api-reference-introduction">Introduction</a></li><li id="api-reference-namespace-item" class="level-2"><a id="api-reference-namespace-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace" class="level-2" pref="#api-reference-namespace">Namespace</a><ul class="level-3" id="api-reference-namespace-list"><li id="api-reference-namespace-list-all-vertices-item" class="level-3"><a id="api-reference-namespace-list-all-vertices-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace-list-all-vertices" class="level-3" pref="#api-reference-namespace-list-all-vertices">List all vertices</a></li><li id="api-reference-namespace-search-vertices-by-propertyies-item" class="level-3"><a id="api-reference-namespace-search-vertices-by-propertyies-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace-search-vertices-by-propertyies" class="level-3" pref="#api-reference-namespace-search-vertices-by-propertyies">Search Vertices by property(ies)</a></li></ul></li><li id="api-reference-vertex-property-item" class="level-2"><a id="api-reference-vertex-property-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property" class="level-2" pref="#api-reference-vertex-property">Vertex Property</a><ul class="level-3" id="api-reference-vertex-property-list"><li id="api-reference-vertex-property-create-update-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-create-update-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-create-update-vertex-properties" class="level-3" pref="#api-reference-vertex-property-create-update-vertex-properties">Create / Update Vertex Properties</a></li><li id="api-reference-vertex-property-read-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-read-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-read-vertex-properties" class="level-3" pref="#api-reference-vertex-property-read-vertex-properties">Read Vertex Properties</a></li><li id="api-reference-vertex-property-delete-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-delete-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-delete-vertex-properties" class="level-3" pref="#api-reference-vertex-property-delete-vertex-properties">Delete vertex properties</a></li></ul></li><li id="api-reference-vertex-edge-item" class="level-2"><a id="api-reference-vertex-edge-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge" class="level-2" pref="#api-reference-vertex-edge">Vertex Edge</a><ul class="level-3" id="api-reference-vertex-edge-list"><li id="api-reference-vertex-edge-create-update-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-create-update-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-create-update-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-create-update-vertex-edges">Create / Update Vertex Edges</a></li><li id="api-reference-vertex-edge-read-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-read-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-read-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-read-vertex-edges">Read Vertex Edges</a></li><li id="api-reference-vertex-edge-delete-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-delete-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-delete-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-delete-vertex-edges">Delete vertex edges</a></li></ul></li></ul></li><li id="socketio-api-endpoints-item" class="level-1"><a id="socketio-api-endpoints-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints" class="level-1" pref="#socketio-api-endpoints">Socket.io API Endpoints</a><ul class="level-2" id="socketio-api-endpoints-list"><li id="socketio-api-endpoints-creating-the-client-item" class="level-2"><a id="socketio-api-endpoints-creating-the-client-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-creating-the-client" class="level-2" pref="#socketio-api-endpoints-creating-the-client">Creating the Client</a></li><li id="socketio-api-endpoints-requesting-for-data-item" class="level-2"><a id="socketio-api-endpoints-requesting-for-data-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data" class="level-2" pref="#socketio-api-endpoints-requesting-for-data">Requesting for data</a><ul class="level-3" id="socketio-api-endpoints-requesting-for-data-list"><li id="socketio-api-endpoints-requesting-for-data-request-format-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-request-format-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-request-format" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-request-format">Request Format</a></li><li id="socketio-api-endpoints-requesting-for-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-vertex-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-vertex" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-requesting-for-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-namespace-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-namespace" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-namespace">Namespace</a></li></ul></li><li id="socketio-api-endpoints-attachingremoving-data-listeners-item" class="level-2"><a id="socketio-api-endpoints-attachingremoving-data-listeners-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners" class="level-2" pref="#socketio-api-endpoints-attachingremoving-data-listeners">Attaching/Removing Data Listeners</a><ul class="level-3" id="socketio-api-endpoints-attachingremoving-data-listeners-list"><li id="socketio-api-endpoints-attachingremoving-data-listeners-format-item" class="level-3"><a id="socketio-api-endpoints-attachingremoving-data-listeners-format-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners-format" class="level-3" pref="#socketio-api-endpoints-attachingremoving-data-listeners-format">Format</a></li></ul></li><li id="socketio-api-endpoints-parsing-the-data-item" class="level-2"><a id="socketio-api-endpoints-parsing-the-data-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data" class="level-2" pref="#socketio-api-endpoints-parsing-the-data">Parsing the Data</a><ul class="level-3" id="socketio-api-endpoints-parsing-the-data-list"><li id="socketio-api-endpoints-parsing-the-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-vertex-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-vertex" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-parsing-the-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-namespace-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-namespace" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-namespace">Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="introduction">Introduction</h1><p>The Appbase API is based on REST principles. All operations including creating vertices and edges, fetching vertex properties (data) and edges, deleting a vertex or an edge as well as searching through vertices are RESTful. The only non-RESTful operation is realtime event streams, which works with the Websocket protocol, using socket.io.</p><h3 id="introduction-allowed-http-request-types">Allowed HTTP Request Types</h3><ul>
 <li><code>PATCH</code> - Creates or updates a resource</li>
@@ -862,82 +862,82 @@ ioClient</span><span class="pun">.</span><span class="pln">on</span><span class=
     </span><span class="comment"><span class="com">// ...</span></span><span class="pln">
 </span><span class="pun">});</span><span class="pln">
 
-ioClient</span><span class="pun">.</span><span class="pln">emit</span><span class="pun">(</span><span class="string"><span class="str">'edges'</span></span><span class="pun">,</span><span class="pln"> request</span><span class="pun">);</span></code></pre><p>Whenever you listen for edges of a vertex, you first get all the existing edges and later on you keep getting the updates.</p><p>If you apply filters, you only get the edges which match the filters, and you NEVER get any further changes in edges.</p><h5>1. Retrieval</h5><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"RETR"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"user`</span><span class="number"><span class="str">54943</span></span><span class="str">c</span><span class="number"><span class="str">863</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">835</span></span><span class="str">a"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"edges"</span></span><span class="pun">:{</span><span class="pln">
-        </span><span class="string"><span class="str">"abcd"</span></span><span class="pun">:{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"misc`</span><span class="number"><span class="str">54943</span></span><span class="str">c</span><span class="number"><span class="str">893</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">835</span></span><span class="str">e"</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419000969730</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"order"</span></span><span class="pun">:</span><span class="number"><span class="lit">1</span></span><span class="pln">
-        </span><span class="pun">},</span><span class="pln">
-        </span><span class="string"><span class="str">"pqrs"</span></span><span class="pun">:{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"misc`</span><span class="number"><span class="str">54943</span></span><span class="str">c</span><span class="number"><span class="str">883</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">835</span></span><span class="str">d"</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419000968929</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"order"</span></span><span class="pun">:</span><span class="number"><span class="lit">234245</span></span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“RETR”</em>. <code>data.edges</code> are all the existing edges of the vertex. Each edge has a <code>timestamp</code> which describes when the timestamp was last changed, and <code>order</code> is the priority of the edge. <code>t_id</code> of each edge displays the internal id of the vertex it points to.</p><h5>Edge addition or replacement</h5><p>The data that arrives is:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"RETR"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"user`</span><span class="number"><span class="str">54943</span></span><span class="str">c</span><span class="number"><span class="str">863</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">835</span></span><span class="str">a"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"edges"</span></span><span class="pun">:{</span><span class="pln">
-        </span><span class="string"><span class="str">"pqrs"</span></span><span class="pun">:{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"misc`</span><span class="number"><span class="str">5</span></span><span class="str">w</span><span class="number"><span class="str">5</span></span><span class="str">rgfhfrtu</span><span class="number"><span class="str">5835</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419000999913</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"order"</span></span><span class="pun">:</span><span class="number"><span class="lit">23341</span></span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“UPDATE”</em> and only the edges which are replaced or added, are present here.</p><h5>3. Edge removal</h5><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"REMOVE"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"edges"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"pqrs"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-            </span><span class="string"><span class="str">"t_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">""</span></span><span class="pun">,</span><span class="pln">
-            </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419001116911</span></span><span class="pln">
-        </span><span class="pun">}</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“REMOVE”</em> and <code>data.edges</code> includes edges which are deleted. Notice that <code>t_id</code> of the edge is empty and now it doesn’t point to any vertex.</p><h5>4. Do an “Off” request</h5><p>When you do a <code>ioClient.emit('edges off', requestObj)</code> to turn off the data listening, you receive a string as data. The value of this string is <code>"STOPPED"</code>. It simply tells you that the callback will never be called again, unless you request for the data again.</p><h5>5. Error</h5><p>Whenever an error occurs, the data will be a string, containing the error message.</p><h3 id="socketio-api-endpoints-parsing-the-data-namespace">Namespace</h3><p>Suppose that you are listening on the namespace <em>user</em>, so you build a <em>requestObject</em>, attached a callback and you requested for the data.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="kwd">var</span><span class="pln"> request </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"appname"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"chat_app"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"secret"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"dskfhyr</span><span class="number"><span class="str">987</span></span><span class="str">r</span><span class="number"><span class="str">09</span></span><span class="str">g</span><span class="number"><span class="str">8</span></span><span class="str">w</span><span class="number"><span class="str">00309309</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"namespace"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"user"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"listener_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asasasfasaef</span><span class="number"><span class="str">324</span></span><span class="str">"</span></span><span class="pln">
-</span><span class="pun">};</span><span class="pln">
+ioClient</span><span class="pun">.</span><span class="pln">emit</span><span class="pun">(</span><span class="string"><span class="str">'edges'</span></span><span class="pun">,</span><span class="pln"> request</span><span class="pun">);</span></code></pre><p>Whenever you listen for edges of a vertex, you first get all the existing edges and later on you keep getting the updates.</p><p>If you apply filters, you only get the edges which match the filters, and you NEVER get any further changes in edges.</p><h5>1. Retrieval</h5><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"RETR"</span>,
+    <span class="string">"_id"</span>:<span class="string">"user`<span class="number">54943</span>c<span class="number">863</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">835</span>a"</span>,
+    <span class="string">"edges"</span>:{
+        <span class="string">"abcd"</span>:{
+            <span class="string">"t_id"</span>:<span class="string">"misc`<span class="number">54943</span>c<span class="number">893</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">835</span>e"</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419000969730</span>,
+            <span class="string">"order"</span>:<span class="number">1</span>
+        },
+        <span class="string">"pqrs"</span>:{
+            <span class="string">"t_id"</span>:<span class="string">"misc`<span class="number">54943</span>c<span class="number">883</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">835</span>d"</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419000968929</span>,
+            <span class="string">"order"</span>:<span class="number">234245</span>
+        }
+    }
+}</code></pre><p><code>data.optype</code> is <em>“RETR”</em>. <code>data.edges</code> are all the existing edges of the vertex. Each edge has a <code>timestamp</code> which describes when the timestamp was last changed, and <code>order</code> is the priority of the edge. <code>t_id</code> of each edge displays the internal id of the vertex it points to.</p><h5>Edge addition or replacement</h5><p>The data that arrives is:</p><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"RETR"</span>,
+    <span class="string">"_id"</span>:<span class="string">"user`<span class="number">54943</span>c<span class="number">863</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">835</span>a"</span>,
+    <span class="string">"edges"</span>:{
+        <span class="string">"pqrs"</span>:{
+            <span class="string">"t_id"</span>:<span class="string">"misc`<span class="number">5</span>w<span class="number">5</span>rgfhfrtu<span class="number">5835</span>"</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419000999913</span>,
+            <span class="string">"order"</span>:<span class="number">23341</span>
+        }
+    }
+}</code></pre><p><code>data.optype</code> is <em>“UPDATE”</em> and only the edges which are replaced or added, are present here.</p><h5>3. Edge removal</h5><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"REMOVE"</span>,
+    <span class="string">"edges"</span>: {
+        <span class="string">"pqrs"</span>: {
+            <span class="string">"t_id"</span>: <span class="string">""</span>,
+            <span class="string">"timestamp"</span>:<span class="number">1419001116911</span>
+        }
+    }
+}</code></pre><p><code>data.optype</code> is <em>“REMOVE”</em> and <code>data.edges</code> includes edges which are deleted. Notice that <code>t_id</code> of the edge is empty and now it doesn’t point to any vertex.</p><h5>4. Do an “Off” request</h5><p>When you do a <code>ioClient.emit('edges off', requestObj)</code> to turn off the data listening, you receive a string as data. The value of this string is <code>"STOPPED"</code>. It simply tells you that the callback will never be called again, unless you request for the data again.</p><h5>5. Error</h5><p>Whenever an error occurs, the data will be a string, containing the error message.</p><h3 id="socketio-api-endpoints-parsing-the-data-namespace">Namespace</h3><p>Suppose that you are listening on the namespace <em>user</em>, so you build a <em>requestObject</em>, attached a callback and you requested for the data.</p><pre><code class="lang-js prettyprint">var request = {
+    <span class="string">"appname"</span>: <span class="string">"chat_app"</span>,
+    <span class="string">"secret"</span>: <span class="string">"dskfhyr<span class="number">987</span>r<span class="number">09</span>g<span class="number">8</span>w<span class="number">00309309</span>"</span>,
+    <span class="string">"namespace"</span>: <span class="string">"user"</span>,
+    <span class="string">"listener_id"</span>: <span class="string">"asasasfasaef<span class="number">324</span>"</span>
+};
 
-ioClient</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="pln">JSON</span><span class="pun">.</span><span class="pln">stringify</span><span class="pun">(</span><span class="pln">request</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    </span><span class="comment"><span class="com">// ...</span></span><span class="pln">
-</span><span class="pun">});</span><span class="pln">
+ioClient.on(JSON.stringify(request), function(data) {
+    <span class="comment">// ...</span>
+});
 
-ioClient</span><span class="pun">.</span><span class="pln">emit</span><span class="pun">(</span><span class="string"><span class="str">'new vertices'</span></span><span class="pun">,</span><span class="pln"> request</span><span class="pun">);</span></code></pre><p>When you listen on a namespace, you first get all the existing vertices, and then as vertices are added or removed, you get the changes.</p><h5>1. Retrieval</h5><p>Intially, all the vertices are retrieved as an array,</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">[</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"</span><span class="number"><span class="str">53</span></span><span class="str">f</span><span class="number"><span class="str">7785324</span></span><span class="str">ebdb</span><span class="number"><span class="str">4878</span></span><span class="str">cb</span><span class="number"><span class="str">677</span></span><span class="str">b"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/andy"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1408727123813</span></span><span class="pln">
-    </span><span class="pun">},</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"</span><span class="number"><span class="str">549454913</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">836</span></span><span class="str">e"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419007121579</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/red"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">]</span></code></pre><p>You do NOT get the properties of the vertices, you just get thier timestaps, internal ids, and root-paths. Using the root-path, you can again listen on their properties if you want.</p><h5>2. Addition</h5><pre><code class="prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="str">"optype"</span><span class="pun">:</span><span class="str">"UPDATE"</span><span class="pun">,</span><span class="pln">
-    </span><span class="str">"vertex"</span><span class="pun">:{</span><span class="pln">
-        </span><span class="str">"timestamp"</span><span class="pun">:</span><span class="lit">1419007153037</span><span class="pun">,</span><span class="pln">
-        </span><span class="str">"rootPath"</span><span class="pun">:</span><span class="str">"user/blue"</span><span class="pun">,</span><span class="pln">
-        </span><span class="str">"_id"</span><span class="pun">:</span><span class="str">"user`549454b13b87a791550d836f"</span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“UPDATE”</em>, and <code>data.vertex</code> is the newly added vertex in the namespace.</p><h5>3. Removal (Destruction)</h5><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"optype"</span></span><span class="pun">:</span><span class="string"><span class="str">"DESTROY"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"vertex"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="string"><span class="str">"user`</span><span class="number"><span class="str">549454</span></span><span class="str">b</span><span class="number"><span class="str">13</span></span><span class="str">b</span><span class="number"><span class="str">87</span></span><span class="str">a</span><span class="number"><span class="str">791550</span></span><span class="str">d</span><span class="number"><span class="str">836</span></span><span class="str">f"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"timestamp"</span></span><span class="pun">:</span><span class="number"><span class="lit">1419007160898</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"rootPath"</span></span><span class="pun">:</span><span class="string"><span class="str">"user/red"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p><code>data.optype</code> is <em>“REMOVE”</em>, and <code>data.vertex</code> is the vertex which got destroyed.</p></div>
+ioClient.emit(<span class="string">'new vertices'</span>, request);</code></pre><p>When you listen on a namespace, you first get all the existing vertices, and then as vertices are added or removed, you get the changes.</p><h5>1. Retrieval</h5><p>Intially, all the vertices are retrieved as an array,</p><pre><code class="lang-json prettyprint">[
+    {
+        <span class="string">"_id"</span>:<span class="string">"<span class="number">53</span>f<span class="number">7785324</span>ebdb<span class="number">4878</span>cb<span class="number">677</span>b"</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/andy"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1408727123813</span>
+    },
+    {
+        <span class="string">"_id"</span>:<span class="string">"<span class="number">549454913</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">836</span>e"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1419007121579</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/red"</span>
+    }
+]</code></pre><p>You do NOT get the properties of the vertices, you just get thier timestaps, internal ids, and root-paths. Using the root-path, you can again listen on their properties if you want.</p><h5>2. Addition</h5><pre><code class="prettyprint">{
+    "optype":"UPDATE",
+    "vertex":{
+        "timestamp":1419007153037,
+        "rootPath":"user/blue",
+        "_id":"user`549454b13b87a791550d836f"
+    }
+}</code></pre><p><code>data.optype</code> is <em>“UPDATE”</em>, and <code>data.vertex</code> is the newly added vertex in the namespace.</p><h5>3. Removal (Destruction)</h5><pre><code class="lang-json prettyprint">{
+    <span class="string">"optype"</span>:<span class="string">"DESTROY"</span>,
+    <span class="string">"vertex"</span>: {
+        <span class="string">"_id"</span>:<span class="string">"user`<span class="number">549454</span>b<span class="number">13</span>b<span class="number">87</span>a<span class="number">791550</span>d<span class="number">836</span>f"</span>,
+        <span class="string">"timestamp"</span>:<span class="number">1419007160898</span>,
+        <span class="string">"rootPath"</span>:<span class="string">"user/red"</span>
+    }
+}</code></pre><p><code>data.optype</code> is <em>“REMOVE”</em>, and <code>data.vertex</code> is the vertex which got destroyed.</p></div>
   <a class="edit" ng-href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v2.0/rest/api-reference.md" target="_blank" href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v2.0/rest/api-reference.md">
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
 
-  <script type="text/javascript" src="/scripts/main.js"></script>
-  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -88,7 +88,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="/images/logo.svg">
+        <img src="/Docs/images/logo.svg">
       </a>
     </div>
 
@@ -98,7 +98,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/scalr/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/scalr/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/scalr/rest/intro.html ng-bind="file.label" class="ng-binding" href=/scalr/rest/intro.html>Quick Start</a>
+      		  	<a ng-href=/Docs/scalr/rest/intro.html ng-bind="file.label" class="ng-binding" href=/Docs/scalr/rest/intro.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -111,11 +111,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -128,7 +128,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="quick-start-to-the-rest-api-item" class="level-1"><a id="quick-start-to-the-rest-api-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api" class="level-1" pref="#quick-start-to-the-rest-api">Quick Start to the  REST API:</a><ul class="level-2" id="quick-start-to-the-rest-api-list"><li id="quick-start-to-the-rest-api-step-0-creating-an-app-item" class="level-2"><a id="quick-start-to-the-rest-api-step-0-creating-an-app-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-0-creating-an-app" class="level-2" pref="#quick-start-to-the-rest-api-step-0-creating-an-app">Step 0: Creating an App</a></li><li id="quick-start-to-the-rest-api-step-1-making-requests-item" class="level-2"><a id="quick-start-to-the-rest-api-step-1-making-requests-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-1-making-requests" class="level-2" pref="#quick-start-to-the-rest-api-step-1-making-requests">Step 1: Making Requests</a></li><li id="quick-start-to-the-rest-api-step-1-storing-data-item" class="level-2"><a id="quick-start-to-the-rest-api-step-1-storing-data-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-1-storing-data" class="level-2" pref="#quick-start-to-the-rest-api-step-1-storing-data">Step 1: Storing Data</a></li><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-item" class="level-2"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data" class="level-2" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data">Step 2: GETing err, Streaming Data</a><ul class="level-3" id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-list"><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document-item" class="level-3"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document" class="level-3" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document">Step 2.a: Modify the Document</a></li><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams-item" class="level-3"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams" class="level-3" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams">Step 2.b: Observe the Streams</a></li></ul></li><li id="quick-start-to-the-rest-api-step-3-streaming-search-item" class="level-2"><a id="quick-start-to-the-rest-api-step-3-streaming-search-link" href="/scalr/rest/intro.html#quick-start-to-the-rest-api-step-3-streaming-search" class="level-2" pref="#quick-start-to-the-rest-api-step-3-streaming-search">Step 3: Streaming Search</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="quick-start-to-the-rest-api-item" class="level-1"><a id="quick-start-to-the-rest-api-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api" class="level-1" pref="#quick-start-to-the-rest-api">Quick Start to the  REST API:</a><ul class="level-2" id="quick-start-to-the-rest-api-list"><li id="quick-start-to-the-rest-api-step-0-creating-an-app-item" class="level-2"><a id="quick-start-to-the-rest-api-step-0-creating-an-app-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-0-creating-an-app" class="level-2" pref="#quick-start-to-the-rest-api-step-0-creating-an-app">Step 0: Creating an App</a></li><li id="quick-start-to-the-rest-api-step-1-making-requests-item" class="level-2"><a id="quick-start-to-the-rest-api-step-1-making-requests-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-1-making-requests" class="level-2" pref="#quick-start-to-the-rest-api-step-1-making-requests">Step 1: Making Requests</a></li><li id="quick-start-to-the-rest-api-step-1-storing-data-item" class="level-2"><a id="quick-start-to-the-rest-api-step-1-storing-data-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-1-storing-data" class="level-2" pref="#quick-start-to-the-rest-api-step-1-storing-data">Step 1: Storing Data</a></li><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-item" class="level-2"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data" class="level-2" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data">Step 2: GETing err, Streaming Data</a><ul class="level-3" id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-list"><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document-item" class="level-3"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document" class="level-3" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2a-modify-the-document">Step 2.a: Modify the Document</a></li><li id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams-item" class="level-3"><a id="quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams" class="level-3" pref="#quick-start-to-the-rest-api-step-2-geting-err-streaming-data-step-2b-observe-the-streams">Step 2.b: Observe the Streams</a></li></ul></li><li id="quick-start-to-the-rest-api-step-3-streaming-search-item" class="level-2"><a id="quick-start-to-the-rest-api-step-3-streaming-search-link" href="/Docs/scalr/rest/intro.html#quick-start-to-the-rest-api-step-3-streaming-search" class="level-2" pref="#quick-start-to-the-rest-api-step-3-streaming-search">Step 3: Streaming Search</a></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="quick-start-to-the-rest-api">Quick Start to the <img src="http://i.imgur.com/a1KAate.png" alt="Scalr"> REST API:</h1><h2 id="quick-start-to-the-rest-api-step-0-creating-an-app">Step 0: Creating an App</h2><p><a href="https://imgflip.com/gif/opgl9"><img src="https://i.imgflip.com/opgl9.gif"></a><br>Log in to <span class="fa fa-external-link"></span> <a href="http://appbase.io/developer/">Appbase Dashboard</a>, and create a new app.</p><p>For this tutorial, we will use an app called “createnewtestapp01”. The &lt;username&gt;:&lt;password&gt; combination for this app is RIvfxo1u1:dee8ee52-8b75-4b5b-be4f-9df3c364f59f.</p><blockquote>
 <p>SCALR uses <em>HTTP Basic Auth</em>, a widely used protocol for simple username/password authentication. This is similar to how GitHub’s authentication works over <code>https</code>, just imagine every repository (app in our context) having it’s unique &lt;username&gt;:&lt;password&gt; combination.</p>
@@ -238,7 +238,7 @@ INITIAL RESPONSE
   </a>
 </div></div>
 
-  <script type="text/javascript" src="/scripts/main.js"></script>
-  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -88,7 +88,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="/images/logo.svg">
+        <img src="/Docs/images/logo.svg">
       </a>
     </div>
 
@@ -98,44 +98,44 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">Changelog</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/v3.0/changelog/changelog.html>Changelog</a>
+      		  	<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>Changelog</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">Search</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/Docs/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/Docs/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v3.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/Docs/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/Docs/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -148,11 +148,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -165,7 +165,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="use-cases-item" class="level-1"><a id="use-cases-link" href="/v3.0/search/use-cases.html#use-cases" class="level-1" pref="#use-cases">Use-cases</a><ul class="level-2" id="use-cases-list"><li id="use-cases-elasticsearch-introduction-item" class="level-2"><a id="use-cases-elasticsearch-introduction-link" href="/v3.0/search/use-cases.html#use-cases-elasticsearch-introduction" class="level-2" pref="#use-cases-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="use-cases-data-mapping-item" class="level-2"><a id="use-cases-data-mapping-link" href="/v3.0/search/use-cases.html#use-cases-data-mapping" class="level-2" pref="#use-cases-data-mapping">Data Mapping</a></li><li id="use-cases-request-and-response-format-item" class="level-2"><a id="use-cases-request-and-response-format-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format" class="level-2" pref="#use-cases-request-and-response-format">Request and Response Format</a><ul class="level-3" id="use-cases-request-and-response-format-list"><li id="use-cases-request-and-response-format-request-item" class="level-3"><a id="use-cases-request-and-response-format-request-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format-request" class="level-3" pref="#use-cases-request-and-response-format-request">Request</a></li><li id="use-cases-request-and-response-format-response-item" class="level-3"><a id="use-cases-request-and-response-format-response-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format-response" class="level-3" pref="#use-cases-request-and-response-format-response">Response</a></li></ul></li><li id="use-cases-searching-item" class="level-2"><a id="use-cases-searching-link" href="/v3.0/search/use-cases.html#use-cases-searching" class="level-2" pref="#use-cases-searching">Searching</a><ul class="level-3" id="use-cases-searching-list"><li id="use-cases-searching-simple-match-and-fulltext-item" class="level-3"><a id="use-cases-searching-simple-match-and-fulltext-link" href="/v3.0/search/use-cases.html#use-cases-searching-simple-match-and-fulltext" class="level-3" pref="#use-cases-searching-simple-match-and-fulltext">Simple Match and Fulltext</a></li><li id="use-cases-searching-fulltext-fuzzy-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy" class="level-3" pref="#use-cases-searching-fulltext-fuzzy">Fulltext: Fuzzy</a></li><li id="use-cases-searching-fulltext-autocompletewildcard-item" class="level-3"><a id="use-cases-searching-fulltext-autocompletewildcard-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-autocompletewildcard" class="level-3" pref="#use-cases-searching-fulltext-autocompletewildcard">Fulltext Autocomplete/wildcard</a></li><li id="use-cases-searching-fulltext-fuzzy-and-autocomplete-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-and-autocomplete-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy-and-autocomplete" class="level-3" pref="#use-cases-searching-fulltext-fuzzy-and-autocomplete">Fulltext: Fuzzy and Autocomplete</a></li><li id="use-cases-searching-numeric-range-item" class="level-3"><a id="use-cases-searching-numeric-range-link" href="/v3.0/search/use-cases.html#use-cases-searching-numeric-range" class="level-3" pref="#use-cases-searching-numeric-range">Numeric-range</a></li><li id="use-cases-searching-geo-spatial-item" class="level-3"><a id="use-cases-searching-geo-spatial-link" href="/v3.0/search/use-cases.html#use-cases-searching-geo-spatial" class="level-3" pref="#use-cases-searching-geo-spatial">Geo spatial</a></li><li id="use-cases-searching-sorting-item" class="level-3"><a id="use-cases-searching-sorting-link" href="/v3.0/search/use-cases.html#use-cases-searching-sorting" class="level-3" pref="#use-cases-searching-sorting">Sorting</a></li><li id="use-cases-searching-aggregation-item" class="level-3"><a id="use-cases-searching-aggregation-link" href="/v3.0/search/use-cases.html#use-cases-searching-aggregation" class="level-3" pref="#use-cases-searching-aggregation">Aggregation</a></li><li id="use-cases-searching-combining-queriesfilters-item" class="level-3"><a id="use-cases-searching-combining-queriesfilters-link" href="/v3.0/search/use-cases.html#use-cases-searching-combining-queriesfilters" class="level-3" pref="#use-cases-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="use-cases-next-steps-item" class="level-2"><a id="use-cases-next-steps-link" href="/v3.0/search/use-cases.html#use-cases-next-steps" class="level-2" pref="#use-cases-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="use-cases-item" class="level-1"><a id="use-cases-link" href="/Docs/v3.0/search/use-cases.html#use-cases" class="level-1" pref="#use-cases">Use-cases</a><ul class="level-2" id="use-cases-list"><li id="use-cases-elasticsearch-introduction-item" class="level-2"><a id="use-cases-elasticsearch-introduction-link" href="/Docs/v3.0/search/use-cases.html#use-cases-elasticsearch-introduction" class="level-2" pref="#use-cases-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="use-cases-data-mapping-item" class="level-2"><a id="use-cases-data-mapping-link" href="/Docs/v3.0/search/use-cases.html#use-cases-data-mapping" class="level-2" pref="#use-cases-data-mapping">Data Mapping</a></li><li id="use-cases-request-and-response-format-item" class="level-2"><a id="use-cases-request-and-response-format-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format" class="level-2" pref="#use-cases-request-and-response-format">Request and Response Format</a><ul class="level-3" id="use-cases-request-and-response-format-list"><li id="use-cases-request-and-response-format-request-item" class="level-3"><a id="use-cases-request-and-response-format-request-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format-request" class="level-3" pref="#use-cases-request-and-response-format-request">Request</a></li><li id="use-cases-request-and-response-format-response-item" class="level-3"><a id="use-cases-request-and-response-format-response-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format-response" class="level-3" pref="#use-cases-request-and-response-format-response">Response</a></li></ul></li><li id="use-cases-searching-item" class="level-2"><a id="use-cases-searching-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching" class="level-2" pref="#use-cases-searching">Searching</a><ul class="level-3" id="use-cases-searching-list"><li id="use-cases-searching-simple-match-and-fulltext-item" class="level-3"><a id="use-cases-searching-simple-match-and-fulltext-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-simple-match-and-fulltext" class="level-3" pref="#use-cases-searching-simple-match-and-fulltext">Simple Match and Fulltext</a></li><li id="use-cases-searching-fulltext-fuzzy-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy" class="level-3" pref="#use-cases-searching-fulltext-fuzzy">Fulltext: Fuzzy</a></li><li id="use-cases-searching-fulltext-autocompletewildcard-item" class="level-3"><a id="use-cases-searching-fulltext-autocompletewildcard-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-autocompletewildcard" class="level-3" pref="#use-cases-searching-fulltext-autocompletewildcard">Fulltext Autocomplete/wildcard</a></li><li id="use-cases-searching-fulltext-fuzzy-and-autocomplete-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-and-autocomplete-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy-and-autocomplete" class="level-3" pref="#use-cases-searching-fulltext-fuzzy-and-autocomplete">Fulltext: Fuzzy and Autocomplete</a></li><li id="use-cases-searching-numeric-range-item" class="level-3"><a id="use-cases-searching-numeric-range-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-numeric-range" class="level-3" pref="#use-cases-searching-numeric-range">Numeric-range</a></li><li id="use-cases-searching-geo-spatial-item" class="level-3"><a id="use-cases-searching-geo-spatial-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-geo-spatial" class="level-3" pref="#use-cases-searching-geo-spatial">Geo spatial</a></li><li id="use-cases-searching-sorting-item" class="level-3"><a id="use-cases-searching-sorting-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-sorting" class="level-3" pref="#use-cases-searching-sorting">Sorting</a></li><li id="use-cases-searching-aggregation-item" class="level-3"><a id="use-cases-searching-aggregation-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-aggregation" class="level-3" pref="#use-cases-searching-aggregation">Aggregation</a></li><li id="use-cases-searching-combining-queriesfilters-item" class="level-3"><a id="use-cases-searching-combining-queriesfilters-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-combining-queriesfilters" class="level-3" pref="#use-cases-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="use-cases-next-steps-item" class="level-2"><a id="use-cases-next-steps-link" href="/Docs/v3.0/search/use-cases.html#use-cases-next-steps" class="level-2" pref="#use-cases-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="use-cases">Use-cases</h1><p>Appbase uses Elasticsearch in the backend, and provides all the search queries and filters supported by ES, on the data stored in Appbase. Every data that’s pushed into Appbase is automatically indexed on ElasticSearch.</p><h2 id="use-cases-elasticsearch-introduction">Elasticsearch Introduction</h2><p>ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggregation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple collections and properties. To learn more about Elasticsearch, checkout <a href="http://exploringelasticsearch.com/">this very effective guide</a>.</p><h2 id="use-cases-data-mapping">Data Mapping</h2><p>As in Appbase has the concepts of collections, Documents and Properties, Elasticsearch has Types, Documents, and Fields. Let’s see how Appbase data is indexed and how these concepts are mapped.</p><table>
 <thead>
@@ -390,34 +390,34 @@ A <strong>query</strong> also <em>scores</em> the document (counts the relevance
 <p>Read more about them <a href="http://exploringelasticsearch.com/searching_data.html#sec-searching-filtering">here</a>.</p>
 </blockquote><p>For all the users with first name as “Andrew”,</p><ul>
 <li>Using the <em>term <strong>filter</strong></em>, the request object would be:</li>
-</ul><pre><code class="lang-json prettyprint">{
-    <span class="string">"filter"</span> : {
-        <span class="string">"term"</span> : { <span class="string">"firstname"</span> : <span class="string">"Andrew"</span> }
-    }
-}</code></pre><ul>
+</ul><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"filter"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"term"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="string"><span class="str">"firstname"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Andrew"</span></span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><ul>
 <li>Using the <em>term <strong>query</strong></em>, the request object would be:</li>
-</ul><pre><code class="lang-json prettyprint">{
-    <span class="string">"query"</span> : {
-        <span class="string">"term"</span> : { <span class="string">"firstname"</span> : <span class="string">"Andrew"</span> }
-    }
-}</code></pre><p> The <em>term</em> filter can also be used for other datatypes, for e.g:</p><pre><code class="lang-json prettyprint">{
-    <span class="string">"filter"</span> : {
-        <span class="string">"term"</span> : { <span class="string">"price"</span> : <span class="number">100</span> }
-    }
-}</code></pre><p>Another useful query is a <em>match query</em>. It allows to define a string of terms and it will find the documents which contains any of these terms. The more matching terms a document contains, the higher its score and higher it will be in the sorted results.</p><pre><code class="lang-json prettyprint">{
-    <span class="string">"query"</span> : {
-        <span class="string">"match"</span> : { <span class="string">"message"</span> : <span class="string">"hello world"</span> }
-    }
-}</code></pre><p>The above search request would find tweets which contains terms “hello” or “world” or both. This behavior can be controlled with <code>operator</code>. Its value defaults to “or”, but we can set to “and” as well.</p><pre><code class="lang-json prettyprint">{
-    <span class="string">"query"</span> : {
-        <span class="string">"match"</span> : {
-            <span class="string">"message"</span> : {
-                <span class="string">"query"</span> : <span class="string">"hello world"</span>,
-                <span class="string">"operator"</span> : <span class="string">"and"</span>
-            }
-        }
-    }
-}</code></pre><p>The above search request would find tweets which contains terms “hello” and “world”, both.</p><blockquote>
+</ul><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"query"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"term"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="string"><span class="str">"firstname"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Andrew"</span></span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p> The <em>term</em> filter can also be used for other datatypes, for e.g:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"filter"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"term"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="string"><span class="str">"price"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">100</span></span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>Another useful query is a <em>match query</em>. It allows to define a string of terms and it will find the documents which contains any of these terms. The more matching terms a document contains, the higher its score and higher it will be in the sorted results.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"query"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"match"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="string"><span class="str">"message"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"hello world"</span></span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>The above search request would find tweets which contains terms “hello” or “world” or both. This behavior can be controlled with <code>operator</code>. Its value defaults to “or”, but we can set to “and” as well.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"query"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"match"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"message"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="string"><span class="str">"query"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"hello world"</span></span><span class="pun">,</span><span class="pln">
+                </span><span class="string"><span class="str">"operator"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"and"</span></span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>The above search request would find tweets which contains terms “hello” and “world”, both.</p><blockquote>
 <p>Elasticseach sidenote</p>
 <h4><strong><em>match</em></strong> <em>query</em> and <strong><em>terms</em></strong> <em>filter</em></h4>
 <p>The equivalent filter for a <em>match query</em> is the <em>terms filter</em>.
@@ -690,7 +690,7 @@ product.brand != <span class="string">"Apple"</span> &amp;&amp;
   </a>
 </div></div>
 
-  <script type="text/javascript" src="/scripts/main.js"></script>
-  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
+  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>
