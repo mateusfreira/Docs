@@ -1,4 +1,8 @@
+##### AppbaseJS v2.2.15 -> 2.2.16
+- Do a GET to the server before socket-io connection, for auto-scaling server
 
+##### AppbaseJS v2.2.14 -> 2.2.15
+- using `v2_1` REST API
 
 ##### AppbaseJS v2.2.13 -> 2.2.14
 - `on()` methods now include vertex data with them.

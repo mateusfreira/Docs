@@ -15,9 +15,8 @@ Reference | Edge | Path to another data container
 
 ### 2. REST API Format
 
-The number of API endpoints have been reduced and the overall API format has been made more expressive.
+The overall API format has been made more expressive.
 
-* Fetching a resource is done by ``GET`` requests.  
-* ``PATCH`` -  creating and updating resources.
-* ``POST`` - querying data.
-* ``DELETE`` - removing properties and documents.
+* Fetching documents and references are now completely supported by ``GET`` requests. There are additional filters supported by URL parameters like **streaming queries**, **pagination**, and **timestamp** based retrieval.
+* ``PATCH`` is used for creating and updating resources.
+* ``POST`` is used for all ElasticSearch queries.

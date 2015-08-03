@@ -1,4 +1,5 @@
-# {"title": "Use-cases", "threeColumns": false}
+{"threeColumns": false}
+# Use-cases
 
 Appbase uses opensource Elasticsearch in the backend, and provides all the powerful search features of ES, on the data stored in Appbase.
 
@@ -8,7 +9,7 @@ Enabling search on a namespace causes all the vertices inside the namespace to b
 
 ## Elasticsearch Introduction
 
-ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggrigation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple namespaces and properties. To learn more about Elasticsearch, checkout [this very effective guide](http://exploringelasticsearch.com/).
+ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggregation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple namespaces and properties. To learn more about Elasticsearch, checkout [this very effective guide](http://exploringelasticsearch.com/).
 
 ## Data Mapping
 

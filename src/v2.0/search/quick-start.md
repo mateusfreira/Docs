@@ -1,4 +1,5 @@
-# {"title": "Searching for a better Search?", "threeColumns": false}
+{"threeColumns": false}
+# Searching for a better Search?
 
 Building a good quality full-text search experience for an app is a hard problem if your data resides in traditional RDBMS systems. Even database systems like MongoDB have very nascent support for search, others like DynamoDB offer no support. The hard, real fact is that these systems are not designed with search as a use-case, and one is left with a very rudimentary support like exact search match, or in the worst case scenario, even scanning the DB tables.
 
@@ -54,16 +55,16 @@ curl --include \
      --request PATCH \
      --header "Content-Type: application/json" \
      --header "Appbase-Secret: 097b2b28b6a13cf2e53b6cecfec42b86" \
-     --data-binary "    {
-        \"data\":{
-	        \"name\": \"Laura Vieria\",
-	         \"sex\": \"F\",
-			\"city\": \"Rio de Janeiro\",
-			\"country\": \"Brazil\",
-			\"occupation\": \"Graphic Designer\",
-			\"email\": \"laura@awesomedesigner.com\"
+     --data-binary '    {
+        "data": {
+	        "name": "Laura Vieria",
+	        "sex": "F",
+	        "city": "Rio de Janeiro",
+	        "country": "Brazil",
+	        "occupation": "Graphic Designer",
+	        "email": "laura@awesomedesigner.com"
         }
-    }" \
+    }' \
 'https://api.appbase.io/my_app9/v2/people/laura/~properties'
 ```
 
@@ -107,12 +108,12 @@ curl --include \
      --request POST \
      --header "Content-Type: application/json" \
      --header "Appbase-Secret: 097b2b28b6a13cf2e53b6cecfec42b86" \
-     --data-binary "    {
-        \"query\": {
-            \"text\": \"designer\",
-            \"properties\":[\"occupation\"]
+     --data-binary '    {
+        "query": {
+            "text": "designer",
+            "properties":["occupation"]
         }
-    }" \
+    }' \
 'https://api.appbase.io/my_app9/v2/people/~search'
 ```
 
@@ -170,4 +171,4 @@ That's it! In less than 10 minutes, we were able to add production grade search 
 
 ## Next Steps
 
-Do you want to customize the 'fuzziness' of your search? Or perhaps apply multiple queries and filter the data at the same time. If this has whetted your appetite, check out our main "search" course on the [ElasticSearch documentation](http://docs.appbase.io/docs/elasticsearch.html).
+Do you want to customize the 'fuzziness' of your search? Or perhaps apply multiple queries and filter the data at the same time. If this has whetted your appetite, check out our main "search" course on the [ElasticSearch documentation](http://docs.appbase.io/#/v2.0/search/use-cases).

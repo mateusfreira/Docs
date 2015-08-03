@@ -1,4 +1,5 @@
-# {"title": "Introduction", "threeColumns": true}
+{"threeColumns": true}
+# Introduction
 
 The Appbase API is based on REST principles. All operations including creating vertices and edges, fetching vertex properties (data) and edges, deleting a vertex or an edge as well as searching through vertices are RESTful. The only non-RESTful operation is realtime event streams, which works with the Websocket protocol, using socket.io.
 
@@ -123,7 +124,7 @@ connection: keep-alive
 
 Search vertices by one or more vertex properties. *Returns* an array of vertices that match the search criteria.
 
-``Note:`` Search should be enabled for the respective namespace from the databrowser interface before performing this query. 
+``Note:`` Search should be enabled for the respective namespace from the databrowser interface before performing this query.
 
 > **Example Request**
 ```curl
@@ -171,7 +172,7 @@ curl --include \
 <code>
 <b>Request</b>
 <span class="inline-heading">URL</span>
-<span class="request-type">PATCH</span> https://api.appbase.io/<span class="path-var">appname</span>/v2/<span class="path-var">namespace</span>/~search
+<span class="request-type">POST</span> https://api.appbase.io/<span class="path-var">appname</span>/v2/<span class="path-var">namespace</span>/~search
 <span class="inline-heading">HEADERS</span>
 Content-Type: application/json
 Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
@@ -572,7 +573,7 @@ curl --include \
      --data-binary '{
         "filters": {}
     }' \
-'https://api.appbase.io/rest_test/v2/Materials/Ice/~properties'
+'https://api.appbase.io/rest_test/v2/Materials/Ice/~edges'
 ```
 **Usage**:
 <ul>
@@ -647,7 +648,7 @@ connection: keep-alive
 
 ### Delete vertex edges
 
-Delete specific (or all) data properties of a vertex.
+Delete specific (or all) edges of a vertex.
 
 > **Example Request**
 ```curl
@@ -688,7 +689,7 @@ curl --include \
 </li>
 <li><span class="inline-heading">RESPONSE</span>
 	<ul>
-		<li><span class="inline-heading">STATUS</span> - ``200`` if success.</li>
+		<li><span class="inline-heading">STATUS</span> - ``204`` if success.</li>
 	</ul>
 </li>
 </ul>
@@ -733,11 +734,11 @@ ioClient = io("http://api.appbase.io:80");
 
 ## Requesting for data
 
-As vertices and namespace are represented using paths, you request for data on a path. Vertices and Namespaces are fundamentally different, and they also differ in terms of what resources you can listen to. But, they share the same Request format, with minor changes for special cases. 
+As vertices and namespace are represented using paths, you request for data on a path. Vertices and Namespaces are fundamentally different, and they also differ in terms of what resources you can listen to. But, they share the same Request format, with minor changes for special cases.
 
 ### Request Format
 
-The request object looks something like this: 
+The request object looks something like this:
 ```json
 {
 	"appname": <string>,
@@ -759,7 +760,7 @@ The request object looks something like this:
 - **appname** - The name of the application
 - **secret** - Application secret
 - **token** - Appbase Auth Token returned using the OAuth flow
-  Only any one of _secret_ or _token_ needs to be present in the request. 
+  Only any one of _secret_ or _token_ needs to be present in the request.
 - **namespace** - The namespace from where the path starts
   E.g. for path _user/andy/machod/bhenchod_, the namespace would be _user_.
 - **key** - The vertex key in the path
@@ -797,7 +798,7 @@ To turn on the listening:
 ioClient.emit('properties', requestObj);
 ```
 
-To turn the listening off: 
+To turn the listening off:
 ```js
 ioClient.emit('properties off', requestObj);
 ```
@@ -958,7 +959,7 @@ When you do a `ioClient.emit('properties off', requestObj)` to turn off the data
 Whenever an error occurs, the data will be a string, containing the error message.
 
 #### Edges
-Suppose you want to listen to edges of the vertex _user/andy_. Here's the code: 
+Suppose you want to listen to edges of the vertex _user/andy_. Here's the code:
 ```js
 var request = {
 	"appname": "chat_app",
@@ -977,7 +978,7 @@ ioClient.emit('edges', request);
 
 Whenever you listen for edges of a vertex, you first get all the existing edges and later on you keep getting the updates.
 
-If you apply filters, you only get the edges which match the filters, and you NEVER get any further changes in edges. 
+If you apply filters, you only get the edges which match the filters, and you NEVER get any further changes in edges.
 
 ##### 1. Retrieval
 ```json
@@ -1063,7 +1064,7 @@ ioClient.emit('new vertices', request);
 
 When you listen on a namespace, you first get all the existing vertices, and then as vertices are added or removed, you get the changes.
 
-##### 1. Retrieval 
+##### 1. Retrieval
 Intially, all the vertices are retrieved as an array,
 
 ```json
@@ -1110,5 +1111,3 @@ You do NOT get the properties of the vertices, you just get thier timestaps, int
 ```
 
 `data.optype` is _"REMOVE"_, and `data.vertex` is the vertex which got destroyed.
-
-
