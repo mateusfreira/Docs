@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -88,7 +88,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="images/logo.svg">
+        <img src="/images/logo.svg">
       </a>
     </div>
 
@@ -98,36 +98,36 @@ Function.prototype.bind = function bind(that) { // .length is 1
       		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
+      		  	<a ng-href=/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v2.0/concepts/datamodel.html>Datamodel</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
+      		  	<a ng-href=/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
+      		  	<a ng-href=/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/quick-start.html>Quick start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
+      		  	<a ng-href=/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
+      		  	<a ng-href=/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/angular.html>Angular Binding</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
+      		  	<a ng-href=/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/oauth.html>OAuth</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
       		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
+      		  	<a ng-href=/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
+      		  	<a ng-href=/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/use-cases.html>Use-cases</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -140,7 +140,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v2.0.html ng-bind="version" class="ng-binding" href=/Docs/v2.0.html>v2.0</a>
+          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -153,9 +157,9 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-use-cases-threecolumns-false-item" class="level-1"><a id="title-use-cases-threecolumns-false-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false" class="level-1" pref="#title-use-cases-threecolumns-false">Use-cases</a><ul class="level-2" id="title-use-cases-threecolumns-false-list"><li id="title-use-cases-threecolumns-false-elasticsearch-introduction-item" class="level-2"><a id="title-use-cases-threecolumns-false-elasticsearch-introduction-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-elasticsearch-introduction" class="level-2" pref="#title-use-cases-threecolumns-false-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="title-use-cases-threecolumns-false-data-mapping-item" class="level-2"><a id="title-use-cases-threecolumns-false-data-mapping-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-data-mapping" class="level-2" pref="#title-use-cases-threecolumns-false-data-mapping">Data Mapping</a></li><li id="title-use-cases-threecolumns-false-request-and-response-format-item" class="level-2"><a id="title-use-cases-threecolumns-false-request-and-response-format-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-request-and-response-format" class="level-2" pref="#title-use-cases-threecolumns-false-request-and-response-format">Request and Response Format</a><ul class="level-3" id="title-use-cases-threecolumns-false-request-and-response-format-list"><li id="title-use-cases-threecolumns-false-request-and-response-format-request-item" class="level-3"><a id="title-use-cases-threecolumns-false-request-and-response-format-request-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-request-and-response-format-request" class="level-3" pref="#title-use-cases-threecolumns-false-request-and-response-format-request">Request</a></li><li id="title-use-cases-threecolumns-false-request-and-response-format-response-item" class="level-3"><a id="title-use-cases-threecolumns-false-request-and-response-format-response-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-request-and-response-format-response" class="level-3" pref="#title-use-cases-threecolumns-false-request-and-response-format-response">Response</a></li></ul></li><li id="title-use-cases-threecolumns-false-searching-item" class="level-2"><a id="title-use-cases-threecolumns-false-searching-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching" class="level-2" pref="#title-use-cases-threecolumns-false-searching">Searching</a><ul class="level-3" id="title-use-cases-threecolumns-false-searching-list"><li id="title-use-cases-threecolumns-false-searching-simple-match-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-simple-match-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-simple-match" class="level-3" pref="#title-use-cases-threecolumns-false-searching-simple-match">Simple Match</a></li><li id="title-use-cases-threecolumns-false-searching-fuzzy-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-fuzzy-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-fuzzy" class="level-3" pref="#title-use-cases-threecolumns-false-searching-fuzzy">Fuzzy</a></li><li id="title-use-cases-threecolumns-false-searching-numeric-range-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-numeric-range-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-numeric-range" class="level-3" pref="#title-use-cases-threecolumns-false-searching-numeric-range">Numeric-range</a></li><li id="title-use-cases-threecolumns-false-searching-geo-spatial-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-geo-spatial-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-geo-spatial" class="level-3" pref="#title-use-cases-threecolumns-false-searching-geo-spatial">Geo spatial</a></li><li id="title-use-cases-threecolumns-false-searching-sorting-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-sorting-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-sorting" class="level-3" pref="#title-use-cases-threecolumns-false-searching-sorting">Sorting</a></li><li id="title-use-cases-threecolumns-false-searching-aggregation-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-aggregation-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-aggregation" class="level-3" pref="#title-use-cases-threecolumns-false-searching-aggregation">Aggregation</a></li><li id="title-use-cases-threecolumns-false-searching-combining-queriesfilters-item" class="level-3"><a id="title-use-cases-threecolumns-false-searching-combining-queriesfilters-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-searching-combining-queriesfilters" class="level-3" pref="#title-use-cases-threecolumns-false-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="title-use-cases-threecolumns-false-next-steps-item" class="level-2"><a id="title-use-cases-threecolumns-false-next-steps-link" href="/Docs/v2.0/search/use-cases.html#title-use-cases-threecolumns-false-next-steps" class="level-2" pref="#title-use-cases-threecolumns-false-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="use-cases-item" class="level-1"><a id="use-cases-link" href="/v2.0/search/use-cases.html#use-cases" class="level-1" pref="#use-cases">Use-cases</a><ul class="level-2" id="use-cases-list"><li id="use-cases-elasticsearch-introduction-item" class="level-2"><a id="use-cases-elasticsearch-introduction-link" href="/v2.0/search/use-cases.html#use-cases-elasticsearch-introduction" class="level-2" pref="#use-cases-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="use-cases-data-mapping-item" class="level-2"><a id="use-cases-data-mapping-link" href="/v2.0/search/use-cases.html#use-cases-data-mapping" class="level-2" pref="#use-cases-data-mapping">Data Mapping</a></li><li id="use-cases-request-and-response-format-item" class="level-2"><a id="use-cases-request-and-response-format-link" href="/v2.0/search/use-cases.html#use-cases-request-and-response-format" class="level-2" pref="#use-cases-request-and-response-format">Request and Response Format</a><ul class="level-3" id="use-cases-request-and-response-format-list"><li id="use-cases-request-and-response-format-request-item" class="level-3"><a id="use-cases-request-and-response-format-request-link" href="/v2.0/search/use-cases.html#use-cases-request-and-response-format-request" class="level-3" pref="#use-cases-request-and-response-format-request">Request</a></li><li id="use-cases-request-and-response-format-response-item" class="level-3"><a id="use-cases-request-and-response-format-response-link" href="/v2.0/search/use-cases.html#use-cases-request-and-response-format-response" class="level-3" pref="#use-cases-request-and-response-format-response">Response</a></li></ul></li><li id="use-cases-searching-item" class="level-2"><a id="use-cases-searching-link" href="/v2.0/search/use-cases.html#use-cases-searching" class="level-2" pref="#use-cases-searching">Searching</a><ul class="level-3" id="use-cases-searching-list"><li id="use-cases-searching-simple-match-item" class="level-3"><a id="use-cases-searching-simple-match-link" href="/v2.0/search/use-cases.html#use-cases-searching-simple-match" class="level-3" pref="#use-cases-searching-simple-match">Simple Match</a></li><li id="use-cases-searching-fuzzy-item" class="level-3"><a id="use-cases-searching-fuzzy-link" href="/v2.0/search/use-cases.html#use-cases-searching-fuzzy" class="level-3" pref="#use-cases-searching-fuzzy">Fuzzy</a></li><li id="use-cases-searching-numeric-range-item" class="level-3"><a id="use-cases-searching-numeric-range-link" href="/v2.0/search/use-cases.html#use-cases-searching-numeric-range" class="level-3" pref="#use-cases-searching-numeric-range">Numeric-range</a></li><li id="use-cases-searching-geo-spatial-item" class="level-3"><a id="use-cases-searching-geo-spatial-link" href="/v2.0/search/use-cases.html#use-cases-searching-geo-spatial" class="level-3" pref="#use-cases-searching-geo-spatial">Geo spatial</a></li><li id="use-cases-searching-sorting-item" class="level-3"><a id="use-cases-searching-sorting-link" href="/v2.0/search/use-cases.html#use-cases-searching-sorting" class="level-3" pref="#use-cases-searching-sorting">Sorting</a></li><li id="use-cases-searching-aggregation-item" class="level-3"><a id="use-cases-searching-aggregation-link" href="/v2.0/search/use-cases.html#use-cases-searching-aggregation" class="level-3" pref="#use-cases-searching-aggregation">Aggregation</a></li><li id="use-cases-searching-combining-queriesfilters-item" class="level-3"><a id="use-cases-searching-combining-queriesfilters-link" href="/v2.0/search/use-cases.html#use-cases-searching-combining-queriesfilters" class="level-3" pref="#use-cases-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="use-cases-next-steps-item" class="level-2"><a id="use-cases-next-steps-link" href="/v2.0/search/use-cases.html#use-cases-next-steps" class="level-2" pref="#use-cases-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><h1 id="title-use-cases-threecolumns-false">Use-cases</h1><p>Appbase uses opensource Elasticsearch in the backend, and provides all the powerful search features of ES, on the data stored in Appbase.</p><p>When you want to make some data <em>searchable</em>, you have to enable search on a namespace in the <em>Dashboard</em>. In the <em>Data Browser</em>, enable the search by toggling the <i class="fa fa-eye-slash"></i> switch on the namespace. If search is enabled, you should see this icon <i class="fa fa-eye"></i> next to the namespace. </p><p>Enabling search on a namespace causes all the vertices inside the namespace to be indexed inside Elasticsearch. New vertices created inside this namespace are automatically indexed, and searchable. When the data of a vertex is updated, the indices update automatically and new data is searchable.</p><h2 id="title-use-cases-threecolumns-false-elasticsearch-introduction">Elasticsearch Introduction</h2><p>ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggrigation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple namespaces and properties. To learn more about Elasticsearch, checkout <a href="http://exploringelasticsearch.com/">this very effective guide</a>.</p><h2 id="title-use-cases-threecolumns-false-data-mapping">Data Mapping</h2><p>As in Appbase has the concepts of Namespaces, Vertices and Properties, Elasticsearch has Types, Documents, and Fields. Let’s see how Appbase data is indexed and how these concepts are mapped.</p><table>
+  <div role="flatdoc-content" class="content"><h1 id="use-cases">Use-cases</h1><p>Appbase uses opensource Elasticsearch in the backend, and provides all the powerful search features of ES, on the data stored in Appbase.</p><p>When you want to make some data <em>searchable</em>, you have to enable search on a namespace in the <em>Dashboard</em>. In the <em>Data Browser</em>, enable the search by toggling the <i class="fa fa-eye-slash"></i> switch on the namespace. If search is enabled, you should see this icon <i class="fa fa-eye"></i> next to the namespace. </p><p>Enabling search on a namespace causes all the vertices inside the namespace to be indexed inside Elasticsearch. New vertices created inside this namespace are automatically indexed, and searchable. When the data of a vertex is updated, the indices update automatically and new data is searchable.</p><h2 id="use-cases-elasticsearch-introduction">Elasticsearch Introduction</h2><p>ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggregation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple namespaces and properties. To learn more about Elasticsearch, checkout <a href="http://exploringelasticsearch.com/">this very effective guide</a>.</p><h2 id="use-cases-data-mapping">Data Mapping</h2><p>As in Appbase has the concepts of Namespaces, Vertices and Properties, Elasticsearch has Types, Documents, and Fields. Let’s see how Appbase data is indexed and how these concepts are mapped.</p><table>
 <thead>
 <tr>
 <th>Purpose</th>
@@ -180,7 +184,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
 <td>Field</td>
 </tr>
 </tbody>
-</table><p>In a nutshell, All the <em>vertices</em> of Appbase are stored as <em>documents</em> inside ES, where the <em>namespace</em> of the vertex becomes its <em>type</em>. <em>Properties</em> of the vertex can be accessed and filtered as <em>fields</em> inside ES. </p><p>All the examples in this doc ES concepts (Type, Document and Field), as we will be making direct Elasticsearch DSL query, but the query is explained in context the of data in Appbase, so Appbase concepts (Namespace, Vertex and Property) are used.</p><h2 id="title-use-cases-threecolumns-false-request-and-response-format">Request and Response Format</h2><p>To do a raw ES query on the data, Appbase provides a <a href="">REST API endpoint</a> and the Javascript library method <a href=""><code>Appbase.rawSearch()</code></a>. Both of them, accepts similar request Query Object, and gives similar responses. </p><h3 id="title-use-cases-threecolumns-false-request-and-response-format-request">Request</h3><p>A typical request object defines:</p><ul>
+</table><p>In a nutshell, All the <em>vertices</em> of Appbase are stored as <em>documents</em> inside ES, where the <em>namespace</em> of the vertex becomes its <em>type</em>. <em>Properties</em> of the vertex can be accessed and filtered as <em>fields</em> inside ES. </p><p>All the examples in this doc ES concepts (Type, Document and Field), as we will be making direct Elasticsearch DSL query, but the query is explained in context the of data in Appbase, so Appbase concepts (Namespace, Vertex and Property) are used.</p><h2 id="use-cases-request-and-response-format">Request and Response Format</h2><p>To do a raw ES query on the data, Appbase provides a <a href="">REST API endpoint</a> and the Javascript library method <a href=""><code>Appbase.rawSearch()</code></a>. Both of them, accepts similar request Query Object, and gives similar responses. </p><h3 id="use-cases-request-and-response-format-request">Request</h3><p>A typical request object defines:</p><ul>
 <li><strong>namespaces</strong> - <em>array</em> : The namespaces on which the query will run</li>
 <li><strong>body</strong> - <em>object</em> : The Elasticsearch Query DSL body</li>
 </ul><p>Elasticsearch provides rich Query DSL (Domain Specific Language) based on JSON to define queries. Queries involving major usecases are covered in this documentation, but if you want to know more about DSL, goto <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html">this link</a>.</p><p>This is a sample request Query Object: </p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
@@ -193,7 +197,7 @@ Function.prototype.bind = function bind(that) { // .length is 1
              </span><span class="pun">}</span><span class="pln">
          </span><span class="pun">}</span><span class="pln">
      </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Do not worry about the <code>body</code> of this object for now, we will see how to define it for different use cases in this document.</p><h3 id="title-use-cases-threecolumns-false-request-and-response-format-response">Response</h3><p>We provide an unaltered DSL Response from ES. A typical response includes:</p><ul>
+</span><span class="pun">}</span></code></pre><p>Do not worry about the <code>body</code> of this object for now, we will see how to define it for different use cases in this document.</p><h3 id="use-cases-request-and-response-format-response">Response</h3><p>We provide an unaltered DSL Response from ES. A typical response includes:</p><ul>
 <li><strong>took</strong> - <em>number</em> : The time it took for the query to run</li>
 <li><strong>timeout</strong> - <em>boolean</em> : If the was query timed out</li>
 <li><strong>_shards</strong> -  <em>object</em> : Sharding information</li>
@@ -252,7 +256,7 @@ The <em>score</em> of a result describes how close it matches the query.</p>
             </span><span class="pun">}</span><span class="pln">
         </span><span class="pun">]</span><span class="pln">
     </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><h2 id="title-use-cases-threecolumns-false-searching">Searching</h2><p>We see one by one, what queries apply in which search use cases, how you can combine them, and harness the full power that Elasticsearch provides. </p><p>In each use case below, it is first described how the data is stored, and what kind of search we are trying to achieve on the data. Let’s start with basic use case.</p><h3 id="title-use-cases-threecolumns-false-searching-simple-match">Simple <em>Match</em></h3><p>This is the most basic use case we can think of, where you want to just find out vertices which contain a certain <em>term</em>, either as a string or a number. </p><p>For example, <em>“give me all the..”</em></p><ul>
+</span><span class="pun">}</span></code></pre><h2 id="use-cases-searching">Searching</h2><p>We see one by one, what queries apply in which search use cases, how you can combine them, and harness the full power that Elasticsearch provides. </p><p>In each use case below, it is first described how the data is stored, and what kind of search we are trying to achieve on the data. Let’s start with basic use case.</p><h3 id="use-cases-searching-simple-match">Simple <em>Match</em></h3><p>This is the most basic use case we can think of, where you want to just find out vertices which contain a certain <em>term</em>, either as a string or a number. </p><p>For example, <em>“give me all the..”</em></p><ul>
 <li>users with first name “Andrew”</li>
 <li>products priced at “$100”</li>
 <li>tweets which say “hello”</li>
@@ -325,7 +329,7 @@ Read more about them:
             </span><span class="pun">}</span><span class="pln">
         </span><span class="pun">}</span><span class="pln">
     </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>For more fine tuned searches, like on the users with first name as “Andrew” and last name as “Garlic”, we have to combine queries/filters. We see that later in this document.</p><h3 id="title-use-cases-threecolumns-false-searching-fuzzy">Fuzzy</h3><p>A fuzzy search matches with the documents who have the terms matching <em>nearly</em>  the search term.</p><p>This is very useful for Google-like searches, where there could be some typing mistakes, or the user is not sure what word exactly he is searching for. </p><p>The simplest way to do a <em>fuzzy query</em> is:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>For more fine tuned searches, like on the users with first name as “Andrew” and last name as “Garlic”, we have to combine queries/filters. We see that later in this document.</p><h3 id="use-cases-searching-fuzzy">Fuzzy</h3><p>A fuzzy search matches with the documents who have the terms matching <em>nearly</em>  the search term.</p><p>This is very useful for Google-like searches, where there could be some typing mistakes, or the user is not sure what word exactly he is searching for. </p><p>The simplest way to do a <em>fuzzy query</em> is:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
     </span><span class="string"><span class="str">"namespaces"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"tweet"</span></span><span class="pun">],</span><span class="pln">
     </span><span class="string"><span class="str">"body"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
         </span><span class="string"><span class="str">"query"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
@@ -339,7 +343,7 @@ Read more about them:
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html"><em>fuzzy</em> query</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-flt-query.html"><em>fuzzy-like-this</em> query</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html"><em>more-like-this</em> query</a></p>
-</blockquote><h3 id="title-use-cases-threecolumns-false-searching-numeric-range">Numeric-range</h3><p><em>“Give me all the…”</em></p><ul>
+</blockquote><h3 id="use-cases-searching-numeric-range">Numeric-range</h3><p><em>“Give me all the…”</em></p><ul>
 <li>products priced at less than <em>$100</em>, more than <em>$50</em> </li>
 <li>pages between <em>5</em> and <em>10</em></li>
 </ul><p>We can use the <em>range filter</em>.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
@@ -358,7 +362,7 @@ Read more about them:
 <p><sup>Elasticseach sidenote</sup></p>
 <h4><strong><em>range</em></strong> <em>filter</em></h4>
 <p>It can also perform greater/less <em>or equal </em> searches. See the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-range-filter.html"><em>range</em> filter documentation</a> for more details.</p>
-</blockquote><h3 id="title-use-cases-threecolumns-false-searching-geo-spatial">Geo spatial</h3><p>Elasticsearch requires you to store your the geographic location using longitude and latitude, stored as a nested JSON object. Lets say that we are storing restaurants, along with their location. The data of a restaurant would be: </p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+</blockquote><h3 id="use-cases-searching-geo-spatial">Geo spatial</h3><p>Elasticsearch requires you to store your the geographic location using longitude and latitude, stored as a nested JSON object. Lets say that we are storing restaurants, along with their location. The data of a restaurant would be: </p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
     </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Sanro Vegetarian Restaurant"</span></span><span class="pun">,</span><span class="pln">
     </span><span class="string"><span class="str">"location"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
         </span><span class="string"><span class="str">"lat"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="number"><span class="lit">40</span></span><span class="lit">.</span><span class="number"><span class="lit">12</span></span></span><span class="pln">
@@ -388,7 +392,7 @@ Read more about them:
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geo-polygon-filter.html"><em>geo-polygon</em> filter</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geo-shape-filter.html"><em>geo-shape</em> filter</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geohash-cell-filter.html"><em>geohash-cell</em> filter</a></p>
-</blockquote><h3 id="title-use-cases-threecolumns-false-searching-sorting">Sorting</h3><p>Results are sorted according to their <em>score</em> by default. We can change this behavior by applying <em>sort</em> parameter in the request.</p><p>Earlier in the <em>numeric range</em> use case, we searched for products in price range $50 and $100. Let’s sort the results according to their price, and then name.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+</blockquote><h3 id="use-cases-searching-sorting">Sorting</h3><p>Results are sorted according to their <em>score</em> by default. We can change this behavior by applying <em>sort</em> parameter in the request.</p><p>Earlier in the <em>numeric range</em> use case, we searched for products in price range $50 and $100. Let’s sort the results according to their price, and then name.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
     </span><span class="string"><span class="str">"namespaces"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"product"</span></span><span class="pun">],</span><span class="pln">
     </span><span class="string"><span class="str">"body"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
         </span><span class="string"><span class="str">"filter"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
@@ -404,10 +408,10 @@ Read more about them:
 <h4><strong><em>sorting</em></strong></h4>
 <p>You can specify the order of the sort (asc, desc), you can also sort on multi-valued fields. Geo Location based sort is possible too.
 Take a look at the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-sort.html"><em>sort</em> documentation</a>.</p>
-</blockquote><h3 id="title-use-cases-threecolumns-false-searching-aggregation">Aggregation</h3><p>There are types of aggregation supported in Elasticsearch. </p><ol>
+</blockquote><h3 id="use-cases-searching-aggregation">Aggregation</h3><p>There are types of aggregation supported in Elasticsearch. </p><ol>
 <li>Grouping (Bucketing): vertices are grouped together based on criteria.</li>
 <li>Metric: keep track and compute metrics over a set of documents.</li>
-</ol><p>There wide varieties of aggregations and criteria, based on string-terms, locations, dates, numbers, etc. Take a look at the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html"><em>Aggregation API</em> documentation</a>.</p><h3 id="title-use-cases-threecolumns-false-searching-combining-queriesfilters">Combining queries/filters</h3><p><em>“Give me all the products which..”</em></p><ul>
+</ol><p>There wide varieties of aggregations and criteria, based on string-terms, locations, dates, numbers, etc. Take a look at the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html"><em>Aggregation API</em> documentation</a>.</p><h3 id="use-cases-searching-combining-queriesfilters">Combining queries/filters</h3><p><em>“Give me all the products which..”</em></p><ul>
 <li>are mobile phones
 <em>and</em></li>
 <li>are priced at lower than $800
@@ -487,13 +491,13 @@ product</span><span class="pun">.</span><span class="pln">brand </span><span cla
 <p>As you can see in the example here, we have using bool filters. This way you can write really complex search requests. To know more check out:
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-bool-query.html"><em>bool</em> query documentation</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-bool-filter.html"><em>bool</em> filter documentation</a></p>
-</blockquote><h2 id="title-use-cases-threecolumns-false-next-steps">Next steps</h2><p>This document may only be able to give you a headstart on Elasticsearch, and it is impossible to cover every use case and feature provided by Elasticsearch. </p><p>If you have confusions on any of the use cases covered here, see the additional notes and links provided beside them.</p><p>To understand the Elasticsearch from the basics to advanced level, the book <a href="http://exploringelasticsearch.com/">“Exploring Elasticsearch” by Andrew Cholakian</a>, and <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/index.html">Elasticsearch: The Definitive Guide</a> are definitely helpful.</p></div>
+</blockquote><h2 id="use-cases-next-steps">Next steps</h2><p>This document may only be able to give you a headstart on Elasticsearch, and it is impossible to cover every use case and feature provided by Elasticsearch. </p><p>If you have confusions on any of the use cases covered here, see the additional notes and links provided beside them.</p><p>To understand the Elasticsearch from the basics to advanced level, the book <a href="http://exploringelasticsearch.com/">“Exploring Elasticsearch” by Andrew Cholakian</a>, and <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/index.html">Elasticsearch: The Definitive Guide</a> are definitely helpful.</p></div>
   <a class="edit" ng-href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v2.0/search/use-cases.md" target="_blank" href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v2.0/search/use-cases.md">
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
 
-  <script type="text/javascript" src="scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

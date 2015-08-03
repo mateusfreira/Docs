@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
 
 </head>
 <body role="flatdoc" class="">
@@ -88,47 +88,54 @@ Function.prototype.bind = function bind(that) { // .length is 1
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#/">
-        <img src="images/logo.svg">
+        <img src="/images/logo.svg">
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
       	<!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">changelog</a>
+      		<a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">Changelog</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>changelog</a>
+      		  	<a ng-href=/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/v3.0/changelog/changelog.html>Changelog</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">concepts</a>
+      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/concepts/datamodel.html>datamodel</a>
+      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">javascript</a>
+      		<a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">Search</a>
       		<ul class="dropdown-menu">
       		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/javascript/api-reference.html>api-reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">rest</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/rest/api-reference.html>api-reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">search</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/quick-start.html>quick-start</a>
+      		  	<a ng-href=/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/quick-start.html>Quick Start</a>
       		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/use-cases.html>use-cases</a>
+      		  	<a ng-href=/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/use-cases.html>Use-cases</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">Concepts</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v3.0/concepts/datamodel.html>Datamodel</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">Javascript</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/javascript/api-reference.html>API Reference</a>
       		  </li><!-- end ngRepeat: file in folder.files -->
       		</ul>
       	</li><!-- end ngRepeat: folder in map[currentVersion] -->
@@ -141,9 +148,11 @@ Function.prototype.bind = function bind(that) { // .length is 1
           </a>
           <ul class="dropdown-menu version-switcher" role="menu">
           	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v2.0.html ng-bind="version" class="ng-binding" href=/Docs/v2.0.html>v2.0</a>
+          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
           	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v3.0.html ng-bind="version" class="ng-binding" href=/Docs/v3.0.html>v3.0</a>
+          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
           	</li><!-- end ngRepeat: version in versions -->
           </ul>
         </li>
@@ -156,267 +165,750 @@ Function.prototype.bind = function bind(that) { // .length is 1
 </nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-introduction-threecolumns-true-item" class="level-1"><a id="title-introduction-threecolumns-true-link" href="/Docs/v3.0/rest/api-reference.html#title-introduction-threecolumns-true" class="level-1" pref="#title-introduction-threecolumns-true">Introduction</a></li><li id="api-quick-reference-item" class="level-1"><a id="api-quick-reference-link" href="/Docs/v3.0/rest/api-reference.html#api-quick-reference" class="level-1" pref="#api-quick-reference">API Quick Reference</a><ul class="level-2" id="api-quick-reference-list"><li id="api-quick-reference-http-status-codes-item" class="level-2"><a id="api-quick-reference-http-status-codes-link" href="/Docs/v3.0/rest/api-reference.html#api-quick-reference-http-status-codes" class="level-2" pref="#api-quick-reference-http-status-codes">HTTP Status Codes</a></li><li id="api-quick-reference-errors-item" class="level-2"><a id="api-quick-reference-errors-link" href="/Docs/v3.0/rest/api-reference.html#api-quick-reference-errors" class="level-2" pref="#api-quick-reference-errors">Errors</a></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/Docs/v3.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-httpapiappbaseioappnamev3-global-item" class="level-2"><a id="api-reference-httpapiappbaseioappnamev3-global-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-httpapiappbaseioappnamev3-global" class="level-2" pref="#api-reference-httpapiappbaseioappnamev3-global">http://api.appbase.io/appname/v3 - Global</a><ul class="level-3" id="api-reference-httpapiappbaseioappnamev3-global-list"><li id="api-reference-httpapiappbaseioappnamev3-global-get-item" class="level-3"><a id="api-reference-httpapiappbaseioappnamev3-global-get-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-httpapiappbaseioappnamev3-global-get" class="level-3" pref="#api-reference-httpapiappbaseioappnamev3-global-get">GET</a></li><li id="api-reference-httpapiappbaseioappnamev3-global-document-resource-notes-item" class="level-3"><a id="api-reference-httpapiappbaseioappnamev3-global-document-resource-notes-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-httpapiappbaseioappnamev3-global-document-resource-notes" class="level-3" pref="#api-reference-httpapiappbaseioappnamev3-global-document-resource-notes">Document Resource Notes:</a></li></ul></li><li id="api-reference-collection-item" class="level-2"><a id="api-reference-collection-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-collection" class="level-2" pref="#api-reference-collection">Collection</a><ul class="level-3" id="api-reference-collection-list"><li id="api-reference-collection-create-patch-item" class="level-3"><a id="api-reference-collection-create-patch-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-collection-create-patch" class="level-3" pref="#api-reference-collection-create-patch">Create PATCH</a></li><li id="api-reference-collection-delete-delete-item" class="level-3"><a id="api-reference-collection-delete-delete-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-collection-delete-delete" class="level-3" pref="#api-reference-collection-delete-delete">Delete DELETE</a></li><li id="api-reference-collection-read-get-item" class="level-3"><a id="api-reference-collection-read-get-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-collection-read-get" class="level-3" pref="#api-reference-collection-read-get">Read GET</a></li><li id="api-reference-collection-push-json-to-a-new-document-post-item" class="level-3"><a id="api-reference-collection-push-json-to-a-new-document-post-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-collection-push-json-to-a-new-document-post" class="level-3" pref="#api-reference-collection-push-json-to-a-new-document-post">Push JSON to a new document POST</a></li></ul></li><li id="api-reference-document-item" class="level-2"><a id="api-reference-document-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document" class="level-2" pref="#api-reference-document">Document</a><ul class="level-3" id="api-reference-document-list"><li id="api-reference-document-create-update-document-patch-item" class="level-3"><a id="api-reference-document-create-update-document-patch-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-create-update-document-patch" class="level-3" pref="#api-reference-document-create-update-document-patch">Create / Update Document PATCH</a></li><li id="api-reference-document-delete-delete-item" class="level-3"><a id="api-reference-document-delete-delete-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-delete-delete" class="level-3" pref="#api-reference-document-delete-delete">Delete DELETE</a></li><li id="api-reference-document-creating-references-item" class="level-3"><a id="api-reference-document-creating-references-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-creating-references" class="level-3" pref="#api-reference-document-creating-references">Creating References</a></li><li id="api-reference-document-with-a-reference-name-patch-item" class="level-3"><a id="api-reference-document-with-a-reference-name-patch-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-with-a-reference-name-patch" class="level-3" pref="#api-reference-document-with-a-reference-name-patch">with a Reference Name PATCH</a></li><li id="api-reference-document-without-a-reference-name-post-item" class="level-3"><a id="api-reference-document-without-a-reference-name-post-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-without-a-reference-name-post" class="level-3" pref="#api-reference-document-without-a-reference-name-post">without a Reference Name POST</a></li><li id="api-reference-document-read-document-get-item" class="level-3"><a id="api-reference-document-read-document-get-link" href="/Docs/v3.0/rest/api-reference.html#api-reference-document-read-document-get" class="level-3" pref="#api-reference-document-read-document-get">Read Document GET</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/v3.0/rest/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a><ul class="level-2" id="introduction-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="introduction-resource-types-item" class="level-3"><a id="introduction-resource-types-link" href="/v3.0/rest/api-reference.html#introduction-resource-types" class="level-3" pref="#introduction-resource-types">Resource Types</a></li><li id="introduction-allowed-http-request-types-item" class="level-3"><a id="introduction-allowed-http-request-types-link" href="/v3.0/rest/api-reference.html#introduction-allowed-http-request-types" class="level-3" pref="#introduction-allowed-http-request-types">Allowed HTTP Request Types</a></li><li id="introduction-authorization-item" class="level-3"><a id="introduction-authorization-link" href="/v3.0/rest/api-reference.html#introduction-authorization" class="level-3" pref="#introduction-authorization">Authorization</a></li><li id="introduction-base-uri-item" class="level-3"><a id="introduction-base-uri-link" href="/v3.0/rest/api-reference.html#introduction-base-uri" class="level-3" pref="#introduction-base-uri">Base URI</a></li></ul></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/v3.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-introduction-item" class="level-2"><a id="api-reference-introduction-link" href="/v3.0/rest/api-reference.html#api-reference-introduction" class="level-2" pref="#api-reference-introduction">Introduction</a></li><li id="api-reference-global-item" class="level-2"><a id="api-reference-global-link" href="/v3.0/rest/api-reference.html#api-reference-global" class="level-2" pref="#api-reference-global">Global</a><ul class="level-3" id="api-reference-global-list"><li id="api-reference-global-server-time-item" class="level-3"><a id="api-reference-global-server-time-link" href="/v3.0/rest/api-reference.html#api-reference-global-server-time" class="level-3" pref="#api-reference-global-server-time">Server Time</a></li><li id="api-reference-global-list-collections-item" class="level-3"><a id="api-reference-global-list-collections-link" href="/v3.0/rest/api-reference.html#api-reference-global-list-collections" class="level-3" pref="#api-reference-global-list-collections">List collections</a></li><li id="api-reference-global-search-collections-item" class="level-3"><a id="api-reference-global-search-collections-link" href="/v3.0/rest/api-reference.html#api-reference-global-search-collections" class="level-3" pref="#api-reference-global-search-collections">Search collections</a></li></ul></li><li id="api-reference-collection-item" class="level-2"><a id="api-reference-collection-link" href="/v3.0/rest/api-reference.html#api-reference-collection" class="level-2" pref="#api-reference-collection">Collection</a><ul class="level-3" id="api-reference-collection-list"><li id="api-reference-collection-list-all-documents-item" class="level-3"><a id="api-reference-collection-list-all-documents-link" href="/v3.0/rest/api-reference.html#api-reference-collection-list-all-documents" class="level-3" pref="#api-reference-collection-list-all-documents">List all documents</a></li><li id="api-reference-collection-search-documents-by-propertyies-item" class="level-3"><a id="api-reference-collection-search-documents-by-propertyies-link" href="/v3.0/rest/api-reference.html#api-reference-collection-search-documents-by-propertyies" class="level-3" pref="#api-reference-collection-search-documents-by-propertyies">Search Documents by property(ies)</a></li></ul></li><li id="api-reference-document-properties-item" class="level-2"><a id="api-reference-document-properties-link" href="/v3.0/rest/api-reference.html#api-reference-document-properties" class="level-2" pref="#api-reference-document-properties">Document Properties</a><ul class="level-3" id="api-reference-document-properties-list"><li id="api-reference-document-properties-create-update-document-properties-item" class="level-3"><a id="api-reference-document-properties-create-update-document-properties-link" href="/v3.0/rest/api-reference.html#api-reference-document-properties-create-update-document-properties" class="level-3" pref="#api-reference-document-properties-create-update-document-properties">Create / Update Document Properties</a></li><li id="api-reference-document-properties-read-document-properties-item" class="level-3"><a id="api-reference-document-properties-read-document-properties-link" href="/v3.0/rest/api-reference.html#api-reference-document-properties-read-document-properties" class="level-3" pref="#api-reference-document-properties-read-document-properties">Read Document Properties</a></li><li id="api-reference-document-properties-delete-document-properties-item" class="level-3"><a id="api-reference-document-properties-delete-document-properties-link" href="/v3.0/rest/api-reference.html#api-reference-document-properties-delete-document-properties" class="level-3" pref="#api-reference-document-properties-delete-document-properties">Delete document properties</a></li></ul></li><li id="api-reference-document-references-item" class="level-2"><a id="api-reference-document-references-link" href="/v3.0/rest/api-reference.html#api-reference-document-references" class="level-2" pref="#api-reference-document-references">Document References</a><ul class="level-3" id="api-reference-document-references-list"><li id="api-reference-document-references-create-update-document-references-item" class="level-3"><a id="api-reference-document-references-create-update-document-references-link" href="/v3.0/rest/api-reference.html#api-reference-document-references-create-update-document-references" class="level-3" pref="#api-reference-document-references-create-update-document-references">Create / Update Document References</a></li><li id="api-reference-document-references-read-references-item" class="level-3"><a id="api-reference-document-references-read-references-link" href="/v3.0/rest/api-reference.html#api-reference-document-references-read-references" class="level-3" pref="#api-reference-document-references-read-references">Read References</a></li><li id="api-reference-document-references-delete-references-item" class="level-3"><a id="api-reference-document-references-delete-references-link" href="/v3.0/rest/api-reference.html#api-reference-document-references-delete-references" class="level-3" pref="#api-reference-document-references-delete-references">Delete References</a></li></ul></li><li id="api-reference-delete-document-item" class="level-2"><a id="api-reference-delete-document-link" href="/v3.0/rest/api-reference.html#api-reference-delete-document" class="level-2" pref="#api-reference-delete-document">Delete Document</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><h1 id="title-introduction-threecolumns-true">Introduction</h1><p>The Appbase v3.0 API is based on REST principles. All operations including creating documents and references, fetching a specific document, deleting a document or searching through documents are RESTful. The only non-RESTful operation is realtime event streams, which works with the Websocket protocol, via sockjs.</p><h1 id="api-quick-reference">API Quick Reference</h1><table>
-<thead>
-<tr>
-<th>Endpoint</th>
-<th>Method</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/</td>
-<td>GET</td>
-<td>list of existing collections, current time as an object</td>
-</tr>
-<tr>
-<td>/{collection_id}/</td>
-<td>GET</td>
-<td>Get/Query a list of documents</td>
-</tr>
-<tr>
-<td>/{collection_id}/</td>
-<td>PATCH</td>
-<td>Create a collection, if doesn’t exist</td>
-</tr>
-<tr>
-<td>/{collection_id}/</td>
-<td>DELETE</td>
-<td>Delete a collection</td>
-</tr>
-<tr>
-<td>/{collection_id}/</td>
-<td>POST</td>
-<td>create a new document inside collection with an auto generated id</td>
-</tr>
-<tr>
-<td>/{collection_id}/{document_id}/{path}/</td>
-<td>GET</td>
-<td>get/listen properties, Query references</td>
-</tr>
-<tr>
-<td>/{collection_id}/{document_id}/{path}/</td>
-<td>PATCH</td>
-<td>create object; partially update properties; put-remove a reference</td>
-</tr>
-<tr>
-<td>/{collection_id}/{document_id}/{path}/</td>
-<td>POST</td>
-<td>push a JSON to create a new object and a reference</td>
-</tr>
-<tr>
-<td>/{collection_id}/{document_id}/{path}/</td>
-<td>DELETE</td>
-<td>delete the whole document</td>
-</tr>
-</tbody>
-</table><h2 id="api-quick-reference-http-status-codes">HTTP Status Codes</h2><ul>
-<li>200 (Success): for every request that succeeds, also the create/delete ones</li>
-<li>404 (not found): when the path doesn’t exist</li>
-<li>401 (Unauthorized): when secret or token is not present, or is invalid</li>
-<li>500 (Server error): internal server errors, like when ES indexing failed or something</li>
-<li>501 (Not Implemented) : When trying to use a wrong HTTP method on the endpoint</li>
-<li>400 (Bad Request): </li>
-<li>403 (Forbidden): a thing to keep in mind for the next backend - When the security rules do not allow the access</li>
-<li>409 (Conflict): for commitData</li>
-</ul><h2 id="api-quick-reference-errors">Errors</h2><p>On top of HTTP status code, we return a json document for errors. the document looks like: </p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    error</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln">number</span><span class="pun">&gt;</span><span class="pln">
-    message</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln">string</span><span class="pun">&gt;</span><span class="pln">
-</span><span class="pun">}</span></code></pre><h1 id="api-reference">API Reference</h1><h2 id="api-reference-httpapiappbaseioappnamev3-global"><a href="http://api.appbase.io/appname/v3">http://api.appbase.io/appname/v3</a> - Global</h2><h3 id="api-reference-httpapiappbaseioappnamev3-global-get"><code>GET</code></h3><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    _time</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">346274526</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"_timezone"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"UTC"</span></span><span class="pun">,</span><span class="pln"> </span><span class="comment"><span class="com">// always - infact server</span><span class="string"><span class="com">'s own system time is in UTC - simplifies Elasticsearch'</span></span><span class="com">s relative time features</span></span><span class="pln">
-        </span><span class="string"><span class="str">"_ISOString"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">2015</span></span><span class="str">-</span><span class="number"><span class="str">02</span></span><span class="str">-</span><span class="number"><span class="str">27</span></span><span class="str">T</span><span class="number"><span class="str">02</span></span><span class="str">:</span><span class="number"><span class="str">51</span></span><span class="str">:</span><span class="number"><span class="number"><span class="str">50</span></span><span class="str">.</span><span class="number"><span class="str">968</span></span></span><span class="str">Z"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="pun">},</span><span class="pln">
-    _collections</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">"user"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"tweet"</span></span><span class="pun">]</span><span class="pln">
-</span><span class="pun">}</span></code></pre><h3 id="api-reference-httpapiappbaseioappnamev3-global-document-resource-notes">Document Resource Notes:</h3><ul>
-<li><p>properties - that can not be used by the developer:</p>
+  <div role="flatdoc-content" class="content"><h1 id="introduction">Introduction</h1><p>The Appbase API is based on REST principles. All operations including creation of new documents and references, fetching document (JSON) and references, deleting a document or a reference as well as searching through documents are RESTful.</p><h3 id="introduction-resource-types">Resource Types</h3><ul>
+<li><code>Collection</code> - A container of JSON documents</li>
+<li><code>Document</code> - A JSON object, can contain embedded documents</li>
+<li><code>Reference</code> - A reference is an alias to another document</li>
+<li><code>Path</code> - A path consists of a document and one or more references</li>
+</ul><h3 id="introduction-allowed-http-request-types">Allowed HTTP Request Types</h3><ul>
+<li><code>PATCH</code> - Partial Updates to an Existing Resource OR Creates a new resource</li>
+<li><code>POST</code> - Querying</li>
+<li><code>GET</code> - Fetches a resource</li>
+<li><code>DELETE</code> - Delete a resource</li>
+</ul><h3 id="introduction-authorization">Authorization</h3><p>Appbase accepts one of the two methods of authorizations.</p><ol>
+<li>Header based authorization (preferred) - Add a HTTP header “Appbase-Secret” to each request, with value as the app’s <em>secret key</em>.</li>
+<li>Add a field “secret” : “&lt;secret-key&gt;” in the JSON body of the request.</li>
+</ol><p>In this document, we will be using the 1. method since it makes authorization distinct from the request data.</p><h3 id="introduction-base-uri">Base URI</h3><p>Base URI is the fixed URI that is common for all the API request endpoints and is prefix to all the API requests. A base URI has two path variables: <strong>appname</strong> and <strong>api_version</strong>. A typical base URI looks like <a href="https://v3.api.appbase.io/&lt;appname&gt;/">https://v3.api.appbase.io/&lt;appname&gt;/</a>.</p><h1 id="api-reference">API Reference</h1><h2 id="api-reference-introduction">Introduction</h2><p>The Appbase API endpoints are divided between three types of different resources.</p><ol>
+<li><code>Collection</code> - A container of JSON documents</li>
+<li><code>Document</code> - A JSON object, can contain embedded documents</li>
+<li><code>Reference</code> - A reference is an alias to another document</li>
+</ol><h4>Path: New Concept</h4><p>A path consists of a document and one or more references. It’s similar to how symlinks work in *nix filesystems.</p><h2 id="api-reference-global">Global</h2><h3 id="api-reference-global-server-time">Server Time</h3><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">H </span><span class="string"><span class="str">"Appbase-Secret: </span><span class="number"><span class="str">193</span></span><span class="str">dc</span><span class="number"><span class="str">4</span></span><span class="str">d</span><span class="number"><span class="str">2440146082</span></span><span class="str">ea</span><span class="number"><span class="str">734</span></span><span class="str">f</span><span class="number"><span class="str">36</span></span><span class="str">f</span><span class="number"><span class="str">4</span></span><span class="str">f</span><span class="number"><span class="str">2638</span></span><span class="str">"</span></span><span class="pln"> \
+  </span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//v</span><span class="number"><span class="str">3</span></span><span class="str">.api.appbase.io/rest_test/~timestamp'</span></span></span></code></pre>
+<p><strong>Usage</strong>:</p>
 <ul>
-<li>_id - uuid of the document - unique across the collection - also represents the document’s path: <code>collection/id</code></li>
-<li>_timestamp - used for internal timestamping</li>
-<li>_collection - collection where it belongs</li>
-<li>_deleted - keeping track of deleted documents</li>
-<li>deprecated in this version:<ul>
-<li>rootPath &lt;-replaced by id and collection</li>
-</ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns server timestamp in milliseconds.</li>
+    </ul>
 </li>
 </ul>
-</li>
-</ul><hr><h2 id="api-reference-collection">Collection</h2><p>Operate on namespaces.</p><h3 id="api-reference-collection-create-patch"><strong>Create</strong> <code>PATCH</code></h3><p>Create a new collection if it doesn’t exist. This is NOT a required step to create documents inside that collection. Collections are created automatically.</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \  
-</span><span class="str">'https://api.appbase.io/rest_test/v3/Materials'</span></code></pre><p>Reponse: (when the collection is newly created)</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_created"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="comment"><span class="com">// as it is a new collection</span></span><span class="pln">
-    </span><span class="string"><span class="str">"_createdAt"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">2301249092</span></span><span class="pln"> </span><span class="comment"><span class="com">//timestamp in UTC</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>(when the collection already exists)</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_createdAt"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">2301249092</span></span><span class="pln"> </span><span class="comment"><span class="com">//timestamp in UTC</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre><h3 id="api-reference-collection-delete-delete"><strong>Delete</strong> <code>DELETE</code></h3><p>Delete the collection and all its documents.</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X DELETE \  
-</span><span class="str">'https://api.appbase.io/rest_test/v3/Materials'</span></code></pre><p>Response: </p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_createdAt"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">2301249092</span></span><span class="pun">,</span><span class="pln"> </span><span class="comment"><span class="com">//timestamp in UTC</span></span><span class="pln">
-    </span><span class="string"><span class="str">"_deleted"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
-</span><span class="pun">}</span></code></pre><h3 id="api-reference-collection-read-get"><strong>Read</strong> <code>GET</code></h3><p>Receive all the documents inside, provide a <code>query=</code> url parameter for querying the documents.</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i \    
-</span><span class="str">'https://api.appbase.io/rest_test/v3/Materials</span></code></pre><p>Response:</p><p><code>200</code></p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
 
-    </span><span class="string"><span class="str">"/abc"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"abc"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pln">
-        </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">2021692</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"bar"</span></span><span class="pln">
-    </span><span class="pun">},</span><span class="pln">
-    </span><span class="string"><span class="str">"/pqr"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pln"> </span><span class="comment"><span class="com">// deleted</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:
- - If a <code>timestamp</code> is provided in the url parameter, it will work as a <em>sync</em> and only the documents updated after that will be returned. Documents that are deleted will be returned too, with <code>"/doc_id": null</code>. 
- - response also includes the request url parameters (query, timestamp etc) 
- - By default, at most <code>50</code> documents are returned. Thus the default query becomes: <code>{ size: 50, query: {match_all: {}}}</code>. To fetch more, provide a proper <code>query</code>. </p><h3 id="api-reference-collection-push-json-to-a-new-document-post"><strong>Push JSON to a new document</strong> <code>POST</code></h3><p>Push a JSON and create a new document out of it in a collection. It will be given a UUID as its doc id by default.</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X POST \  
-</span><span class="pun">-</span><span class="pln">d </span><span class="str">'{
-        "name": "lanny"
-    }
-}'</span><span class="pln"> \  
-</span><span class="str">'https://api.appbase.io/rest_test/v3/user/'</span></code></pre><p>Response:</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"/asd</span><span class="number"><span class="str">34234</span></span><span class="str">"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asd</span><span class="number"><span class="str">34234</span></span><span class="str">"</span></span><span class="pln"> </span><span class="comment"><span class="com">//random id</span></span><span class="pln">
-        </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"lanny"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:
- -  If an <code>_id</code> field is provided inside the JSON object, that id will be used as the document’s id in Appbase. Making it fully compatible with other NoSQL stuff. For eg.</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X POST \  
-</span><span class="pun">-</span><span class="pln">d </span><span class="str">'{
-        "_id": "john"
-        "name": "john mcclane"
-    }
-}'</span><span class="pln"> \  
-</span><span class="str">'https://api.appbase.io/rest_test/v3/user/'</span></code></pre><p>Response:</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"/john"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"john"</span></span><span class="pln">
-        </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"john mcclane"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Now fetching that document:</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X \  
-</span><span class="str">'https://api.appbase.io/rest_test/v3/user/john'</span></code></pre><p>Note:
-If <code>_id</code> points to an existing document, it works as a <code>PATCH</code>.</p><h2 id="api-reference-document">Document</h2><p>Operate on documents inside a collection.</p><h3 id="api-reference-document-create-update-document-patch"><strong>Create / Update Document</strong> <code>PATCH</code></h3><p>Update the document properties, or create a new document when the path exists. The document and collection, are automatically created if they don’t exist.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+</blockquote><pre><code class="prettyprint prettyprinted" style=""><span class="pln">
+</span><b><span class="typ">Request</span></b><span class="pln">
+</span><span class="inline-heading"><span class="pln">URL</span></span><span class="pln">
+</span><span class="request-type"><span class="pln">GET</span></span><span class="pln"> https</span><span class="pun">:</span><span class="com">//v3.api.appbase.io/</span><span class="path-var"><span class="com">appname</span></span><span class="com">/~timestamp</span><span class="pln">
+</span><span class="inline-heading"><span class="pln">HEADERS</span></span><span class="pln">
+</span><span class="typ">Appbase</span><span class="pun">-</span><span class="typ">Secret</span><span class="pun">:</span><span class="pln"> </span><span class="lit">193dc4d2440146082ea734f36f4f2638</span><span class="pln">
+
+</span><b><span class="typ">Response</span></b><span class="pln">
+</span><span class="inline-heading"><span class="pln">STATUS</span></span><span class="pln">
+</span><span class="lit">200</span><span class="pln">
+</span><span class="inline-heading"><span class="pln">BODY</span></span><span class="pln">
+</span><span class="lit">1427598163417</span></code>
+</pre><h3 id="api-reference-global-list-collections">List collections</h3><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
 <p><strong>Example Request</strong></p>
-<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \
-</span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{</span><span class="string"><span class="str">"foo"</span></span><span class="str">: </span><span class="string"><span class="str">"bar"</span></span><span class="str">}'</span></span><span class="pln"> \
-</span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//api.appbase.io/rest_test/v</span><span class="number"><span class="str">3</span></span><span class="str">/Materials/Ice/'</span></span></span></code></pre>
-</blockquote><p>Response: 
- Return the whole updated document.</p><p><code>200</code>
-Content-Type: application/json</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">12535265236</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"bar"</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:</p><ul>
-<li>If timestamp is provided in the url parameter, it will only update the document when the request timestamp matches the stored timestamp. (commitData)</li>
-<li>only updates properties which are provided in the request</li>
-<li><p>patch properties with <code>null</code> to remove them
-eg:</p>
-<pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \
-</span><span class="pun">-</span><span class="pln">d </span><span class="str">'{"foo": "bar"}'</span><span class="pln"> \
-</span><span class="str">'https://api.appbase.io/rest_test/v3/Materials/Ice/'</span></code></pre>
-<p>Response: </p>
-<pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
- </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pln">
- </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
- </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">12535265236</span></span><span class="pun">,</span><span class="pln">
- </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pln"> </span><span class="comment"><span class="com">// null appears only in this request, as this property is removed. in subsequent requests, this property will simply be omitted </span></span><span class="pln">
-</span><span class="pun">}</span></code></pre>
-</li>
-<li><p>to update a nested field, provide nested properties with a dot (Mongo and ES convention)</p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">H </span><span class="string"><span class="str">"Appbase-Secret: </span><span class="number"><span class="str">193</span></span><span class="str">dc</span><span class="number"><span class="str">4</span></span><span class="str">d</span><span class="number"><span class="str">2440146082</span></span><span class="str">ea</span><span class="number"><span class="str">734</span></span><span class="str">f</span><span class="number"><span class="str">36</span></span><span class="str">f</span><span class="number"><span class="str">4</span></span><span class="str">f</span><span class="number"><span class="str">2638</span></span><span class="str">"</span></span><span class="pln"> \
+  </span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//v</span><span class="number"><span class="str">3</span></span><span class="str">.api.appbase.io/rest_test/~collections'</span></span></span></code></pre>
+<p><strong>Usage</strong>:</p>
 <ul>
-<li>eg: <pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-</span><span class="string"><span class="str">"authoredBy.profile.firstName"</span></span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="number"><span class="lit">52</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns an array with collection names.</li>
+    </ul>
 </li>
 </ul>
+
+</blockquote><pre><code class="prettyprint prettyprinted" style=""><span class="pln">
+</span><b><span class="typ">Request</span></b><span class="pln">
+</span><span class="inline-heading"><span class="pln">URL</span></span><span class="pln">
+</span><span class="request-type"><span class="pln">GET</span></span><span class="pln"> https</span><span class="pun">:</span><span class="com">//v3.api.appbase.io/</span><span class="path-var"><span class="com">appname</span></span><span class="com">/~collections</span><span class="pln">
+</span><span class="inline-heading"><span class="pln">HEADERS</span></span><span class="pln">
+</span><span class="typ">Appbase</span><span class="pun">-</span><span class="typ">Secret</span><span class="pun">:</span><span class="pln"> </span><span class="lit">193dc4d2440146082ea734f36f4f2638</span><span class="pln">
+
+</span><b><span class="typ">Response</span></b><span class="pln">
+</span><span class="inline-heading"><span class="pln">STATUS</span></span><span class="pln">
+</span><span class="lit">200</span><span class="pln">
+</span><span class="inline-heading"><span class="pln">BODY</span></span><span class="pln">
+</span><span class="pun">[</span><span class="str">"Materials"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"newName"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"user"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"calls"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"HXH"</span><span class="pun">]</span></code>
+</pre><h3 id="api-reference-global-search-collections">Search collections</h3><p>Search documents across one or more collections. <em>Returns</em> a JSON body matching the <strong>ElasticSearch response format</strong>. The matching search results are inside the <code>hits.hits</code> field as an array of documents. For more details, see <a href="http://docs.appbase.io/#/v3.0/search/use-cases">more queries</a> that can be done with this endpoint, including fuzzy search, numeric-range, geospatial and aggregation queries.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X POST -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+            <span class="string">"query"</span>: {
+                <span class="string">"multi_match"</span>: {
+                    <span class="string">"fields"</span>: [<span class="string">"foo"</span>],
+                    <span class="string">"query"</span>: <span class="string">"bar"</span>
+                }
+            }
+        }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/~search'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+    </ul>
 </li>
-</ul><h3 id="api-reference-document-delete-delete"><strong>Delete</strong> <code>DELETE</code></h3><p>Delete (Destroy) Document</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X DELETE \
-</span><span class="str">'https://api.appbase.io/rest_test/v3/Materials/Ice'</span></code></pre><p>Response: (get the whole document which was just deleted - omitting references) </p><p><code>200</code>
-Content-Type: application/json</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">12535265236</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_deleted"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"bar"</span></span><span class="pln">
-</span><span class="pun">}</span></code></pre><h3 id="api-reference-document-creating-references">Creating References</h3><h3 id="api-reference-document-with-a-reference-name-patch"><strong>with a Reference Name</strong> <code>PATCH</code></h3><p>Update/create references, one at a time. This is an overloaded endpoint. One can update either properties or one reference.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span>
+    <ul>
+        <li><code>collections</code> - An array of the collection names across which search should be applied.</li>
+        <li><code>body.query</code> - A JSON object representing the search query and the properties to be used for the matching criteria.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns an array of documents which match the search query. Each document is returned as an object with all the <strong>properties</strong> (both matching and non-matching), a server <code>timestamp</code> when the document was last updated, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">POST</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/~search
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+        "query": {
+                "multi_match": {
+                    "fields": ["foo"],
+                    "query": "bar"
+                }
+        }
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+    "took":126,
+    "timed_out":false,
+    "_shards":{
+        "total":5,
+        "successful":5,
+        "failed":0
+    },
+    "hits": {
+        "total":1,
+        "max_score":8.6468315,
+        "hits":[
+            {
+                "_index":"rest_test",
+                "_type":"Materials",
+                "_id":"5510233f328410803792d1cb",
+                "_score":8.6468315,
+                "_source":{
+                    "lol":"cat",
+                    "timestamp":1427120959524,
+                    "rootPath":"Materials/Es"
+                }
+            }
+        ]
+    }
+}
+</code>
+</pre><h2 id="api-reference-collection">Collection</h2><h3 id="api-reference-collection-list-all-documents">List all documents</h3><p>List the documents in the collection. <em>Returns</em> an array of documents in the given collection.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
 <p><strong>Example Request</strong></p>
-<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \  
-</span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{
-    </span><span class="string"><span class="str">"/tweetedBy"</span></span><span class="str">: </span><span class="string"><span class="str">"user/sagar"</span></span><span class="str">
-}'</span></span><span class="pln"> \  
-</span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//api.appbase.io/rest_test/v</span><span class="number"><span class="str">3</span></span><span class="str">/Materials/Ice/'</span></span></span></code></pre>
-</blockquote><p>Response: 
-<code>200</code>
-Receive the reference with its data. Receive basic properties of the document, id collection and timestamp. </p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">12535265236</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"/tweetedBy"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"abc"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asas"</span></span><span class="pln">
-        </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">2021692</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"bar"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:
- - provide a <code>null</code> for a reference name to delete a reference.</p><p>Eg: </p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+  <span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/~documents'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> identifier can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns an array of documents. Each document is returned as an object with a server <code>_timestamp</code> when the document was last updated, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">GET</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/~documents
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+[
+    {
+        "foo":"bar1",
+        "_id":"Ice",
+        "_collection":"Materials",
+        "_timestamp":1427654841414
+    },
+    {
+        "lol":"cat",
+        "_id":"Es",
+        "_collection":"Materials",
+        "_timestamp":1427120959524
+    }
+]
+</code>
+</pre><h3 id="api-reference-collection-search-documents-by-propertyies">Search Documents by property(ies)</h3><p>Search documents by one or more document properties. <em>Returns</em> a JSON body matching the <strong>ElasticSearch response format</strong>. The matching search results are inside the <code>hits.hits</code> field as an array of documents. For more details, see other queries that can be done with this <a href="http://docs.appbase.io/#/v3.0/search/use-cases">endpoint</a>, including fuzzy search, numeric-range, geospatial and aggregation queries.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
 <p><strong>Example Request</strong></p>
-<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \  
-</span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{
-    </span><span class="string"><span class="str">"/tweetedBy"</span></span><span class="str">: null
-}'</span></span><span class="pln"> \  
-</span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//api.appbase.io/rest_test/v</span><span class="number"><span class="str">3</span></span><span class="str">/Materials/Ice/'</span></span></span></code></pre>
-</blockquote><p>Response: 
-<code>200</code>
-Receive the deleted reference, set as null. Receive basic properties of the document, id collection and timestamp. </p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Materials"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">12535265236</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"/tweetedBy"</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:</p><ul>
-<li>references don’t have any meta data. No priority/timestamp.</li>
-</ul><h3 id="api-reference-document-without-a-reference-name-post"><strong>without a Reference Name</strong> <code>POST</code></h3><p>This is a way to work with web-hooks or events from other systems and services, where there may not be a control over what kind of JSON object is received.</p><p>This endpoint allows pushing pure JSON data to an document URL, and it creates a new document out of it, adding it as a reference inside the document.</p><p>Works similar to POST on a collection.</p><p>eg.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X POST -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+        <span class="string">"query"</span>: {
+            <span class="string">"multi_match"</span>: {
+                <span class="string">"fields"</span>: [<span class="string">"foo"</span>],
+                <span class="string">"query"</span>: <span class="string">"bar"</span>
+            }
+        }
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/~search'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> identifier can contain all ascii characters except for white spaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span>
+    <ul>
+        <li><code>query</code> - A JSON object representing the search query and the properties to be used for the matching criteria.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns an array of documents which match the search query. Each document is returned as an object with all the <strong>properties</strong> (both matching and non-matching), a server <code>timestamp</code> when the document was last updated, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">POST</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/~search
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+        "query": {
+            "multi_match": {
+                "fields": ["foo"],
+                "query": "bar"
+            }
+        }
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+    "took":126,
+    "timed_out":false,
+    "_shards":{
+        "total":5,
+        "successful":5,
+        "failed":0
+    },
+    "hits": {
+        "total":1,
+        "max_score":8.6468315,
+        "hits":[
+            {
+                "_index":"rest_test",
+                "_type":"Materials",
+                "_id":"5510233f328410803792d1cb",
+                "_score":8.6468315,
+                "_source":{
+                    "lol":"cat",
+                    "timestamp":1427120959524,
+                    "rootPath":"Materials/Es"
+                }
+            }
+        ]
+    }
+}
+</code>
+</pre><h2 id="api-reference-document-properties">Document Properties</h2><p>All data operations on a document happen via <strong>Document Properties</strong> endpoint.</p><h3 id="api-reference-document-properties-create-update-document-properties">Create / Update Document Properties</h3><p>Create a new document with some properties or update the properties of an existing document.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
 <p><strong>Example Request</strong></p>
-<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i </span><span class="pun">-</span><span class="pln">X PATCH \  
-</span><span class="pun">-</span><span class="pln">d </span><span class="string"><span class="str">'{
-    </span><span class="string"><span class="str">"message"</span></span><span class="str">: </span><span class="string"><span class="str">"this is a tweet"</span></span><span class="str">
-}'</span></span><span class="pln"> \  
-</span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//api.appbase.io/rest_test/v</span><span class="number"><span class="str">3</span></span><span class="str">/Materials/Ice?collection=tweet'</span></span></span></code></pre>
-</blockquote><p>Response:</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"/</span><span class="number"><span class="str">141</span></span><span class="str">fsddvf"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="comment"><span class="com">//random generate reference name</span></span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"wasvt</span><span class="number"><span class="str">33463</span></span><span class="str">"</span></span><span class="pun">,</span><span class="pln"> </span><span class="comment"><span class="com">//random generated id for the new document</span></span><span class="pln">
-        </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"tweet"</span></span><span class="pln">
-        </span><span class="string"><span class="str">"message"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"this is a tweet"</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note: </p><ul>
-<li><code>collection=</code> is necessary in the URL, where the new document will be created.</li>
-</ul><h3 id="api-reference-document-read-document-get"><strong>Read Document</strong> <code>GET</code></h3><p>Fetch document’s properties and references</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X PATCH -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+        <span class="string">"foo"</span>:<span class="string">"bar"</span>
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~properties'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span>
+    <ul>
+        <li><code>data</code> - A JSON object representing the properties to be set on the document (can contain nested object, arrays). In case of a conflict (read existing property), the property value will be overwritten.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns updated properties and values, a server <code>_timestamp</code> when the update happened, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">PATCH</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~properties
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+    "foo": "bar"
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+  "foo": "bar",
+  "_timestamp": 1413403738268,
+  "_id": "Ice",
+  "_collection": "Materials"
+}
+</code>
+</pre><h3 id="api-reference-document-properties-read-document-properties">Read Document Properties</h3><p>Read the existing document properties.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
 <p><strong>Example Request</strong></p>
-<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint prettyprinted" style=""><span class="pln">curl </span><span class="pun">-</span><span class="pln">i \  
-</span><span class="string"><span class="str">'https:</span><span class="comment"><span class="str">//api.appbase.io/rest_test/v</span><span class="number"><span class="str">3</span></span><span class="str">/Materials/Ice'</span></span></span></code></pre>
-</blockquote><p>Response:</p><p><code>200</code></p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
-    </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Ice"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Material"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"foo"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"bar"</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">23491400</span></span><span class="pun">,</span><span class="pln">
-    </span><span class="string"><span class="str">"/tweetedBy"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-        </span><span class="string"><span class="str">"_id"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">3193</span></span><span class="str">v</span><span class="number"><span class="str">1934</span></span><span class="str">n"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"_collection"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"user"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"yo"</span></span><span class="pun">,</span><span class="pln">
-        </span><span class="string"><span class="str">"_timestamp"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">23491400</span></span><span class="pln">
-    </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></code></pre><p>Note:
- - references are included as well, unless <code>references=false</code> provided in URL parameter
- - <code>query</code> is a url parameter, that filter references.
- - if a <code>timestamp</code> is provided in the url parameter, it will work as a <em>sync</em> and refs changed after that timestamp will be returned: <code>"/ref_name": null</code>
- - request url parameters are included in the response
- - By default, only 50 references are returned, use query to return more.</p></div>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~properties'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns a <strong>document</strong> with all the properties, a <code>_timestamp</code> value when the document was last updated, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">GET</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~properties
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+  "foo": "bar",
+  "green": "leaf",
+  "_id": "Ice",
+  "_collection": "Materials",
+  "_timestamp": 1418488108255
+}
+</code>
+</pre><h3 id="api-reference-document-properties-delete-document-properties">Delete document properties</h3><p>Delete specific (or all) data properties of a document.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X DELETE -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+         <span class="string">"properties"</span>: [<span class="string">"foo"</span>]
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~properties'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span> <b>For deleting all properties</b>
+    <ul>
+        <li>A JSON object with the field <code>properties</code> set as the boolean value <strong>true</strong>.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span> <b>For deleting specific properties</b>
+    <ul>
+        <li>A JSON object with the property <code>properties</code> set as an array of property names to be deleted.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns the <strong>document</strong> object with the deleted properties set to “”, a <code>_timestamp</code> value when the document was last updated, the collection name <code>_collection</code> to which the document belongs and the document key as <code>_id</code> (unique to the collection).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">DELETE</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~properties
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+    "properties": ["foo"]
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+  "foo": "",
+  "_timestamp": 1418486072705,
+  "_id": "Ice",
+  "_collection": "Materials"
+}
+</code>
+</pre><h2 id="api-reference-document-references">Document References</h2><h3 id="api-reference-document-references-create-update-document-references">Create / Update Document References</h3><p>Create a new reference or update the existing reference(s). A <strong>priority</strong>, which acts as an index can optionally be set on the reference.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong>  </p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X PATCH -H <span class="string">"Appbase-Secret:<span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+             <span class="string">"aReference"</span>: {
+                 <span class="string">"path"</span>: <span class="string">"Materials/Iron"</span>
+             },
+             <span class="string">"anotherReference"</span>: {
+                 <span class="string">"path"</span>: <span class="string">"Materials/Ice"</span>,
+                 <span class="string">"priority"</span>: <span class="number"><span class="number">500</span>.<span class="number">6</span></span>
+             }
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~references'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span>
+    <ul>
+        <li>A JSON object representing the reference(s) to be created from the document. In case of a conflict (read an existing reference), the original reference will be updated.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns updated references, a server <code>_timestamp</code> for each reference when the update happened, and a unique identifier for each reference resource <code>t_id</code> (used by the server internally).</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">PATCH</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~references
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+    "aReference": {
+      "path": "Materials/Iron"
+    },
+    "anotherReference": {
+      "path": "Materials/Ice",
+      "priority": 500.6
+    }
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+    "aReference": {
+      "t_id": "Materials`5488ccab3b87a791550d81b7",
+      "_timestamp": 1418261314605
+    },
+    "anotherReference": {
+      "t_id": "Materials`547059ce69528db30aa7ae90",
+      "priority": 500.6,
+      "_timestamp": 1418261314605
+    }
+}
+</code>
+</pre><h3 id="api-reference-document-references-read-references">Read References</h3><p>Fetch the document references.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~references'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">URL PARAMETERS</span>
+    <ul>
+        <li>URL parameters can be passed to retrieve references by querying on priority. The valid url parameters are startAt, endAt, limit and skip</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns a <strong>references</strong> object with the filtered references as an array, each reference having a <code>_timestamp</code> value when the reference was last updated, a unique identifier of the reference resource <code>t_id</code> (used by the server internally), along with an <code>id</code> identifier of the reference on which this operation is performed.</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">GET</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~references
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+[
+    {
+        "anotherReference":
+        {
+            "_timestamp":1427746003602,
+            "_json": 
+            {
+                "_id":"Ice",
+                "foo":"bar",
+                "_collection":"Materials",
+                "_timestamp":1427745945520
+            },
+            "priority":500.6
+        }
+    },
+    {
+        "aReference":
+        {
+             "_timestamp":1427746003602,
+             "_json":
+             {
+                 "_id":"Iron",
+                 "density":"2.0",
+                 "_collection":"Materials",
+                 "_timestamp":1427745992545
+             }
+        }
+    }
+]
+</code>
+</pre><h3 id="api-reference-document-references-delete-references">Delete References</h3><p>Delete specific (or all) document references.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X DELETE -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+        <span class="string">"references"</span>: [<span class="string">"edge<span class="number">1</span>"</span>, <span class="string">"edgen"</span>]
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/~references'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span> <b>For deleting all references</b>
+    <ul>
+        <li>A JSON object with the field <code>references</code> set as the boolean value <strong>true</strong>.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span> <b>For deleting specific references</b>
+    <ul>
+        <li>A JSON object with the field <code>references</code> set as an array of reference identifiers to be deleted.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">DELETE</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/~references
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+    "references": ["edge1", "edgen"]
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+</code>
+</pre><h2 id="api-reference-delete-document">Delete Document</h2><p>Deletes the document (including all properties, references), the document path itself will not resolve after this operation, i.e. a retrieval will result in a <em>101: Resource does not exist</em> error.</p><blockquote style="float: left; width: 510px; margin-left: 20px; margin-right: 20px; color: rgb(51, 51, 51); ">
+<p><strong>Example Request</strong></p>
+<pre style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; "><code class="lang-curl prettyprint">curl -X DELETE -H <span class="string">"Appbase-Secret: <span class="number">193</span>dc<span class="number">4</span>d<span class="number">2440146082</span>ea<span class="number">734</span>f<span class="number">36</span>f<span class="number">4</span>f<span class="number">2638</span>"</span> \
+     -d <span class="string">'{
+         <span class="string">"all"</span>: true
+     }'</span> \
+<span class="string">'https:<span class="comment">//v<span class="number">3</span>.api.appbase.io/rest_test/Materials/Ice/'</span></span></code></pre>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li><span class="inline-heading">URL VARIABLES</span>
+    <ul>
+        <li><span class="path-var">appname</span> - application name, as set in the Dashboard.</li>
+        <li><span class="path-var">collection</span> - collection identifier, will create one if it doesn’t exist.</li>
+        <li><span class="path-var">document</span> - document identifier, will create one if it doesn’t exist.</li>
+<code>Note:</code> <em>collection</em> and <em>document</em> identifiers can contain all ascii characters except for whitespaces, ‘/’, ‘:’, and ‘~’.
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST HEADERS</span>
+    <ul>
+        <li>Appbase-Secret - Application secret key, unique to the application</li>
+    </ul>
+</li>
+<li><span class="inline-heading">REQUEST BODY (JSON)</span>
+    <ul>
+        <li>A JSON object with the field <code>all</code> set as the boolean value <strong>true</strong>.</li>
+    </ul>
+</li>
+<li><span class="inline-heading">RESPONSE</span>
+    <ul>
+        <li><span class="inline-heading">STATUS</span> - <code>200</code> if success.</li>
+        <li><span class="inline-heading">BODY (JSON)</span> - Returns the <strong>document</strong> object with the fields “_deleted” set to true, and <code>_timestamp</code> field set for the time of deletion.</li>
+    </ul>
+</li>
+</ul>
+
+</blockquote><pre><code class="prettyprint">
+<b>Request</b>
+<span class="inline-heading">URL</span>
+<span class="request-type">DELETE</span> https://v3.api.appbase.io/<span class="path-var">appname</span>/<span class="path-var">collection</span>/<span class="path-var">document</span>/
+<span class="inline-heading">HEADERS</span>
+Appbase-Secret: 193dc4d2440146082ea734f36f4f2638
+<span class="inline-heading">BODY</span>
+{
+    "all": true
+}
+
+<b>Response</b>
+<span class="inline-heading">STATUS</span>
+200
+<span class="inline-heading">BODY</span>
+{
+  "_deleted": "true",
+  "_timestamp": 1431324814057,
+  "_id": "Ice",
+  "_collection": "Materials"
+}
+</code>
+</pre></div>
   <a class="edit" ng-href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v3.0/rest/api-reference.md" target="_blank" href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v3.0/rest/api-reference.md">
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
 
-  <script type="text/javascript" src="scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

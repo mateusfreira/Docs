@@ -6,8 +6,8 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   <script type="text/javascript">
     if (!Function.prototype.bind) {
 Function.prototype.bind = function bind(that) { // .length is 1
@@ -50,27 +50,27 @@ Function.prototype.bind = function bind(that) { // .length is 1
 }
   </script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -78,9 +78,298 @@ Function.prototype.bind = function bind(that) { // .length is 1
      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- ngView:  -->
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><nav class="navbar navbar-default navbar-fixed-top ng-scope">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">
+        <img src="/images/logo.svg">
+      </a>
+    </div>
 
-  <script type="text/javascript" src="scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+      	<!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">Changelog</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/v3.0/changelog/changelog.html>Changelog</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">Search</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/quick-start.html>Quick Start</a>
+      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/use-cases.html>Use-cases</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">Concepts</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v3.0/concepts/datamodel.html>Datamodel</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+      		<a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">Javascript</a>
+      		<ul class="dropdown-menu">
+      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+      		  	<a ng-href=/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/javascript/api-reference.html>API Reference</a>
+      		  </li><!-- end ngRepeat: file in folder.files -->
+      		</ul>
+      	</li><!-- end ngRepeat: folder in map[currentVersion] -->
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          	 <span ng-bind="currentVersion" class="ng-binding">v3.0</span> <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu version-switcher" role="menu">
+          	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/scalr/rest/intro.html>scalr</a>
+          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+          		<a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          	</li><!-- end ngRepeat: version in versions -->
+          </ul>
+        </li>
+        <li class="github-star">
+          <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div role="flatdoc" class="content-root ng-scope">
+  <div class="menubar fixed">
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="appbasejs-item" class="level-1"><a id="appbasejs-link" href="/v3.0/javascript/api-reference.html#appbasejs" class="level-1" pref="#appbasejs">appbase.js</a><ul class="level-2" id="appbasejs-list"><li id="appbasejs-1-appbase-global-object-item" class="level-2"><a id="appbasejs-1-appbase-global-object-link" href="/v3.0/javascript/api-reference.html#appbasejs-1-appbase-global-object" class="level-2" pref="#appbasejs-1-appbase-global-object">1. Appbase Global Object</a><ul class="level-3" id="appbasejs-1-appbase-global-object-list"><li id="appbasejs-1-appbase-global-object-methods-item" class="level-3"><a id="appbasejs-1-appbase-global-object-methods-link" href="/v3.0/javascript/api-reference.html#appbasejs-1-appbase-global-object-methods" class="level-3" pref="#appbasejs-1-appbase-global-object-methods">Methods</a></li></ul></li><li id="appbasejs-2-app-class-item" class="level-2"><a id="appbasejs-2-app-class-link" href="/v3.0/javascript/api-reference.html#appbasejs-2-app-class" class="level-2" pref="#appbasejs-2-app-class">2. App Class</a><ul class="level-3" id="appbasejs-2-app-class-list"><li id="appbasejs-2-app-class-methods-item" class="level-3"><a id="appbasejs-2-app-class-methods-link" href="/v3.0/javascript/api-reference.html#appbasejs-2-app-class-methods" class="level-3" pref="#appbasejs-2-app-class-methods">Methods</a></li></ul></li><li id="appbasejs-3-collection-class-item" class="level-2"><a id="appbasejs-3-collection-class-link" href="/v3.0/javascript/api-reference.html#appbasejs-3-collection-class" class="level-2" pref="#appbasejs-3-collection-class">3. Collection Class</a></li><li id="appbasejs-properties-item" class="level-2"><a id="appbasejs-properties-link" href="/v3.0/javascript/api-reference.html#appbasejs-properties" class="level-2" pref="#appbasejs-properties">Properties</a></li><li id="appbasejs-methods-item" class="level-2"><a id="appbasejs-methods-link" href="/v3.0/javascript/api-reference.html#appbasejs-methods" class="level-2" pref="#appbasejs-methods">Methods</a></li></ul></li></ul></li></ul></div>
+  </div>
+  <div role="flatdoc-content" class="content"><h1 id="appbasejs">appbase.js</h1><p>JavaScript Wrapper for Appbase Rest API</p><h2 id="appbasejs-1-appbase-global-object">1. Appbase Global Object</h2><p>The Appbase object is responsible for instantiating Apps.</p><hr><h3 id="appbasejs-1-appbase-global-object-methods">Methods</h3><p><strong>Appbase.app(appname, secret)</strong><br>Used to create a new instance of a App<br>Parameters:</p><pre><code class="prettyprint prettyprinted" style=""><span class="pln"> </span><span class="pun">-</span><span class="pln"> appname</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> name of the app on your appbase dashboard
+ </span><span class="pun">-</span><span class="pln"> secret</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> secret of the app</span></code></pre><h4>Example</h4><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">    </span><span class="kwd">var</span><span class="pln"> restTestApp </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Appbase</span><span class="pun">.</span><span class="pln">app</span><span class="pun">(</span><span class="string"><span class="str">"rest_test"</span></span><span class="pun">,</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">193</span></span><span class="str">dc</span><span class="number"><span class="str">4</span></span><span class="str">d</span><span class="number"><span class="str">2440146082</span></span><span class="str">ea</span><span class="number"><span class="str">734</span></span><span class="str">f</span><span class="number"><span class="str">36</span></span><span class="str">f</span><span class="number"><span class="str">4</span></span><span class="str">f</span><span class="number"><span class="str">2638</span></span><span class="str">"</span></span><span class="pun">);</span></code></pre><hr><h2 id="appbasejs-2-app-class">2. App Class</h2><p>The App class has utility methods to manage the App’s collections.</p><hr><h3 id="appbasejs-2-app-class-methods">Methods</h3><p> <strong>App.search(query)</strong><br>This method searches the App’s collections with the given query.<br><a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-global-search-collections">View in the REST API Docs</a><br>Parameters:  </p><pre><code class="prettyprint prettyprinted" style=""><span class="pln"> </span><span class="pun">-</span><span class="pln"> query</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Object</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> A JS </span><span class="typ">Object</span><span class="pln"> to query the collections</span><span class="pun">.</span></code></pre><p> Example</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">    </span><span class="typ">AppTest</span><span class="pun">.</span><span class="pln">search</span><span class="pun">({</span><span class="pln">
+        match_all </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{}</span><span class="pln">
+    </span><span class="pun">})</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">response</span><span class="pun">){</span><span class="pln">
+       response</span><span class="pun">.</span><span class="pln">hits</span><span class="pun">.</span><span class="pln">hits</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">(</span><span class="pln">console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="pln">console</span><span class="pun">));</span><span class="pln"> </span><span class="comment"><span class="com">// hits.hits - Contains all matched objects, limited by the query or by default </span><span class="number"><span class="com">10</span></span></span><span class="pln">
+       console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">hits</span><span class="pun">.</span><span class="pln">total</span><span class="pun">);</span><span class="pln"> </span><span class="comment"><span class="com">// hits.total - Total number of objects matched</span></span><span class="pln">
+    </span><span class="pun">});</span></code></pre><p>  <strong>AppTest.listCollections()</strong><br>This method retrieves all the collections of the app.<br><a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-global-list-collections">View in the REST API Docs</a>  </p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">    </span><span class="typ">AppTest</span><span class="pun">.</span><span class="pln">listCollections</span><span class="pun">()</span><span class="pln"> </span><span class="comment"><span class="com">// Returns a promise</span></span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">collections</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        collections</span><span class="pun">.</span><span class="pln">forEach</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">collection</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="comment"><span class="com">// The collections variable is a array of Collection</span></span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">collection</span><span class="pun">.</span><span class="pln">name</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">});</span></code></pre><p><strong>AppTest.serverTime()</strong><br>Returns the server timestamp in milliseconds.<br><a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-global-server-time">View in the REST API Docs</a>  </p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">    </span><span class="typ">AppTest</span><span class="pun">.</span><span class="pln">serverTime</span><span class="pun">()</span><span class="pln"> </span><span class="comment"><span class="com">// Returns a promise</span></span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">time</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">time</span><span class="pun">);</span><span class="pln"> </span><span class="comment"><span class="com">// </span><span class="number"><span class="com">1430941365939</span></span></span><span class="pln">
+    </span><span class="pun">});</span></code></pre><p><strong>AppTest.collection(name)</strong><br>Returns a Collection object for the provided name  </p><p>Parameters:  </p><pre><code class="prettyprint prettyprinted" style=""><span class="pln"> </span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> name of the collection</span><span class="pun">,</span><span class="pln"> should already exists </span><span class="kwd">in</span><span class="pln"> your dashboard</span><span class="pun">.</span></code></pre><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="kwd">var</span><span class="pln"> userCollection </span><span class="pun">=</span><span class="pln"> </span><span class="typ">AppTest</span><span class="pun">.</span><span class="pln">collection</span><span class="pun">(</span><span class="string"><span class="str">'user'</span></span><span class="pun">);</span></code></pre><h2 id="appbasejs-3-collection-class">3. Collection Class</h2><p>Provides an interface to the Appbase’s REST endpoints to manage your collections.
+<a href="http://docs.appbase.io/#/v3.0/rest/api-reference">View in the REST API Docs</a></p><hr><h2 id="appbasejs-properties">Properties</h2><pre><code class="prettyprint prettyprinted" style=""><span class="pln">name </span><span class="typ">String</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> name of the collection</span></code></pre><h2 id="appbasejs-methods">Methods</h2><p><strong>collection.search(query)</strong>
+Searches the collection’s documents with the provided query.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-collection-search-documents-by-propertyies">View in the REST API Docs</a><br>Parameters:  </p><pre><code class="prettyprint prettyprinted" style=""><span class="pln"> </span><span class="pun">-</span><span class="pln"> query</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Object</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> A JS </span><span class="typ">Object</span><span class="pln"> to query the collection</span><span class="pun">.</span></code></pre><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">    userCollection</span><span class="pun">.</span><span class="pln">search</span><span class="pun">({</span><span class="pln"> </span><span class="comment"><span class="com">// Returns a promise</span></span><span class="pln">
+        filter </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            term </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                foo </span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'bar'</span></span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}).</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">response</span><span class="pun">.</span><span class="pln">hits</span><span class="pun">.</span><span class="pln">hits</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">});</span></code></pre><p><strong>collection.insert(entry)</strong>
+Create a new document in the collection
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-properties-create-update-document-properties">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - entry: Object - A JS Object to be added to the collection.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.insert({ <span class="comment">// Returns a promise</span>
+        foo : <span class="string">'bar'</span>,
+        name : <span class="string">'aName'</span>
+    }).then(function(response) {
+        console.log(response)
+        /*
+            {
+                <span class="string">"foo"</span>: <span class="string">"bar"</span>,
+                <span class="string">"name"</span>: <span class="string">"aName"</span>,
+                <span class="string">"_id"</span>: <span class="string">"c<span class="number">12</span>c<span class="number">7649</span>-<span class="number">53</span>e<span class="number">3</span>-<span class="number">44</span>bf-bbe<span class="number">8</span>-f<span class="number">23769885</span>eb<span class="number">0</span>"</span>,
+                <span class="string">"_collection"</span>: <span class="string">"calls"</span>,
+                <span class="string">"_timestamp"</span>: <span class="number">1430943009686</span>
+            }
+        */
+    });</code></pre><p><strong>collection.set(key, entry)</strong>
+Create or update a new document in the collection, with the provided key as the id of that object.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-properties-create-update-document-properties">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - A unique key.
+ - entry: Object - A JS Object to be added to the collection.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.set(<span class="string">'<span class="number">12345</span>'</span>, { <span class="comment">// Returns a promise</span>
+        foo : <span class="string">'bar'</span>,
+        name : <span class="string">'aName'</span>
+    }).then(function(response) {
+        console.log(response)
+        /*
+            {
+                <span class="string">"foo"</span>: <span class="string">"bar"</span>,
+                <span class="string">"name"</span>: <span class="string">"aName"</span>,
+                <span class="string">"_id"</span>: <span class="string">"<span class="number">12345</span>"</span>,
+                <span class="string">"_collection"</span>: <span class="string">"calls"</span>,
+                <span class="string">"_timestamp"</span>: <span class="number">1430943009686</span>
+            }
+        */
+    });</code></pre><p><strong>collection.unset(key, properties)</strong>
+Delete specific (or all) data properties of a document.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-properties-delete-document-properties">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - entry: Array&lt;String&gt; - A array of Strings with the name of the properties tobe removed.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.unset(<span class="string">'<span class="number">12345</span>'</span>, [<span class="string">'bar'</span>]).then(function(response) { <span class="comment">// Returns a promise</span>
+        console.log(response)
+        /*
+            {
+                <span class="string">"foo"</span>: <span class="string">""</span>, <span class="comment">// Notice that foo is now empty</span>
+                <span class="string">"name"</span>: <span class="string">"aName"</span>,
+                <span class="string">"_id"</span>: <span class="string">"<span class="number">12345</span>"</span>,
+                <span class="string">"_collection"</span>: <span class="string">"calls"</span>,
+                <span class="string">"_timestamp"</span>: <span class="number">1430943009686</span>
+            }
+        */
+    });</code></pre><p><strong>collection.get(key)</strong>
+Read the existing document properties.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-properties-read-document-properties">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.get(<span class="string">'<span class="number">12345</span>'</span>).then(function(response) { <span class="comment">// Returns a promise</span>
+        console.log(response)
+        /*
+            {
+                <span class="string">"foo"</span>: <span class="string">""</span>,
+                <span class="string">"name"</span>: <span class="string">"aName"</span>,
+                <span class="string">"_id"</span>: <span class="string">"<span class="number">12345</span>"</span>,
+                <span class="string">"_collection"</span>: <span class="string">"calls"</span>,
+                <span class="string">"_timestamp"</span>: <span class="number">1430943009686</span>
+            }
+        */
+    });</code></pre><p><strong>collection.getAll([filters])</strong>
+List the documents in the collection. Returns an array of documents in the given collection.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-collection-list-all-documents">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - filters: Object - Optional Object to paginate the collection's documents, you may specify limit and skip.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.getAll({ <span class="comment">// Returns a promise</span>
+        limit : <span class="number">3</span>, <span class="comment">// Get <span class="number">3</span> objects</span>
+        skip : <span class="number">2</span>   <span class="comment">// Start by the second</span>
+    }).then(function(response) {
+        console.log(response)
+        /*
+            [
+                {
+                    <span class="string">"foo"</span>: <span class="string">"bar"</span>,
+                    <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+                    <span class="string">"_id"</span>: <span class="string">"<span class="number">4</span>fcaaab<span class="number">1636</span>e<span class="number">48</span>ca<span class="number">988</span>ffe<span class="number">075</span>ec<span class="number">820</span>b<span class="number">5</span>"</span>,
+                    <span class="string">"_timestamp"</span>: <span class="number">1427918110979</span>
+                },
+                {
+                    <span class="string">"foo"</span>: <span class="string">"bar"</span>,
+                    <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+                    <span class="string">"_id"</span>: <span class="string">"<span class="number">77623095</span>cf<span class="number">284</span>c<span class="number">4</span>c<span class="number">8768</span>a<span class="number">0393</span>e<span class="number">40</span>aacf"</span>,
+                    <span class="string">"_timestamp"</span>: <span class="number">1427920330170</span>
+                },
+                {
+                    <span class="string">"name"</span>: <span class="string">"sid"</span>,
+                    <span class="string">"name<span class="number">1</span>"</span>: <span class="string">"sagar"</span>,
+                    <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+                    <span class="string">"_id"</span>: <span class="string">"sid"</span>,
+                    <span class="string">"_timestamp"</span>: <span class="number">1428103822887</span>
+                }
+            ]
+        */
+    });</code></pre><p><strong>collection.on(key, callback[, errorCallback])</strong>
+Listen to changes on the Document with the provided key.</p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - callback: Function - A function to be called whenever a change occurs to the Document.
+ - errorCallback: Function - A function to be called whenever a error occurs in the call, may be called more than once.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.on(<span class="string">'<span class="number">12345</span>'</span>, function(response) {
+        console.log(response); <span class="comment">// Will log the object every time it has a change</span>
+    });</code></pre><p><strong>collection.onDocuments(callback[, errorCallback])</strong>
+Listen to the creation or changes on any Document in the collection.</p><p>Parameters:  </p><pre><code class="prettyprint"> - callback: Function - A function to be called whenever a new Document is created or a change occurs to a Document.
+ - errorCallback: Function - A function to be called whenever a error occurs in the call, may be called more than once.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.onDocuments(function(response) {
+        console.log(response); <span class="comment">// Will log the object every time it has a new or changed Document</span>
+    });</code></pre><p><strong>collection.onRef(key, callback[, errorCallback])</strong>
+Listen to the creation or changes of References on the Document that has the provided key.</p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - callback: Function - A function to be called whenever a new Reference is created or a changes in a Document.
+ - errorCallback: Function - A function to be called whenever a error occurs in the call, may be called more than once.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.onRef(<span class="string">'<span class="number">12345</span>'</span>, function(response) {
+        console.log(response); <span class="comment">// Will log the object every time it has a new or changed Ref in the Document</span>
+        /*
+        {
+            <span class="string">"friend"</span>: {
+                <span class="string">"_timestamp"</span>: <span class="number">1431040446952</span>,
+                <span class="string">"_json"</span>: {
+                    <span class="string">"_id"</span>: <span class="string">"sagar"</span>,
+                    <span class="string">"name<span class="number">1</span>"</span>: <span class="string">"sagar"</span>,
+                    <span class="string">"name"</span>: <span class="string">"<span class="number">1123</span>"</span>,
+                    <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+                    <span class="string">"_timestamp"</span>: <span class="number">1429562388858</span>
+                }
+            }
+        } */
+    });</code></pre><p><strong>collection.setRef(key, ref, path[, priority])</strong>
+Listen to the creation or changes of References on the Document that has the provided key.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-references-create-update-document-references">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - callback: Function - A function to be called whenever a new Reference is created or a changes in a Document.
+ - errorCallback: Function - A function to be called whenever a error occurs in the call, may be called more than once.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.setRef(<span class="string">'<span class="number">12345</span>'</span>, <span class="string">'friend'</span>, <span class="string">'user/sagar'</span>).then(function(response) { <span class="comment">// Returns a promise</span>
+        console.log(response);
+        /*
+        {
+            <span class="string">"friend"</span>: {
+                <span class="string">"timestamp"</span>: <span class="number">1431040446952</span>
+            }
+        }
+        */
+    });</code></pre><p><strong>collection.getRefs(key[, filters])</strong>
+Get all the References of the Document with the provided key.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-references-read-references">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - filters: Object - Optional Object to paginate the documents's References, you may specify limit and skip.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.getRefs(<span class="string">'<span class="number">12345</span>'</span>, { <span class="comment">// Returns a promise</span>
+        limit : <span class="number">3</span>, <span class="comment">// Get <span class="number">3</span> objects</span>
+        skip : <span class="number">2</span>   <span class="comment">// Start by the second</span>
+    }).then(function(response) {
+        console.log(response);
+        /*
+        [
+            {
+                <span class="string">"friend"</span>: {
+                    <span class="string">"_timestamp"</span>: <span class="number">1431040446952</span>,
+                    <span class="string">"_json"</span>: {
+                        <span class="string">"_id"</span>: <span class="string">"sagar"</span>,
+                        <span class="string">"name<span class="number">1</span>"</span>: <span class="string">"sagar"</span>,
+                        <span class="string">"name"</span>: <span class="string">"<span class="number">1123</span>"</span>,
+                        <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+                        <span class="string">"_timestamp"</span>: <span class="number">1429562388858</span>
+                    }
+                }
+            }
+        ]
+        */
+    });</code></pre><p><strong>collection.unsetRefs(key, references)</strong>
+Removes the provided References from the Document with the provided key.
+<a href="http://docs.appbase.io//v3.0/rest/api-reference.html#api-reference-document-references-delete-references">View in the REST API Docs</a></p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.
+ - references: Array&lt;String&gt; - Names of References to be removed from the object.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.unsetRefs(<span class="string">'<span class="number">12345</span>'</span>, [<span class="string">'friend'</span>]).then(function(response) { <span class="comment">// Returns a promise</span>
+        console.log(response);
+    });</code></pre><p><strong>collection.delete(key)</strong>
+Removes the Document with the provided key from the collection.</p><p>Parameters:  </p><pre><code class="prettyprint"> - key: String - Document's unique key.</code></pre><pre><code class="lang-javascript prettyprint">    userCollection.delete(<span class="string">'<span class="number">12345</span>'</span>).then(function(response) { <span class="comment">// Returns a promise</span>
+        console.log(response);
+        /*
+        {
+            <span class="string">"_collection"</span>: <span class="string">"user"</span>,
+            <span class="string">"_id"</span>: <span class="string">"<span class="number">4</span>fcaaab<span class="number">1636</span>e<span class="number">48</span>ca<span class="number">988</span>ffe<span class="number">075</span>ec<span class="number">820</span>b<span class="number">5</span>"</span>,
+            <span class="string">"_timestamp"</span>: <span class="number">1431042743261</span>,
+            <span class="string">"_deleted"</span>: true
+        }
+        */
+    });</code></pre></div>
+  <a class="edit" ng-href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v3.0/javascript/api-reference.md" target="_blank" href="https://github.com/appbaseio/Docs/tree/gh-pages/src/v3.0/javascript/api-reference.md">
+    <span class="fa fa-pencil"></span>
+  </a>
+</div></div>
+
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>
