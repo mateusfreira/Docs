@@ -4,7 +4,8 @@ module.exports = function(grunt) {
 			def: {
 				options: {
 					generatePath: "dist/",
-					baseUrl: "/Docs/"
+					baseUrl: "/",
+					'urlToAccess': 'http://localhost:8081/'
 				}
 			}
 		},
