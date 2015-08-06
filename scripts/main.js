@@ -19,8 +19,8 @@
 	      src: 'map.json',
 	      path: 'src'
 	  },
-	  indexType: 'markdown',
-	  indexSrc: 'v2.0/javascript/quick-start',
+	  indexType: 'html',
+	  indexHtml: 'html/main.html',
 	  editGithubBtn: true,
 	  html5mode: false,
 	  flatdocHtml: 'html/flatdoc.html',
@@ -37,6 +37,10 @@
 		                         "color": "#333"});
 		  $(this).css({"padding": "10px"});
 		});
+		
+		if(typeof(ga) === 'function'){
+			ga('send', 'pageview',window.location.href);
+		}
 	});
 
 })(window.jQuery);

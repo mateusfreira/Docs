@@ -6,71 +6,33 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <script type="text/javascript">
-    if (!Function.prototype.bind) {
-Function.prototype.bind = function bind(that) { // .length is 1
-        var slice = [].slice;
-        var Empty = function(){};
-        var target = this;
-        if (typeof target != "function") {
-            throw new TypeError("Function.prototype.bind called on incompatible " + target);
-        }
-        var args = slice.call(arguments, 1); // for normal call
-        var bound = function () {
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-            if (this instanceof bound) {
-
-                var result = target.apply(
-                    this,
-                    args.concat(slice.call(arguments))
-                );
-                if (Object(result) === result) {
-                    return result;
-                }
-                return this;
-
-            } else {
-                return target.apply(
-                    that,
-                    args.concat(slice.call(arguments))
-                );
-
-            }
-
-        };
-        if(target.prototype) {
-            Empty.prototype = target.prototype;
-            bound.prototype = new Empty();
-            Empty.prototype = null;
-        }
-        return bound;
-    };  
-}
-  </script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/bower_components/docbase/scripts/polyfill.js"></script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/docs.css">
 
 </head>
 <body role="flatdoc" class="no-literate">
@@ -78,94 +40,85 @@ Function.prototype.bind = function bind(that) { // .length is 1
      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><nav class="navbar navbar-default navbar-fixed-top ng-scope">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#/">
-        <img src="/Docs/images/logo.svg">
-      </a>
-    </div>
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://appbase.io">
+      <img src="/images/logo.svg">
+    </a>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-      	<!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">Changelog</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>Changelog</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/rest/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">Search</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/quick-start.html>Quick Start</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/search/use-cases.html>Use-cases</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">Concepts</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/concepts/datamodel.html>Datamodel</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/rest/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">Javascript</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v3.0/javascript/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] -->
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          	 <span ng-bind="currentVersion" class="ng-binding">v3.0</span> <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu version-switcher" role="menu">
-          	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
-          	</li><!-- end ngRepeat: version in versions -->
-          </ul>
-        </li>
-        <li class="github-star">
-          <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v3.0/changelog" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/changelog">Changelog</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/changelog/changelog.html ng-bind="file.label" class="ng-binding" href=/v3.0/changelog/changelog.html>Changelog</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v3.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/concepts">Concepts</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v3.0/concepts/datamodel.html>Datamodel</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v3.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/javascript">Javascript</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/javascript/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v3.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/rest">REST</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v3.0/rest/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v3.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v3.0/search">Search</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/quick-start.html>Quick Start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v3.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v3.0/search/use-cases.html>Use-cases</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] -->
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+           <span ng-bind="currentVersion" class="ng-binding">v3.0</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu version-switcher" role="menu">
+          <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/scalr/concepts/intro.html ng-bind="version" class="ng-binding" href=/scalr/concepts/intro.html>scalr</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          </li><!-- end ngRepeat: version in versions -->
+        </ul>
+      </li>
+      <li class="github-star">
+        <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid --></nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="use-cases-item" class="level-1"><a id="use-cases-link" href="/Docs/v3.0/search/use-cases.html#use-cases" class="level-1" pref="#use-cases">Use-cases</a><ul class="level-2" id="use-cases-list"><li id="use-cases-elasticsearch-introduction-item" class="level-2"><a id="use-cases-elasticsearch-introduction-link" href="/Docs/v3.0/search/use-cases.html#use-cases-elasticsearch-introduction" class="level-2" pref="#use-cases-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="use-cases-data-mapping-item" class="level-2"><a id="use-cases-data-mapping-link" href="/Docs/v3.0/search/use-cases.html#use-cases-data-mapping" class="level-2" pref="#use-cases-data-mapping">Data Mapping</a></li><li id="use-cases-request-and-response-format-item" class="level-2"><a id="use-cases-request-and-response-format-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format" class="level-2" pref="#use-cases-request-and-response-format">Request and Response Format</a><ul class="level-3" id="use-cases-request-and-response-format-list"><li id="use-cases-request-and-response-format-request-item" class="level-3"><a id="use-cases-request-and-response-format-request-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format-request" class="level-3" pref="#use-cases-request-and-response-format-request">Request</a></li><li id="use-cases-request-and-response-format-response-item" class="level-3"><a id="use-cases-request-and-response-format-response-link" href="/Docs/v3.0/search/use-cases.html#use-cases-request-and-response-format-response" class="level-3" pref="#use-cases-request-and-response-format-response">Response</a></li></ul></li><li id="use-cases-searching-item" class="level-2"><a id="use-cases-searching-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching" class="level-2" pref="#use-cases-searching">Searching</a><ul class="level-3" id="use-cases-searching-list"><li id="use-cases-searching-simple-match-and-fulltext-item" class="level-3"><a id="use-cases-searching-simple-match-and-fulltext-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-simple-match-and-fulltext" class="level-3" pref="#use-cases-searching-simple-match-and-fulltext">Simple Match and Fulltext</a></li><li id="use-cases-searching-fulltext-fuzzy-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy" class="level-3" pref="#use-cases-searching-fulltext-fuzzy">Fulltext: Fuzzy</a></li><li id="use-cases-searching-fulltext-autocompletewildcard-item" class="level-3"><a id="use-cases-searching-fulltext-autocompletewildcard-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-autocompletewildcard" class="level-3" pref="#use-cases-searching-fulltext-autocompletewildcard">Fulltext Autocomplete/wildcard</a></li><li id="use-cases-searching-fulltext-fuzzy-and-autocomplete-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-and-autocomplete-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy-and-autocomplete" class="level-3" pref="#use-cases-searching-fulltext-fuzzy-and-autocomplete">Fulltext: Fuzzy and Autocomplete</a></li><li id="use-cases-searching-numeric-range-item" class="level-3"><a id="use-cases-searching-numeric-range-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-numeric-range" class="level-3" pref="#use-cases-searching-numeric-range">Numeric-range</a></li><li id="use-cases-searching-geo-spatial-item" class="level-3"><a id="use-cases-searching-geo-spatial-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-geo-spatial" class="level-3" pref="#use-cases-searching-geo-spatial">Geo spatial</a></li><li id="use-cases-searching-sorting-item" class="level-3"><a id="use-cases-searching-sorting-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-sorting" class="level-3" pref="#use-cases-searching-sorting">Sorting</a></li><li id="use-cases-searching-aggregation-item" class="level-3"><a id="use-cases-searching-aggregation-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-aggregation" class="level-3" pref="#use-cases-searching-aggregation">Aggregation</a></li><li id="use-cases-searching-combining-queriesfilters-item" class="level-3"><a id="use-cases-searching-combining-queriesfilters-link" href="/Docs/v3.0/search/use-cases.html#use-cases-searching-combining-queriesfilters" class="level-3" pref="#use-cases-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="use-cases-next-steps-item" class="level-2"><a id="use-cases-next-steps-link" href="/Docs/v3.0/search/use-cases.html#use-cases-next-steps" class="level-2" pref="#use-cases-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="use-cases-item" class="level-1"><a id="use-cases-link" href="/v3.0/search/use-cases.html#use-cases" class="level-1" pref="#use-cases">Use-cases</a><ul class="level-2" id="use-cases-list"><li id="use-cases-elasticsearch-introduction-item" class="level-2"><a id="use-cases-elasticsearch-introduction-link" href="/v3.0/search/use-cases.html#use-cases-elasticsearch-introduction" class="level-2" pref="#use-cases-elasticsearch-introduction">Elasticsearch Introduction</a></li><li id="use-cases-data-mapping-item" class="level-2"><a id="use-cases-data-mapping-link" href="/v3.0/search/use-cases.html#use-cases-data-mapping" class="level-2" pref="#use-cases-data-mapping">Data Mapping</a></li><li id="use-cases-request-and-response-format-item" class="level-2"><a id="use-cases-request-and-response-format-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format" class="level-2" pref="#use-cases-request-and-response-format">Request and Response Format</a><ul class="level-3" id="use-cases-request-and-response-format-list"><li id="use-cases-request-and-response-format-request-item" class="level-3"><a id="use-cases-request-and-response-format-request-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format-request" class="level-3" pref="#use-cases-request-and-response-format-request">Request</a></li><li id="use-cases-request-and-response-format-response-item" class="level-3"><a id="use-cases-request-and-response-format-response-link" href="/v3.0/search/use-cases.html#use-cases-request-and-response-format-response" class="level-3" pref="#use-cases-request-and-response-format-response">Response</a></li></ul></li><li id="use-cases-searching-item" class="level-2"><a id="use-cases-searching-link" href="/v3.0/search/use-cases.html#use-cases-searching" class="level-2" pref="#use-cases-searching">Searching</a><ul class="level-3" id="use-cases-searching-list"><li id="use-cases-searching-simple-match-and-fulltext-item" class="level-3"><a id="use-cases-searching-simple-match-and-fulltext-link" href="/v3.0/search/use-cases.html#use-cases-searching-simple-match-and-fulltext" class="level-3" pref="#use-cases-searching-simple-match-and-fulltext">Simple Match and Fulltext</a></li><li id="use-cases-searching-fulltext-fuzzy-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy" class="level-3" pref="#use-cases-searching-fulltext-fuzzy">Fulltext: Fuzzy</a></li><li id="use-cases-searching-fulltext-autocompletewildcard-item" class="level-3"><a id="use-cases-searching-fulltext-autocompletewildcard-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-autocompletewildcard" class="level-3" pref="#use-cases-searching-fulltext-autocompletewildcard">Fulltext Autocomplete/wildcard</a></li><li id="use-cases-searching-fulltext-fuzzy-and-autocomplete-item" class="level-3"><a id="use-cases-searching-fulltext-fuzzy-and-autocomplete-link" href="/v3.0/search/use-cases.html#use-cases-searching-fulltext-fuzzy-and-autocomplete" class="level-3" pref="#use-cases-searching-fulltext-fuzzy-and-autocomplete">Fulltext: Fuzzy and Autocomplete</a></li><li id="use-cases-searching-numeric-range-item" class="level-3"><a id="use-cases-searching-numeric-range-link" href="/v3.0/search/use-cases.html#use-cases-searching-numeric-range" class="level-3" pref="#use-cases-searching-numeric-range">Numeric-range</a></li><li id="use-cases-searching-geo-spatial-item" class="level-3"><a id="use-cases-searching-geo-spatial-link" href="/v3.0/search/use-cases.html#use-cases-searching-geo-spatial" class="level-3" pref="#use-cases-searching-geo-spatial">Geo spatial</a></li><li id="use-cases-searching-sorting-item" class="level-3"><a id="use-cases-searching-sorting-link" href="/v3.0/search/use-cases.html#use-cases-searching-sorting" class="level-3" pref="#use-cases-searching-sorting">Sorting</a></li><li id="use-cases-searching-aggregation-item" class="level-3"><a id="use-cases-searching-aggregation-link" href="/v3.0/search/use-cases.html#use-cases-searching-aggregation" class="level-3" pref="#use-cases-searching-aggregation">Aggregation</a></li><li id="use-cases-searching-combining-queriesfilters-item" class="level-3"><a id="use-cases-searching-combining-queriesfilters-link" href="/v3.0/search/use-cases.html#use-cases-searching-combining-queriesfilters" class="level-3" pref="#use-cases-searching-combining-queriesfilters">Combining queries/filters</a></li></ul></li><li id="use-cases-next-steps-item" class="level-2"><a id="use-cases-next-steps-link" href="/v3.0/search/use-cases.html#use-cases-next-steps" class="level-2" pref="#use-cases-next-steps">Next steps</a></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="use-cases">Use-cases</h1><p>Appbase uses Elasticsearch in the backend, and provides all the search queries and filters supported by ES, on the data stored in Appbase. Every data that’s pushed into Appbase is automatically indexed on ElasticSearch.</p><h2 id="use-cases-elasticsearch-introduction">Elasticsearch Introduction</h2><p>ElasticSearch is powered by Lucene, a powerful open-source full-text search library, under the hood. More than just full-text queries, ES can be used for numeric range queries, geo spatial queries, aggregation/ordering/grouping search results etc. In addition, we can combine these queries (logical and/or) and search across multiple collections and properties. To learn more about Elasticsearch, checkout <a href="http://exploringelasticsearch.com/">this very effective guide</a>.</p><h2 id="use-cases-data-mapping">Data Mapping</h2><p>As in Appbase has the concepts of collections, Documents and Properties, Elasticsearch has Types, Documents, and Fields. Let’s see how Appbase data is indexed and how these concepts are mapped.</p><table>
 <thead>
@@ -480,23 +433,23 @@ Read more about them:
 <p>Elasticseach sidenote</p>
 <h4><strong><em>range</em></strong> <em>filter</em></h4>
 <p>It can also perform greater/less <em>or equal </em> searches. See the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-range-filter.html"><em>range</em> filter documentation</a> for more details.</p>
-</blockquote><h3 id="use-cases-searching-geo-spatial">Geo spatial</h3><p>Elasticsearch requires you to store your the geographic location using longitude and latitude, stored as a nested JSON object. Lets say that we are storing restaurants, along with their location. The data of a restaurant would be:</p><pre><code class="lang-json prettyprint">{
-    <span class="string">"name"</span>: <span class="string">"Sanro Vegetarian Restaurant"</span>,
-    <span class="string">"location"</span>: {
-        <span class="string">"lat"</span> : <span class="number"><span class="number">40</span>.<span class="number">12</span></span>
-        <span class="string">"lon"</span> : -<span class="number"><span class="number">71</span>.<span class="number">34</span></span>
-    }
-}</code></pre><p>As long as the location is stored as above inside a document, we can do tons of geo spatial queries with Elasticsearch.</p><p>We can use <em>geo distance</em> filter to find documents located within specific distance from a geo point.</p><p>Find restaurants located within 5km from the point 40, -70.</p><pre><code class="lang-json prettyprint">{
-  <span class="string">"filter"</span>: {
-    <span class="string">"geo_distance"</span>: {
-      <span class="string">"distance"</span>: <span class="string">"<span class="number">5</span>km"</span>,
-      <span class="string">"location"</span>: {
-        <span class="string">"lat"</span>: <span class="number">40</span>,
-        <span class="string">"lon"</span>: -<span class="number">70</span>
-      }
-    }
-  }
-}</code></pre><blockquote>
+</blockquote><h3 id="use-cases-searching-geo-spatial">Geo spatial</h3><p>Elasticsearch requires you to store your the geographic location using longitude and latitude, stored as a nested JSON object. Lets say that we are storing restaurants, along with their location. The data of a restaurant would be:</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Sanro Vegetarian Restaurant"</span></span><span class="pun">,</span><span class="pln">
+    </span><span class="string"><span class="str">"location"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"lat"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="number"><span class="lit">40</span></span><span class="lit">.</span><span class="number"><span class="lit">12</span></span></span><span class="pln">
+        </span><span class="string"><span class="str">"lon"</span></span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="number"><span class="number"><span class="lit">71</span></span><span class="lit">.</span><span class="number"><span class="lit">34</span></span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>As long as the location is stored as above inside a document, we can do tons of geo spatial queries with Elasticsearch.</p><p>We can use <em>geo distance</em> filter to find documents located within specific distance from a geo point.</p><p>Find restaurants located within 5km from the point 40, -70.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"filter"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"geo_distance"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"distance"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"</span><span class="number"><span class="str">5</span></span><span class="str">km"</span></span><span class="pun">,</span><span class="pln">
+      </span><span class="string"><span class="str">"location"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="string"><span class="str">"lat"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">40</span></span><span class="pun">,</span><span class="pln">
+        </span><span class="string"><span class="str">"lon"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="number"><span class="lit">70</span></span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><blockquote>
 <p>Elasticseach sidenote</p>
 <h4><strong><em>geo spatial</em></strong> <em>search</em></h4>
 <p>You can define the distance in real world Units like km, miles etc. There many ways the shape (box, polygon etc) and the range of this distance can be customized. Check out these documents for more details:
@@ -507,21 +460,21 @@ Read more about them:
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geo-polygon-filter.html"><em>geo-polygon</em> filter</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geo-shape-filter.html"><em>geo-shape</em> filter</a>
 - <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/0.90/query-dsl-geohash-cell-filter.html"><em>geohash-cell</em> filter</a></p>
-</blockquote><h3 id="use-cases-searching-sorting">Sorting</h3><p>Results are sorted according to their <em>score</em> by default. We can change this behavior by applying <em>sort</em> parameter in the request.</p><p>Earlier in the <em>numeric range</em> use case, we searched for products in price range $50 and $100. Let’s sort the results according to their price, and then name.</p><pre><code class="lang-json prettyprint">{
-  <span class="string">"filter"</span>: {
-    <span class="string">"term"</span>: {
-      <span class="string">"price"</span>: <span class="number">100</span>
-    }
-  },
-  <span class="string">"sort"</span>: [
-    {
-      <span class="string">"price"</span>: <span class="string">"asc"</span>
-    },
-    {
-      <span class="string">"name"</span>: <span class="string">"asc"</span>
-    }
-  ],
-}</code></pre><blockquote>
+</blockquote><h3 id="use-cases-searching-sorting">Sorting</h3><p>Results are sorted according to their <em>score</em> by default. We can change this behavior by applying <em>sort</em> parameter in the request.</p><p>Earlier in the <em>numeric range</em> use case, we searched for products in price range $50 and $100. Let’s sort the results according to their price, and then name.</p><pre><code class="lang-json prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"filter"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"price"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">100</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+  </span><span class="string"><span class="str">"sort"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"price"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asc"</span></span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"asc"</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">],</span><span class="pln">
+</span><span class="pun">}</span></code></pre><blockquote>
 <p>Elasticseach sidenote</p>
 <h4><strong><em>sorting</em></strong></h4>
 <p>You can specify the order of the sort (asc, desc), you can also sort on multi-valued fields. Geo Location based sort is possible too.
@@ -550,135 +503,135 @@ Take a look at the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/
 <li>any brand with “metal” color</li>
 </ul>
 </li>
-</ul><p>Writing these terms into a programming language like Javascript:</p><pre><code class="lang-js prettyprint">product.type == <span class="string">"mobile"</span> &amp;&amp;
-product.price &lt; <span class="number">800</span> &amp;&amp;
-product.brand != <span class="string">"Apple"</span> &amp;&amp;
-(
-    (product.brand == <span class="string">"Samsung"</span> &amp;&amp; product.color == <span class="string">"white"</span>) ||
-    (product.brand == <span class="string">"Sony"</span> &amp;&amp; product.color == <span class="string">"white"</span>) ||
-    product.color == <span class="string">"metal"</span>
-)</code></pre><p>For such a case, Elasticsearch provides <em>bool query</em> or <em>bool filter</em>. In a bool query/filter you define the the other kind of queries/filters which should or must be satisfied or, must not be satisfied.</p><p>A bool query/filter can have three kinds of clauses:</p><ul>
+</ul><p>Writing these terms into a programming language like Javascript:</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pln">product</span><span class="pun">.</span><span class="pln">type </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"mobile"</span></span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln">
+product</span><span class="pun">.</span><span class="pln">price </span><span class="pun">&lt;</span><span class="pln"> </span><span class="number"><span class="lit">800</span></span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln">
+product</span><span class="pun">.</span><span class="pln">brand </span><span class="pun">!=</span><span class="pln"> </span><span class="string"><span class="str">"Apple"</span></span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln">
+</span><span class="pun">(</span><span class="pln">
+    </span><span class="pun">(</span><span class="pln">product</span><span class="pun">.</span><span class="pln">brand </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"Samsung"</span></span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> product</span><span class="pun">.</span><span class="pln">color </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"white"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln">
+    </span><span class="pun">(</span><span class="pln">product</span><span class="pun">.</span><span class="pln">brand </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"Sony"</span></span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> product</span><span class="pun">.</span><span class="pln">color </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"white"</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">||</span><span class="pln">
+    product</span><span class="pun">.</span><span class="pln">color </span><span class="pun">==</span><span class="pln"> </span><span class="string"><span class="str">"metal"</span></span><span class="pln">
+</span><span class="pun">)</span></code></pre><p>For such a case, Elasticsearch provides <em>bool query</em> or <em>bool filter</em>. In a bool query/filter you define the the other kind of queries/filters which should or must be satisfied or, must not be satisfied.</p><p>A bool query/filter can have three kinds of clauses:</p><ul>
 <li><code>must</code> - all the conditions (query/filter) defined inside this clause must appear in matching documents.</li>
 <li><code>must_not</code> - the conditions must not appear in the matching documents.</li>
 <li><code>should</code> - any one of the conditions must appear in the matching documents.</li>
-</ul><p>Lets write the request to search the mobile phones we described above.</p><pre><code class="lang-js prettyprint"><span class="comment">//For case <span class="number">1</span>: <span class="string">"Apple"</span> OR <span class="string">"Samsung"</span></span>
-{
-  <span class="string">"query"</span>: {
-    <span class="string">"bool"</span>: {
-      <span class="string">"should"</span>: [
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"brand"</span>: <span class="string">"Apple"</span>
-          }
-        },
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"brand"</span>: <span class="string">"Samsung"</span>
-          }
-        }
-      ]
-    }
-  }
-}</code></pre><pre><code class="lang-js prettyprint"><span class="comment">//For case <span class="number">2</span>: <span class="string">"Apple"</span> AND <span class="string">"Samsung"</span></span>
-{
-  <span class="string">"query"</span>: {
-    <span class="string">"bool"</span>: {
-      <span class="string">"must"</span>: [
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"brand"</span>: <span class="string">"Apple"</span>
-          }
-        },
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"brand"</span>: <span class="string">"Samsung"</span>
-          }
-        }
-      ]
-    }
-  }
-}</code></pre><pre><code class="lang-js prettyprint">{
-  <span class="string">"query"</span>: {
-    <span class="string">"bool"</span>: {
-      <span class="string">"should"</span>: [
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"first_name"</span>: <span class="string">"John"</span>
-          }
-        },
-        {
-          <span class="string">"match"</span>: {
-            <span class="string">"last_name"</span>: <span class="string">"John"</span>
-          }
-        }
-      ]
-    }
-  }
-}</code></pre><pre><code class="lang-js prettyprint"><span class="comment">// For case <span class="number">3</span></span>
-{
-  <span class="string">"filter"</span>: {
-    <span class="string">"bool"</span>: {
-      <span class="string">"must"</span>: [
-        {
-          <span class="string">"term"</span>: {
-            <span class="string">"type"</span>: <span class="string">"mobile"</span>
-          }
-        },
-        {
-          <span class="string">"range"</span>: {
-            <span class="string">"price"</span>: {
-              <span class="string">"lt"</span>: <span class="number">800</span>
-            }
-          }
-        }
-       ],
-      <span class="string">"must_not"</span>: [{
-        <span class="string">"term"</span>: {
-          <span class="string">"brand"</span>: <span class="string">"Apple"</span>
-        }
-       }],
-      <span class="string">"should"</span>: [
-        {
-          <span class="string">"term"</span>: {
-            <span class="string">"color"</span>: <span class="string">"metal"</span>
-          }
-        },
-        {
-          <span class="string">"bool"</span>: {
-            <span class="string">"must"</span>: [
-              {
-                <span class="string">"term"</span>: {
-                  <span class="string">"brand"</span>: <span class="string">"Samsung"</span>
-                }
-           },
-              {
-                <span class="string">"term"</span>: {
-                  <span class="string">"color"</span>: <span class="string">"white"</span>
-                }
-           }
-          ]
-          },
-        },
-        {
-          <span class="string">"bool"</span>: {
-            <span class="string">"must"</span>: [
-              {
-                <span class="string">"term"</span>: {
-                  <span class="string">"brand"</span>: <span class="string">"Sony"</span>
-                }
-           },
-              {
-                <span class="string">"term"</span>: {
-                  <span class="string">"color"</span>: <span class="string">"black"</span>
-                }
-           }
-          ]
-          }
-        }
-       ]
-    }
-  }
-}</code></pre><blockquote>
+</ul><p>Lets write the request to search the mobile phones we described above.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">//For case </span><span class="number"><span class="com">1</span></span><span class="com">: </span><span class="string"><span class="com">"Apple"</span></span><span class="com"> OR </span><span class="string"><span class="com">"Samsung"</span></span></span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"should"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Apple"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Samsung"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">//For case </span><span class="number"><span class="com">2</span></span><span class="com">: </span><span class="string"><span class="com">"Apple"</span></span><span class="com"> AND </span><span class="string"><span class="com">"Samsung"</span></span></span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"must"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Apple"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Samsung"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"query"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"should"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"first_name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"John"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"match"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"last_name"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"John"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="comment"><span class="com">// For case </span><span class="number"><span class="com">3</span></span></span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="string"><span class="str">"filter"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="string"><span class="str">"must"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"type"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"mobile"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"range"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"price"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+              </span><span class="string"><span class="str">"lt"</span></span><span class="pun">:</span><span class="pln"> </span><span class="number"><span class="lit">800</span></span><span class="pln">
+            </span><span class="pun">}</span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+       </span><span class="pun">],</span><span class="pln">
+      </span><span class="string"><span class="str">"must_not"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[{</span><span class="pln">
+        </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Apple"</span></span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+       </span><span class="pun">}],</span><span class="pln">
+      </span><span class="string"><span class="str">"should"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"color"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"metal"</span></span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"must"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+              </span><span class="pun">{</span><span class="pln">
+                </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                  </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Samsung"</span></span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+           </span><span class="pun">},</span><span class="pln">
+              </span><span class="pun">{</span><span class="pln">
+                </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                  </span><span class="string"><span class="str">"color"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"white"</span></span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+           </span><span class="pun">}</span><span class="pln">
+          </span><span class="pun">]</span><span class="pln">
+          </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="string"><span class="str">"bool"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="string"><span class="str">"must"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+              </span><span class="pun">{</span><span class="pln">
+                </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                  </span><span class="string"><span class="str">"brand"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"Sony"</span></span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+           </span><span class="pun">},</span><span class="pln">
+              </span><span class="pun">{</span><span class="pln">
+                </span><span class="string"><span class="str">"term"</span></span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                  </span><span class="string"><span class="str">"color"</span></span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">"black"</span></span><span class="pln">
+                </span><span class="pun">}</span><span class="pln">
+           </span><span class="pun">}</span><span class="pln">
+          </span><span class="pun">]</span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+       </span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><blockquote>
 <p>Elasticseach sidenote</p>
 <h4><strong><em>bool</em></strong> <em>query/filter</em></h4>
 <p>As you can see in the example here, we have using bool filters. This way you can combine any kind of queries and filters, you can also combine multiple usecases (like fuzzy and wildcard), and write complex search requests. To know more check out:
@@ -689,8 +642,8 @@ product.brand != <span class="string">"Apple"</span> &amp;&amp;
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
-
-  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/analytics.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

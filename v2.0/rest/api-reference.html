@@ -6,71 +6,33 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <script type="text/javascript">
-    if (!Function.prototype.bind) {
-Function.prototype.bind = function bind(that) { // .length is 1
-        var slice = [].slice;
-        var Empty = function(){};
-        var target = this;
-        if (typeof target != "function") {
-            throw new TypeError("Function.prototype.bind called on incompatible " + target);
-        }
-        var args = slice.call(arguments, 1); // for normal call
-        var bound = function () {
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-            if (this instanceof bound) {
-
-                var result = target.apply(
-                    this,
-                    args.concat(slice.call(arguments))
-                );
-                if (Object(result) === result) {
-                    return result;
-                }
-                return this;
-
-            } else {
-                return target.apply(
-                    that,
-                    args.concat(slice.call(arguments))
-                );
-
-            }
-
-        };
-        if(target.prototype) {
-            Empty.prototype = target.prototype;
-            bound.prototype = new Empty();
-            Empty.prototype = null;
-        }
-        return bound;
-    };  
-}
-  </script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/bower_components/docbase/scripts/polyfill.js"></script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/docs.css">
 
 </head>
 <body role="flatdoc" class="">
@@ -78,86 +40,84 @@ Function.prototype.bind = function bind(that) { // .length is 1
      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><nav class="navbar navbar-default navbar-fixed-top ng-scope">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#/">
-        <img src="/Docs/images/logo.svg">
-      </a>
-    </div>
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://appbase.io">
+      <img src="/images/logo.svg">
+    </a>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-      	<!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] -->
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          	 <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu version-switcher" role="menu">
-          	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
-          	</li><!-- end ngRepeat: version in versions -->
-          </ul>
-        </li>
-        <li class="github-star">
-          <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v2.0/concepts/datamodel.html>Datamodel</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/rest/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/quick-start.html>Quick start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/angular.html>Angular Binding</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/oauth.html>OAuth</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/quick-start.html>Quick Start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/use-cases.html>Use-cases</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] -->
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+           <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu version-switcher" role="menu">
+          <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/scalr/concepts/intro.html ng-bind="version" class="ng-binding" href=/scalr/concepts/intro.html>scalr</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          </li><!-- end ngRepeat: version in versions -->
+        </ul>
+      </li>
+      <li class="github-star">
+        <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid --></nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/Docs/v2.0/rest/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a><ul class="level-2" id="introduction-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="introduction-allowed-http-request-types-item" class="level-3"><a id="introduction-allowed-http-request-types-link" href="/Docs/v2.0/rest/api-reference.html#introduction-allowed-http-request-types" class="level-3" pref="#introduction-allowed-http-request-types">Allowed HTTP Request Types</a></li><li id="introduction-http-headers-item" class="level-3"><a id="introduction-http-headers-link" href="/Docs/v2.0/rest/api-reference.html#introduction-http-headers" class="level-3" pref="#introduction-http-headers">HTTP Header(s)</a></li><li id="introduction-authorization-item" class="level-3"><a id="introduction-authorization-link" href="/Docs/v2.0/rest/api-reference.html#introduction-authorization" class="level-3" pref="#introduction-authorization">Authorization</a></li><li id="introduction-base-uri-item" class="level-3"><a id="introduction-base-uri-link" href="/Docs/v2.0/rest/api-reference.html#introduction-base-uri" class="level-3" pref="#introduction-base-uri">Base URI</a></li></ul></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/Docs/v2.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-introduction-item" class="level-2"><a id="api-reference-introduction-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-introduction" class="level-2" pref="#api-reference-introduction">Introduction</a></li><li id="api-reference-namespace-item" class="level-2"><a id="api-reference-namespace-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace" class="level-2" pref="#api-reference-namespace">Namespace</a><ul class="level-3" id="api-reference-namespace-list"><li id="api-reference-namespace-list-all-vertices-item" class="level-3"><a id="api-reference-namespace-list-all-vertices-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace-list-all-vertices" class="level-3" pref="#api-reference-namespace-list-all-vertices">List all vertices</a></li><li id="api-reference-namespace-search-vertices-by-propertyies-item" class="level-3"><a id="api-reference-namespace-search-vertices-by-propertyies-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-namespace-search-vertices-by-propertyies" class="level-3" pref="#api-reference-namespace-search-vertices-by-propertyies">Search Vertices by property(ies)</a></li></ul></li><li id="api-reference-vertex-property-item" class="level-2"><a id="api-reference-vertex-property-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property" class="level-2" pref="#api-reference-vertex-property">Vertex Property</a><ul class="level-3" id="api-reference-vertex-property-list"><li id="api-reference-vertex-property-create-update-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-create-update-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-create-update-vertex-properties" class="level-3" pref="#api-reference-vertex-property-create-update-vertex-properties">Create / Update Vertex Properties</a></li><li id="api-reference-vertex-property-read-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-read-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-read-vertex-properties" class="level-3" pref="#api-reference-vertex-property-read-vertex-properties">Read Vertex Properties</a></li><li id="api-reference-vertex-property-delete-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-delete-vertex-properties-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-property-delete-vertex-properties" class="level-3" pref="#api-reference-vertex-property-delete-vertex-properties">Delete vertex properties</a></li></ul></li><li id="api-reference-vertex-edge-item" class="level-2"><a id="api-reference-vertex-edge-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge" class="level-2" pref="#api-reference-vertex-edge">Vertex Edge</a><ul class="level-3" id="api-reference-vertex-edge-list"><li id="api-reference-vertex-edge-create-update-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-create-update-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-create-update-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-create-update-vertex-edges">Create / Update Vertex Edges</a></li><li id="api-reference-vertex-edge-read-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-read-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-read-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-read-vertex-edges">Read Vertex Edges</a></li><li id="api-reference-vertex-edge-delete-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-delete-vertex-edges-link" href="/Docs/v2.0/rest/api-reference.html#api-reference-vertex-edge-delete-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-delete-vertex-edges">Delete vertex edges</a></li></ul></li></ul></li><li id="socketio-api-endpoints-item" class="level-1"><a id="socketio-api-endpoints-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints" class="level-1" pref="#socketio-api-endpoints">Socket.io API Endpoints</a><ul class="level-2" id="socketio-api-endpoints-list"><li id="socketio-api-endpoints-creating-the-client-item" class="level-2"><a id="socketio-api-endpoints-creating-the-client-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-creating-the-client" class="level-2" pref="#socketio-api-endpoints-creating-the-client">Creating the Client</a></li><li id="socketio-api-endpoints-requesting-for-data-item" class="level-2"><a id="socketio-api-endpoints-requesting-for-data-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data" class="level-2" pref="#socketio-api-endpoints-requesting-for-data">Requesting for data</a><ul class="level-3" id="socketio-api-endpoints-requesting-for-data-list"><li id="socketio-api-endpoints-requesting-for-data-request-format-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-request-format-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-request-format" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-request-format">Request Format</a></li><li id="socketio-api-endpoints-requesting-for-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-vertex-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-vertex" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-requesting-for-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-namespace-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-namespace" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-namespace">Namespace</a></li></ul></li><li id="socketio-api-endpoints-attachingremoving-data-listeners-item" class="level-2"><a id="socketio-api-endpoints-attachingremoving-data-listeners-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners" class="level-2" pref="#socketio-api-endpoints-attachingremoving-data-listeners">Attaching/Removing Data Listeners</a><ul class="level-3" id="socketio-api-endpoints-attachingremoving-data-listeners-list"><li id="socketio-api-endpoints-attachingremoving-data-listeners-format-item" class="level-3"><a id="socketio-api-endpoints-attachingremoving-data-listeners-format-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners-format" class="level-3" pref="#socketio-api-endpoints-attachingremoving-data-listeners-format">Format</a></li></ul></li><li id="socketio-api-endpoints-parsing-the-data-item" class="level-2"><a id="socketio-api-endpoints-parsing-the-data-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data" class="level-2" pref="#socketio-api-endpoints-parsing-the-data">Parsing the Data</a><ul class="level-3" id="socketio-api-endpoints-parsing-the-data-list"><li id="socketio-api-endpoints-parsing-the-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-vertex-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-vertex" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-parsing-the-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-namespace-link" href="/Docs/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-namespace" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-namespace">Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/v2.0/rest/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a><ul class="level-2" id="introduction-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="introduction-allowed-http-request-types-item" class="level-3"><a id="introduction-allowed-http-request-types-link" href="/v2.0/rest/api-reference.html#introduction-allowed-http-request-types" class="level-3" pref="#introduction-allowed-http-request-types">Allowed HTTP Request Types</a></li><li id="introduction-http-headers-item" class="level-3"><a id="introduction-http-headers-link" href="/v2.0/rest/api-reference.html#introduction-http-headers" class="level-3" pref="#introduction-http-headers">HTTP Header(s)</a></li><li id="introduction-authorization-item" class="level-3"><a id="introduction-authorization-link" href="/v2.0/rest/api-reference.html#introduction-authorization" class="level-3" pref="#introduction-authorization">Authorization</a></li><li id="introduction-base-uri-item" class="level-3"><a id="introduction-base-uri-link" href="/v2.0/rest/api-reference.html#introduction-base-uri" class="level-3" pref="#introduction-base-uri">Base URI</a></li></ul></li></ul></li><li id="api-reference-item" class="level-1"><a id="api-reference-link" href="/v2.0/rest/api-reference.html#api-reference" class="level-1" pref="#api-reference">API Reference</a><ul class="level-2" id="api-reference-list"><li id="api-reference-introduction-item" class="level-2"><a id="api-reference-introduction-link" href="/v2.0/rest/api-reference.html#api-reference-introduction" class="level-2" pref="#api-reference-introduction">Introduction</a></li><li id="api-reference-namespace-item" class="level-2"><a id="api-reference-namespace-link" href="/v2.0/rest/api-reference.html#api-reference-namespace" class="level-2" pref="#api-reference-namespace">Namespace</a><ul class="level-3" id="api-reference-namespace-list"><li id="api-reference-namespace-list-all-vertices-item" class="level-3"><a id="api-reference-namespace-list-all-vertices-link" href="/v2.0/rest/api-reference.html#api-reference-namespace-list-all-vertices" class="level-3" pref="#api-reference-namespace-list-all-vertices">List all vertices</a></li><li id="api-reference-namespace-search-vertices-by-propertyies-item" class="level-3"><a id="api-reference-namespace-search-vertices-by-propertyies-link" href="/v2.0/rest/api-reference.html#api-reference-namespace-search-vertices-by-propertyies" class="level-3" pref="#api-reference-namespace-search-vertices-by-propertyies">Search Vertices by property(ies)</a></li></ul></li><li id="api-reference-vertex-property-item" class="level-2"><a id="api-reference-vertex-property-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property" class="level-2" pref="#api-reference-vertex-property">Vertex Property</a><ul class="level-3" id="api-reference-vertex-property-list"><li id="api-reference-vertex-property-create-update-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-create-update-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-create-update-vertex-properties" class="level-3" pref="#api-reference-vertex-property-create-update-vertex-properties">Create / Update Vertex Properties</a></li><li id="api-reference-vertex-property-read-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-read-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-read-vertex-properties" class="level-3" pref="#api-reference-vertex-property-read-vertex-properties">Read Vertex Properties</a></li><li id="api-reference-vertex-property-delete-vertex-properties-item" class="level-3"><a id="api-reference-vertex-property-delete-vertex-properties-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-property-delete-vertex-properties" class="level-3" pref="#api-reference-vertex-property-delete-vertex-properties">Delete vertex properties</a></li></ul></li><li id="api-reference-vertex-edge-item" class="level-2"><a id="api-reference-vertex-edge-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge" class="level-2" pref="#api-reference-vertex-edge">Vertex Edge</a><ul class="level-3" id="api-reference-vertex-edge-list"><li id="api-reference-vertex-edge-create-update-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-create-update-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-create-update-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-create-update-vertex-edges">Create / Update Vertex Edges</a></li><li id="api-reference-vertex-edge-read-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-read-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-read-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-read-vertex-edges">Read Vertex Edges</a></li><li id="api-reference-vertex-edge-delete-vertex-edges-item" class="level-3"><a id="api-reference-vertex-edge-delete-vertex-edges-link" href="/v2.0/rest/api-reference.html#api-reference-vertex-edge-delete-vertex-edges" class="level-3" pref="#api-reference-vertex-edge-delete-vertex-edges">Delete vertex edges</a></li></ul></li></ul></li><li id="socketio-api-endpoints-item" class="level-1"><a id="socketio-api-endpoints-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints" class="level-1" pref="#socketio-api-endpoints">Socket.io API Endpoints</a><ul class="level-2" id="socketio-api-endpoints-list"><li id="socketio-api-endpoints-creating-the-client-item" class="level-2"><a id="socketio-api-endpoints-creating-the-client-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-creating-the-client" class="level-2" pref="#socketio-api-endpoints-creating-the-client">Creating the Client</a></li><li id="socketio-api-endpoints-requesting-for-data-item" class="level-2"><a id="socketio-api-endpoints-requesting-for-data-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data" class="level-2" pref="#socketio-api-endpoints-requesting-for-data">Requesting for data</a><ul class="level-3" id="socketio-api-endpoints-requesting-for-data-list"><li id="socketio-api-endpoints-requesting-for-data-request-format-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-request-format-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-request-format" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-request-format">Request Format</a></li><li id="socketio-api-endpoints-requesting-for-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-vertex-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-vertex" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-requesting-for-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-requesting-for-data-namespace-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-requesting-for-data-namespace" class="level-3" pref="#socketio-api-endpoints-requesting-for-data-namespace">Namespace</a></li></ul></li><li id="socketio-api-endpoints-attachingremoving-data-listeners-item" class="level-2"><a id="socketio-api-endpoints-attachingremoving-data-listeners-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners" class="level-2" pref="#socketio-api-endpoints-attachingremoving-data-listeners">Attaching/Removing Data Listeners</a><ul class="level-3" id="socketio-api-endpoints-attachingremoving-data-listeners-list"><li id="socketio-api-endpoints-attachingremoving-data-listeners-format-item" class="level-3"><a id="socketio-api-endpoints-attachingremoving-data-listeners-format-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-attachingremoving-data-listeners-format" class="level-3" pref="#socketio-api-endpoints-attachingremoving-data-listeners-format">Format</a></li></ul></li><li id="socketio-api-endpoints-parsing-the-data-item" class="level-2"><a id="socketio-api-endpoints-parsing-the-data-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data" class="level-2" pref="#socketio-api-endpoints-parsing-the-data">Parsing the Data</a><ul class="level-3" id="socketio-api-endpoints-parsing-the-data-list"><li id="socketio-api-endpoints-parsing-the-data-vertex-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-vertex-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-vertex" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-vertex">Vertex</a></li><li id="socketio-api-endpoints-parsing-the-data-namespace-item" class="level-3"><a id="socketio-api-endpoints-parsing-the-data-namespace-link" href="/v2.0/rest/api-reference.html#socketio-api-endpoints-parsing-the-data-namespace" class="level-3" pref="#socketio-api-endpoints-parsing-the-data-namespace">Namespace</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="introduction">Introduction</h1><p>The Appbase API is based on REST principles. All operations including creating vertices and edges, fetching vertex properties (data) and edges, deleting a vertex or an edge as well as searching through vertices are RESTful. The only non-RESTful operation is realtime event streams, which works with the Websocket protocol, using socket.io.</p><h3 id="introduction-allowed-http-request-types">Allowed HTTP Request Types</h3><ul>
 <li><code>PATCH</code> - Creates or updates a resource</li>
@@ -936,8 +896,8 @@ ioClient</span><span class="pun">.</span><span class="pln">emit</span><span clas
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
-
-  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/analytics.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>

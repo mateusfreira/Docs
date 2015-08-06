@@ -6,71 +6,33 @@
   <title>Appbase Documentation</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <script type="text/javascript">
-    if (!Function.prototype.bind) {
-Function.prototype.bind = function bind(that) { // .length is 1
-        var slice = [].slice;
-        var Empty = function(){};
-        var target = this;
-        if (typeof target != "function") {
-            throw new TypeError("Function.prototype.bind called on incompatible " + target);
-        }
-        var args = slice.call(arguments, 1); // for normal call
-        var bound = function () {
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-            if (this instanceof bound) {
-
-                var result = target.apply(
-                    this,
-                    args.concat(slice.call(arguments))
-                );
-                if (Object(result) === result) {
-                    return result;
-                }
-                return this;
-
-            } else {
-                return target.apply(
-                    that,
-                    args.concat(slice.call(arguments))
-                );
-
-            }
-
-        };
-        if(target.prototype) {
-            Empty.prototype = target.prototype;
-            bound.prototype = new Empty();
-            Empty.prototype = null;
-        }
-        return bound;
-    };  
-}
-  </script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/bower_components/docbase/scripts/polyfill.js"></script>
   <!-- Flatdoc -->
-  <script type="text/javascript" src="/Docs/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/legacy.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="/bower_components/flatdoc/flatdoc.js"></script>
 
   <!-- Flatdoc theme -->
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/flatdoc/theme-white/style.css">
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/flatdoc/theme-white/style.css">
+  <script type="text/javascript" src="/bower_components/docbase/scripts/flatdoc-theme.js"></script>
 
   <!-- DocBase -->
-  <script type="text/javascript" src="/Docs/bower_components/angular/angular.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/angular-route/angular-route.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/js-schema/js-schema.min.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/docbase/scripts/docbase.js"></script>
-  <script src="/Docs/bower_components/google-code-prettify/bin/prettify.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/google-code-prettify/bin/prettify.min.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/docbase/styles/main.css">
-  <link rel="stylesheet" type="text/css" href="/Docs/bower_components/components-font-awesome/css/font-awesome.min.css">
+  <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="/bower_components/js-schema/js-schema.min.js"></script>
+
+  <script type="text/javascript" src="/bower_components/docbase/scripts/docbase.js"></script>
+  <script src="/bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/bower_components/google-code-prettify/bin/prettify.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/docbase/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/components-font-awesome/css/font-awesome.min.css">
   
 
   <!-- Custom -->
-  <link rel="stylesheet" type="text/css" href="/Docs/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/docs.css">
 
 </head>
 <body role="flatdoc" class="">
@@ -78,93 +40,91 @@ Function.prototype.bind = function bind(that) { // .length is 1
      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><nav class="navbar navbar-default navbar-fixed-top ng-scope">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#/">
-        <img src="/Docs/images/logo.svg">
-      </a>
-    </div>
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://appbase.io">
+      <img src="/images/logo.svg">
+    </a>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-      	<!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>Datamodel</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/rest/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/quick-start.html>Quick start</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/api-reference.html>API Reference</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/angular.html>Angular Binding</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/javascript/oauth.html>OAuth</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
-      		<a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
-      		<ul class="dropdown-menu">
-      		  <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/quick-start.html>Quick Start</a>
-      		  </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
-      		  	<a ng-href=/Docs/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/Docs/v2.0/search/use-cases.html>Use-cases</a>
-      		  </li><!-- end ngRepeat: file in folder.files -->
-      		</ul>
-      	</li><!-- end ngRepeat: folder in map[currentVersion] -->
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          	 <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu version-switcher" role="menu">
-          	<!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/scalr/rest/intro.html ng-bind="version" class="ng-binding" href=/Docs/scalr/rest/intro.html>scalr</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/Docs/v2.0/concepts/datamodel.html>v2.0</a>
-          	</li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
-          		<a ng-href=/Docs/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/Docs/v3.0/changelog/changelog.html>v3.0</a>
-          	</li><!-- end ngRepeat: version in versions -->
-          </ul>
-        </li>
-        <li class="github-star">
-          <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav">
+      <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/concepts" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/concepts">Concepts</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/concepts/datamodel.html ng-bind="file.label" class="ng-binding" href=/v2.0/concepts/datamodel.html>Datamodel</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/javascript" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/javascript">Javascript</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/angular.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/angular.html>Angular Binding</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/oauth.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/oauth.html>OAuth</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/javascript/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/javascript/quick-start.html>Quick start</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/rest" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/rest">REST</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/rest/api-reference.html ng-bind="file.label" class="ng-binding" href=/v2.0/rest/api-reference.html>API Reference</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
+        <a ng-href="#/v2.0/search" class="dropdown-toggle ng-binding" data-toggle="dropdown" role="button" aria-expanded="false" ng-bind="folder.label" href="#/v2.0/search">Search Queries</a>
+        <ul class="dropdown-menu">
+          <!-- ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/search/quick-start.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/quick-start.html>Quick Start</a>
+          </li><!-- end ngRepeat: file in folder.files --><li ng-repeat="file in folder.files" class="ng-scope">
+            <a ng-href=/v2.0/search/use-cases.html ng-bind="file.label" class="ng-binding" href=/v2.0/search/use-cases.html>Use-cases</a>
+          </li><!-- end ngRepeat: file in folder.files -->
+        </ul>
+      </li><!-- end ngRepeat: folder in map[currentVersion] -->
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+           <span ng-bind="currentVersion" class="ng-binding">v2.0</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu version-switcher" role="menu">
+          <!-- ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/scalr/concepts/intro.html ng-bind="version" class="ng-binding" href=/scalr/concepts/intro.html>scalr</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v2.0/concepts/datamodel.html ng-bind="version" class="ng-binding" href=/v2.0/concepts/datamodel.html>v2.0</a>
+          </li><!-- end ngRepeat: version in versions --><li ng-repeat="version in versions" class="ng-scope">
+            <a ng-href=/v3.0/changelog/changelog.html ng-bind="version" class="ng-binding" href=/v3.0/changelog/changelog.html>v3.0</a>
+          </li><!-- end ngRepeat: version in versions -->
+        </ul>
+      </li>
+      <li class="github-star">
+        <iframe src="https://ghbtns.com/github-btn.html?user=appbaseio&amp;repo=Docs&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid --></nav>
 <div role="flatdoc" class="content-root ng-scope">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/Docs/v2.0/javascript/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a></li><li id="appbase-item" class="level-1"><a id="appbase-link" href="/Docs/v2.0/javascript/api-reference.html#appbase" class="level-1" pref="#appbase">Appbase</a><ul class="level-2" id="appbase-list"><li id="appbase-setting-up-item" class="level-2"><a id="appbase-setting-up-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-setting-up" class="level-2" pref="#appbase-setting-up">Setting up</a><ul class="level-3" id="appbase-setting-up-list"><li id="appbase-setting-up-credentials-item" class="level-3"><a id="appbase-setting-up-credentials-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-setting-up-credentials" class="level-3" pref="#appbase-setting-up-credentials">credentials()</a></li></ul></li><li id="appbase-namespaces-item" class="level-2"><a id="appbase-namespaces-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-namespaces" class="level-2" pref="#appbase-namespaces">Namespaces</a><ul class="level-3" id="appbase-namespaces-list"><li id="appbase-namespaces-ns-item" class="level-3"><a id="appbase-namespaces-ns-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-namespaces-ns" class="level-3" pref="#appbase-namespaces-ns">ns()</a></li></ul></li><li id="appbase-fantastic-search-item" class="level-2"><a id="appbase-fantastic-search-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-fantastic-search" class="level-2" pref="#appbase-fantastic-search">Fantastic Search</a><ul class="level-3" id="appbase-fantastic-search-list"><li id="appbase-fantastic-search-rawsearch-item" class="level-3"><a id="appbase-fantastic-search-rawsearch-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-fantastic-search-rawsearch" class="level-3" pref="#appbase-fantastic-search-rawsearch">rawSearch()</a></li></ul></li><li id="appbase-utility-item" class="level-2"><a id="appbase-utility-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-utility" class="level-2" pref="#appbase-utility">Utility</a><ul class="level-3" id="appbase-utility-list"><li id="appbase-utility-uuid-item" class="level-3"><a id="appbase-utility-uuid-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-utility-uuid" class="level-3" pref="#appbase-utility-uuid">uuid()</a></li><li id="appbase-utility-servertime-item" class="level-3"><a id="appbase-utility-servertime-link" href="/Docs/v2.0/javascript/api-reference.html#appbase-utility-servertime" class="level-3" pref="#appbase-utility-servertime">serverTime()</a></li></ul></li></ul></li><li id="namespace-reference-item" class="level-1"><a id="namespace-reference-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference" class="level-1" pref="#namespace-reference">Namespace Reference</a><ul class="level-2" id="namespace-reference-list"><li id="namespace-reference-vertices-item" class="level-2"><a id="namespace-reference-vertices-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-vertices" class="level-2" pref="#namespace-reference-vertices">Vertices</a><ul class="level-3" id="namespace-reference-vertices-list"><li id="namespace-reference-vertices-v-item" class="level-3"><a id="namespace-reference-vertices-v-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-vertices-v" class="level-3" pref="#namespace-reference-vertices-v">v()</a></li></ul></li><li id="namespace-reference-search-item" class="level-2"><a id="namespace-reference-search-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-search" class="level-2" pref="#namespace-reference-search">Search</a><ul class="level-3" id="namespace-reference-search-list"><li id="namespace-reference-search-search-item" class="level-3"><a id="namespace-reference-search-search-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-search-search" class="level-3" pref="#namespace-reference-search-search">search()</a></li></ul></li><li id="namespace-reference-retrieving-data-item" class="level-2"><a id="namespace-reference-retrieving-data-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data" class="level-2" pref="#namespace-reference-retrieving-data">Retrieving Data</a><ul class="level-3" id="namespace-reference-retrieving-data-list"><li id="namespace-reference-retrieving-data-on-item" class="level-3"><a id="namespace-reference-retrieving-data-on-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data-on" class="level-3" pref="#namespace-reference-retrieving-data-on">on()</a></li><li id="namespace-reference-retrieving-data-off-item" class="level-3"><a id="namespace-reference-retrieving-data-off-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data-off" class="level-3" pref="#namespace-reference-retrieving-data-off">off()</a></li></ul></li><li id="namespace-reference-utility-item" class="level-2"><a id="namespace-reference-utility-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-utility" class="level-2" pref="#namespace-reference-utility">Utility</a><ul class="level-3" id="namespace-reference-utility-list"><li id="namespace-reference-utility-name-item" class="level-3"><a id="namespace-reference-utility-name-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-utility-name" class="level-3" pref="#namespace-reference-utility-name">name()</a></li><li id="namespace-reference-utility-path-item" class="level-3"><a id="namespace-reference-utility-path-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-utility-path" class="level-3" pref="#namespace-reference-utility-path">path()</a></li><li id="namespace-reference-utility-url-item" class="level-3"><a id="namespace-reference-utility-url-link" href="/Docs/v2.0/javascript/api-reference.html#namespace-reference-utility-url" class="level-3" pref="#namespace-reference-utility-url">URL()</a></li></ul></li></ul></li><li id="vertex-reference-item" class="level-1"><a id="vertex-reference-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference" class="level-1" pref="#vertex-reference">Vertex Reference</a><ul class="level-2" id="vertex-reference-list"><li id="vertex-reference-storing-data-item" class="level-2"><a id="vertex-reference-storing-data-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data" class="level-2" pref="#vertex-reference-storing-data">Storing Data</a><ul class="level-3" id="vertex-reference-storing-data-list"><li id="vertex-reference-storing-data-setdata-item" class="level-3"><a id="vertex-reference-storing-data-setdata-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-setdata" class="level-3" pref="#vertex-reference-storing-data-setdata">setData()</a></li><li id="vertex-reference-storing-data-commitdata-item" class="level-3"><a id="vertex-reference-storing-data-commitdata-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-commitdata" class="level-3" pref="#vertex-reference-storing-data-commitdata">commitData()</a></li><li id="vertex-reference-storing-data-removedata-item" class="level-3"><a id="vertex-reference-storing-data-removedata-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-removedata" class="level-3" pref="#vertex-reference-storing-data-removedata">removeData()</a></li><li id="vertex-reference-storing-data-setedge-item" class="level-3"><a id="vertex-reference-storing-data-setedge-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-setedge" class="level-3" pref="#vertex-reference-storing-data-setedge">setEdge()</a></li><li id="vertex-reference-storing-data-removeedge-item" class="level-3"><a id="vertex-reference-storing-data-removeedge-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-removeedge" class="level-3" pref="#vertex-reference-storing-data-removeedge">removeEdge()</a></li><li id="vertex-reference-storing-data-destroy-item" class="level-3"><a id="vertex-reference-storing-data-destroy-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-storing-data-destroy" class="level-3" pref="#vertex-reference-storing-data-destroy">destroy()</a></li></ul></li><li id="vertex-reference-retrieving-data-item" class="level-2"><a id="vertex-reference-retrieving-data-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data" class="level-2" pref="#vertex-reference-retrieving-data">Retrieving Data</a><ul class="level-3" id="vertex-reference-retrieving-data-list"><li id="vertex-reference-retrieving-data-onproperties-item" class="level-3"><a id="vertex-reference-retrieving-data-onproperties-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onproperties" class="level-3" pref="#vertex-reference-retrieving-data-onproperties">on(‘properties’)</a></li><li id="vertex-reference-retrieving-data-onceproperties-item" class="level-3"><a id="vertex-reference-retrieving-data-onceproperties-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onceproperties" class="level-3" pref="#vertex-reference-retrieving-data-onceproperties">once(‘properties’)</a></li><li id="vertex-reference-retrieving-data-onedge_added-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_added-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_added" class="level-3" pref="#vertex-reference-retrieving-data-onedge_added">on(‘edge_added’)</a></li><li id="vertex-reference-retrieving-data-onedge_removed-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_removed-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_removed" class="level-3" pref="#vertex-reference-retrieving-data-onedge_removed">on(‘edge_removed’)</a></li><li id="vertex-reference-retrieving-data-onedge_changed-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_changed-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_changed" class="level-3" pref="#vertex-reference-retrieving-data-onedge_changed">on(‘edge_changed’)</a></li></ul></li><li id="vertex-reference-utility-item" class="level-2"><a id="vertex-reference-utility-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility" class="level-2" pref="#vertex-reference-utility">Utility</a><ul class="level-3" id="vertex-reference-utility-list"><li id="vertex-reference-utility-outvertex-item" class="level-3"><a id="vertex-reference-utility-outvertex-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility-outvertex" class="level-3" pref="#vertex-reference-utility-outvertex">outVertex()</a></li><li id="vertex-reference-utility-invertex-item" class="level-3"><a id="vertex-reference-utility-invertex-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility-invertex" class="level-3" pref="#vertex-reference-utility-invertex">inVertex()</a></li><li id="vertex-reference-utility-path-item" class="level-3"><a id="vertex-reference-utility-path-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility-path" class="level-3" pref="#vertex-reference-utility-path">path()</a></li><li id="vertex-reference-utility-name-item" class="level-3"><a id="vertex-reference-utility-name-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility-name" class="level-3" pref="#vertex-reference-utility-name">name()</a></li><li id="vertex-reference-utility-url-item" class="level-3"><a id="vertex-reference-utility-url-link" href="/Docs/v2.0/javascript/api-reference.html#vertex-reference-utility-url" class="level-3" pref="#vertex-reference-utility-url">URL()</a></li></ul></li></ul></li><li id="data-snapshots-item" class="level-1"><a id="data-snapshots-link" href="/Docs/v2.0/javascript/api-reference.html#data-snapshots" class="level-1" pref="#data-snapshots">Data Snapshots</a><ul class="level-2" id="data-snapshots-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="data-snapshots-property-snapshot-item" class="level-3"><a id="data-snapshots-property-snapshot-link" href="/Docs/v2.0/javascript/api-reference.html#data-snapshots-property-snapshot" class="level-3" pref="#data-snapshots-property-snapshot">Property Snapshot</a></li><li id="data-snapshots-edge-snapshot-item" class="level-3"><a id="data-snapshots-edge-snapshot-link" href="/Docs/v2.0/javascript/api-reference.html#data-snapshots-edge-snapshot" class="level-3" pref="#data-snapshots-edge-snapshot">Edge Snapshot</a></li></ul></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="introduction-item" class="level-1"><a id="introduction-link" href="/v2.0/javascript/api-reference.html#introduction" class="level-1" pref="#introduction">Introduction</a></li><li id="appbase-item" class="level-1"><a id="appbase-link" href="/v2.0/javascript/api-reference.html#appbase" class="level-1" pref="#appbase">Appbase</a><ul class="level-2" id="appbase-list"><li id="appbase-setting-up-item" class="level-2"><a id="appbase-setting-up-link" href="/v2.0/javascript/api-reference.html#appbase-setting-up" class="level-2" pref="#appbase-setting-up">Setting up</a><ul class="level-3" id="appbase-setting-up-list"><li id="appbase-setting-up-credentials-item" class="level-3"><a id="appbase-setting-up-credentials-link" href="/v2.0/javascript/api-reference.html#appbase-setting-up-credentials" class="level-3" pref="#appbase-setting-up-credentials">credentials()</a></li></ul></li><li id="appbase-namespaces-item" class="level-2"><a id="appbase-namespaces-link" href="/v2.0/javascript/api-reference.html#appbase-namespaces" class="level-2" pref="#appbase-namespaces">Namespaces</a><ul class="level-3" id="appbase-namespaces-list"><li id="appbase-namespaces-ns-item" class="level-3"><a id="appbase-namespaces-ns-link" href="/v2.0/javascript/api-reference.html#appbase-namespaces-ns" class="level-3" pref="#appbase-namespaces-ns">ns()</a></li></ul></li><li id="appbase-fantastic-search-item" class="level-2"><a id="appbase-fantastic-search-link" href="/v2.0/javascript/api-reference.html#appbase-fantastic-search" class="level-2" pref="#appbase-fantastic-search">Fantastic Search</a><ul class="level-3" id="appbase-fantastic-search-list"><li id="appbase-fantastic-search-rawsearch-item" class="level-3"><a id="appbase-fantastic-search-rawsearch-link" href="/v2.0/javascript/api-reference.html#appbase-fantastic-search-rawsearch" class="level-3" pref="#appbase-fantastic-search-rawsearch">rawSearch()</a></li></ul></li><li id="appbase-utility-item" class="level-2"><a id="appbase-utility-link" href="/v2.0/javascript/api-reference.html#appbase-utility" class="level-2" pref="#appbase-utility">Utility</a><ul class="level-3" id="appbase-utility-list"><li id="appbase-utility-uuid-item" class="level-3"><a id="appbase-utility-uuid-link" href="/v2.0/javascript/api-reference.html#appbase-utility-uuid" class="level-3" pref="#appbase-utility-uuid">uuid()</a></li><li id="appbase-utility-servertime-item" class="level-3"><a id="appbase-utility-servertime-link" href="/v2.0/javascript/api-reference.html#appbase-utility-servertime" class="level-3" pref="#appbase-utility-servertime">serverTime()</a></li></ul></li></ul></li><li id="namespace-reference-item" class="level-1"><a id="namespace-reference-link" href="/v2.0/javascript/api-reference.html#namespace-reference" class="level-1" pref="#namespace-reference">Namespace Reference</a><ul class="level-2" id="namespace-reference-list"><li id="namespace-reference-vertices-item" class="level-2"><a id="namespace-reference-vertices-link" href="/v2.0/javascript/api-reference.html#namespace-reference-vertices" class="level-2" pref="#namespace-reference-vertices">Vertices</a><ul class="level-3" id="namespace-reference-vertices-list"><li id="namespace-reference-vertices-v-item" class="level-3"><a id="namespace-reference-vertices-v-link" href="/v2.0/javascript/api-reference.html#namespace-reference-vertices-v" class="level-3" pref="#namespace-reference-vertices-v">v()</a></li></ul></li><li id="namespace-reference-search-item" class="level-2"><a id="namespace-reference-search-link" href="/v2.0/javascript/api-reference.html#namespace-reference-search" class="level-2" pref="#namespace-reference-search">Search</a><ul class="level-3" id="namespace-reference-search-list"><li id="namespace-reference-search-search-item" class="level-3"><a id="namespace-reference-search-search-link" href="/v2.0/javascript/api-reference.html#namespace-reference-search-search" class="level-3" pref="#namespace-reference-search-search">search()</a></li></ul></li><li id="namespace-reference-retrieving-data-item" class="level-2"><a id="namespace-reference-retrieving-data-link" href="/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data" class="level-2" pref="#namespace-reference-retrieving-data">Retrieving Data</a><ul class="level-3" id="namespace-reference-retrieving-data-list"><li id="namespace-reference-retrieving-data-on-item" class="level-3"><a id="namespace-reference-retrieving-data-on-link" href="/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data-on" class="level-3" pref="#namespace-reference-retrieving-data-on">on()</a></li><li id="namespace-reference-retrieving-data-off-item" class="level-3"><a id="namespace-reference-retrieving-data-off-link" href="/v2.0/javascript/api-reference.html#namespace-reference-retrieving-data-off" class="level-3" pref="#namespace-reference-retrieving-data-off">off()</a></li></ul></li><li id="namespace-reference-utility-item" class="level-2"><a id="namespace-reference-utility-link" href="/v2.0/javascript/api-reference.html#namespace-reference-utility" class="level-2" pref="#namespace-reference-utility">Utility</a><ul class="level-3" id="namespace-reference-utility-list"><li id="namespace-reference-utility-name-item" class="level-3"><a id="namespace-reference-utility-name-link" href="/v2.0/javascript/api-reference.html#namespace-reference-utility-name" class="level-3" pref="#namespace-reference-utility-name">name()</a></li><li id="namespace-reference-utility-path-item" class="level-3"><a id="namespace-reference-utility-path-link" href="/v2.0/javascript/api-reference.html#namespace-reference-utility-path" class="level-3" pref="#namespace-reference-utility-path">path()</a></li><li id="namespace-reference-utility-url-item" class="level-3"><a id="namespace-reference-utility-url-link" href="/v2.0/javascript/api-reference.html#namespace-reference-utility-url" class="level-3" pref="#namespace-reference-utility-url">URL()</a></li></ul></li></ul></li><li id="vertex-reference-item" class="level-1"><a id="vertex-reference-link" href="/v2.0/javascript/api-reference.html#vertex-reference" class="level-1" pref="#vertex-reference">Vertex Reference</a><ul class="level-2" id="vertex-reference-list"><li id="vertex-reference-storing-data-item" class="level-2"><a id="vertex-reference-storing-data-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data" class="level-2" pref="#vertex-reference-storing-data">Storing Data</a><ul class="level-3" id="vertex-reference-storing-data-list"><li id="vertex-reference-storing-data-setdata-item" class="level-3"><a id="vertex-reference-storing-data-setdata-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-setdata" class="level-3" pref="#vertex-reference-storing-data-setdata">setData()</a></li><li id="vertex-reference-storing-data-commitdata-item" class="level-3"><a id="vertex-reference-storing-data-commitdata-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-commitdata" class="level-3" pref="#vertex-reference-storing-data-commitdata">commitData()</a></li><li id="vertex-reference-storing-data-removedata-item" class="level-3"><a id="vertex-reference-storing-data-removedata-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-removedata" class="level-3" pref="#vertex-reference-storing-data-removedata">removeData()</a></li><li id="vertex-reference-storing-data-setedge-item" class="level-3"><a id="vertex-reference-storing-data-setedge-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-setedge" class="level-3" pref="#vertex-reference-storing-data-setedge">setEdge()</a></li><li id="vertex-reference-storing-data-removeedge-item" class="level-3"><a id="vertex-reference-storing-data-removeedge-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-removeedge" class="level-3" pref="#vertex-reference-storing-data-removeedge">removeEdge()</a></li><li id="vertex-reference-storing-data-destroy-item" class="level-3"><a id="vertex-reference-storing-data-destroy-link" href="/v2.0/javascript/api-reference.html#vertex-reference-storing-data-destroy" class="level-3" pref="#vertex-reference-storing-data-destroy">destroy()</a></li></ul></li><li id="vertex-reference-retrieving-data-item" class="level-2"><a id="vertex-reference-retrieving-data-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data" class="level-2" pref="#vertex-reference-retrieving-data">Retrieving Data</a><ul class="level-3" id="vertex-reference-retrieving-data-list"><li id="vertex-reference-retrieving-data-onproperties-item" class="level-3"><a id="vertex-reference-retrieving-data-onproperties-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onproperties" class="level-3" pref="#vertex-reference-retrieving-data-onproperties">on(‘properties’)</a></li><li id="vertex-reference-retrieving-data-onceproperties-item" class="level-3"><a id="vertex-reference-retrieving-data-onceproperties-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onceproperties" class="level-3" pref="#vertex-reference-retrieving-data-onceproperties">once(‘properties’)</a></li><li id="vertex-reference-retrieving-data-onedge_added-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_added-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_added" class="level-3" pref="#vertex-reference-retrieving-data-onedge_added">on(‘edge_added’)</a></li><li id="vertex-reference-retrieving-data-onedge_removed-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_removed-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_removed" class="level-3" pref="#vertex-reference-retrieving-data-onedge_removed">on(‘edge_removed’)</a></li><li id="vertex-reference-retrieving-data-onedge_changed-item" class="level-3"><a id="vertex-reference-retrieving-data-onedge_changed-link" href="/v2.0/javascript/api-reference.html#vertex-reference-retrieving-data-onedge_changed" class="level-3" pref="#vertex-reference-retrieving-data-onedge_changed">on(‘edge_changed’)</a></li></ul></li><li id="vertex-reference-utility-item" class="level-2"><a id="vertex-reference-utility-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility" class="level-2" pref="#vertex-reference-utility">Utility</a><ul class="level-3" id="vertex-reference-utility-list"><li id="vertex-reference-utility-outvertex-item" class="level-3"><a id="vertex-reference-utility-outvertex-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility-outvertex" class="level-3" pref="#vertex-reference-utility-outvertex">outVertex()</a></li><li id="vertex-reference-utility-invertex-item" class="level-3"><a id="vertex-reference-utility-invertex-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility-invertex" class="level-3" pref="#vertex-reference-utility-invertex">inVertex()</a></li><li id="vertex-reference-utility-path-item" class="level-3"><a id="vertex-reference-utility-path-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility-path" class="level-3" pref="#vertex-reference-utility-path">path()</a></li><li id="vertex-reference-utility-name-item" class="level-3"><a id="vertex-reference-utility-name-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility-name" class="level-3" pref="#vertex-reference-utility-name">name()</a></li><li id="vertex-reference-utility-url-item" class="level-3"><a id="vertex-reference-utility-url-link" href="/v2.0/javascript/api-reference.html#vertex-reference-utility-url" class="level-3" pref="#vertex-reference-utility-url">URL()</a></li></ul></li></ul></li><li id="data-snapshots-item" class="level-1"><a id="data-snapshots-link" href="/v2.0/javascript/api-reference.html#data-snapshots" class="level-1" pref="#data-snapshots">Data Snapshots</a><ul class="level-2" id="data-snapshots-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="data-snapshots-property-snapshot-item" class="level-3"><a id="data-snapshots-property-snapshot-link" href="/v2.0/javascript/api-reference.html#data-snapshots-property-snapshot" class="level-3" pref="#data-snapshots-property-snapshot">Property Snapshot</a></li><li id="data-snapshots-edge-snapshot-item" class="level-3"><a id="data-snapshots-edge-snapshot-link" href="/v2.0/javascript/api-reference.html#data-snapshots-edge-snapshot" class="level-3" pref="#data-snapshots-edge-snapshot">Edge Snapshot</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
   <div role="flatdoc-content" class="content"><h1 id="introduction">Introduction</h1><p>The Appbase JS library allows developers to create realtime multi-user apps using a graph data model and realtime smart-search capabilities.</p><p>To use it in the browser, use this link: <a href="https://cdn.appbase.io/latest/appbase.js">https://cdn.appbase.io/latest/appbase.js</a></p><p>To use it with nodejs, do <code>npm install appbasejs</code></p><p>The Appbase library exposes the <code>Appbase</code> object. The methods in the JS lib rely on three main objects.</p><ol>
 <li><strong>Appbase</strong></li>
 <li><strong>Namespace Reference</strong> (referred as <code>nsref</code> in this doc)</li>
 <li><strong>Vertex Reference</strong> (referred as <code>vref</code> in this doc)</li>
 </ol><h1 id="appbase">Appbase</h1><p><strong>Appbase</strong> is the global object exposed the JS library. It has the following four methods: <code>credentials()</code>, 
-<code>ns()</code>, <code>uuid()</code>, and <code>serverTime()</code>.</p><h2 id="appbase-setting-up">Setting up</h2><h3 id="appbase-setting-up-credentials">credentials()</h3><p>Authorize the app credentials using the appname and appsecret identifiers, as they appear in the <a href="/Docs//appbase.io/developer">Dev Console</a>.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="typ">Appbase</span><span class="pun">.</span><span class="pln">credentials</span><span class="pun">(</span><span class="string"><span class="str">'aphrodite'</span></span><span class="pun">,</span><span class="pln">
+<code>ns()</code>, <code>uuid()</code>, and <code>serverTime()</code>.</p><h2 id="appbase-setting-up">Setting up</h2><h3 id="appbase-setting-up-credentials">credentials()</h3><p>Authorize the app credentials using the appname and appsecret identifiers, as they appear in the <a href="//appbase.io/developer">Dev Console</a>.</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="typ">Appbase</span><span class="pun">.</span><span class="pln">credentials</span><span class="pun">(</span><span class="string"><span class="str">'aphrodite'</span></span><span class="pun">,</span><span class="pln">
 </span><span class="string"><span class="str">'</span><span class="number"><span class="str">4</span></span><span class="str">d</span><span class="number"><span class="str">8</span></span><span class="str">d</span><span class="number"><span class="str">0072580912343</span></span><span class="str">cd</span><span class="number"><span class="str">74</span></span><span class="str">aa</span><span class="number"><span class="str">0015</span></span><span class="str">cd</span><span class="number"><span class="str">217</span></span><span class="str">'</span></span><span class="pun">,</span><span class="pln">
 </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">,</span><span class="pln"> isAuthorized</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">error </span><span class="pun">&amp;&amp;</span><span class="pln"> isAuthorized</span><span class="pun">)</span><span class="pln">
@@ -462,8 +422,8 @@ inVertex </span><span class="pun">=</span><span class="pln"> vref</span><span cl
     <span class="fa fa-pencil"></span>
   </a>
 </div></div>
-
-  <script type="text/javascript" src="/Docs/scripts/main.js"></script>
-  <script type="text/javascript" src="/Docs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/analytics.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body></html>
